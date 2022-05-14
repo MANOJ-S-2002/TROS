@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "TROS",
+    "slug": "TROS",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "TROS"
+}
