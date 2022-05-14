@@ -1,11 +1,33 @@
 {
   "expo": {
-    "name": "TROS",
-    "slug": "TROS",
+    "name": "tros",
+    "slug": "tros",
     "version": "1.0.0",
+    "orientation": "portrait",
+    
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
     "assetBundlePatterns": [
       "**/*"
-    ]
-  },
-  "name": "TROS"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
 }
