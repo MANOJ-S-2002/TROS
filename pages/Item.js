@@ -13,32 +13,32 @@ const data = [
     {
         id: 1,
         image: image1,
-        name: 'Orange',
-        price: 10,
+        name: 'shirt 1',
+        price: 1000,
         amountTaken: 3
     }, {
         id: 2,
         image: image2,
-        name: 'Tomato',
-        price: 5,
+        name: 'shirt 2',
+        price: 500,
         amountTaken: 4
     }, {
         id: 3,
         image: image3,
-        name: 'Green',
-        price: 16,
+        name: 'tshirt1',
+        price: 1600,
         amountTaken: 2
     }, {
         id: 4,
         image: image4,
-        name: 'Onion',
-        price: 3,
+        name: 'tshirt2',
+        price: 300,
         amountTaken: 3
     }, {
         id: 5,
         image: image5,
-        name: 'Apple',
-        price: 20,
+        name: 'shirt3',
+        price: 500,
         amountTaken: 1
     },
 ];

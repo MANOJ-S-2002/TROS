@@ -21,7 +21,7 @@ import Veggie from "../src/const/Veggie";
 const width = Dimensions.get("screen").width / 2 - 30;
 const HomeScreen = ({ navigation }) => {
   //create categories
-  const categories = ["POPULAR", "OFFERS", "ORGANIC", "GREENY"];
+  const categories = ["S", "M", "L", "XL"];
   //selecting index in categories
 
   const [categoryIndex, setCategoryIndex] = React.useState(0);
@@ -138,7 +138,7 @@ const HomeScreen = ({ navigation }) => {
           <Text
             style={{ fontSize: 38, fontWeight: "bold", color: COLORS.green }}
           >
-            Veggies Shop
+            TROS
           </Text>
         </View>
         <FontAwesome onPress={() => navigation.navigate('Cart')}

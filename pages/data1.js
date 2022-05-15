@@ -27,7 +27,7 @@ const data1 = [
         id: 5,
         image: require('../images/apple.jpg'),
         name: 'Apple',
-        price: 20,
+        price: 500,
         amountTaken: 1
     },
 ];
