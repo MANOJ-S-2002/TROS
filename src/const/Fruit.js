@@ -6,7 +6,7 @@ const fruit = [
     like: true,
     img: require("./assets/apple.jpg"),
     about:
-      "Apple contain Vitamin C,K. lycopene, an antioxidant that reduces the risk of cancer and heart-diseases. They protect the eyes from light induced damage. ",
+      "Shirt contain Vitamin C,K. lycopene, an antioxidant that reduces the risk of cancer and heart-diseases. They protect the eyes from light induced damage. ",
   },
   {
     id: 2,

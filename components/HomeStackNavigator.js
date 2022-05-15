@@ -22,7 +22,7 @@ const StackNavigator = (props) => {
         //     headerShown: true,
         // }}
         >
-            <Stack.Screen name="Well Come To Veggies Shope" component={Home} />
+            <Stack.Screen name="WellCome To TROS" component={Home} />
             <Stack.Screen name="Login" component={LoginStackNavigator} screenOptions={{ headerShown: false, }} />
 
             <Stack.Screen name="Cart" component={Cart} />
