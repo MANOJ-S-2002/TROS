@@ -32,7 +32,7 @@ const Aboutus = () => {
                                     textAlign: "center",
                                 }}
                             >
-                                THE VEGGIES
+                                THE TROS
                             </Text>
                         </View>
 
@@ -59,8 +59,8 @@ const Aboutus = () => {
                         </View>
                         <View>
                             <Text style={{ fontSize: 15, padding: 10 }}>
-                                To delivery the fresh vegetables and Fruits to the Costumers
-                                directly by the former
+                                To delivery the Shirt and Tshirt to the Costumers
+                                directly by the shop
                             </Text>
                         </View>
                         <View>
@@ -82,12 +82,12 @@ const Aboutus = () => {
                         >
                             <Text style={styles.steps}>
                                 1.<Text style={styles.highLight}> Login/Signup</Text> to the
-                                Veggies
+                                TROS
                             </Text>
                             <Text style={styles.steps}>
                                 2.Select the Items from the catogeries{" "}
-                                <Text style={styles.highLight}> fruits</Text> and
-                                <Text style={styles.highLight}> vegetables</Text>
+                                <Text style={styles.highLight}> Shirt</Text> and
+                                <Text style={styles.highLight}> </Text>
                             </Text>
                             <Text style={styles.steps}>
                                 3.Now place the <Text style={styles.highLight}> order</Text>{" "}
