@@ -14,7 +14,6 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
-import Aboutus from "../pages/Aboutus";
 
 import Fruits from "./fruits.png";
 import Vegetables from "./vegetables.png";
@@ -74,13 +73,8 @@ const Home = ({ navigation }) => {
           name="home"
           size={30}
           color="#900"
-          onPress={() => navigation.navigate("Cart")}
-        /><Icon
-        name=""
-        size={30}
-        color="#900"
-        onPress={() => navigation.navigate("Cart")}
-      />
+          onPress={() => navigation.navigate("Aboutus")}
+        />
        
       </View>
 

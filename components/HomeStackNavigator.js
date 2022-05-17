@@ -4,8 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginStackNavigator from "./LoginStackNavigator";
 import Cart from "../pages/Cart";
 import Home from "./Home";
-import Fruits from './Fruits'
-import Vegetables from './Vegetables';
+import Fruits from './shirt'
+import Vegetables from './tshirt';
 import Address from "./Address";
 // import StripeApp from "./StripeApp";
 // import FruitDetails from "./FruitDetails";

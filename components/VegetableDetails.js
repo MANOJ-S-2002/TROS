@@ -100,7 +100,7 @@ const VegetableDetails = ({ navigation, route }) => {
             <Text
               style={{ fontSize: 20, fontWeight: "bold", color: COLORS.white }}
             >
-              Buy
+              Add to Cart
             </Text>
           </View>
         </View>

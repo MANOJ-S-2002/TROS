@@ -1,33 +1,33 @@
 const veggie = [
   {
     id: 1,
-    name: "Tomato",
-    price: 20,
+    name: "Tshirt1",
+    price: 200,
     like: true,
-    img: require("./assets/Tomato.jpg"),
+    img: require("./assets/tshirt1.png"),
     about:""  },
   {
     id: 2,
-    name: "Potato",
-    price: 40,
+    name: "Tshirt2",
+    price: 400,
     like: false,
-    img: require("./assets/potato.jpg"),
+    img: require("./assets/tshirt1.png"),
     about:
 ""  },
   {
     id: 3,
-    name: "Onion",
-    price: 10,
+    name: "Tshirt3",
+    price: 300,
     like: false,
-    img: require("./assets/onion.jpg"),
+    img: require("./assets/tshirt1.png"),
     about:
 ""  },
   {
     id: 4,
-    name: "Country Onion",
-    price: 30,
+    name: "Tshirt4",
+    price: 350,
     like: true,
-    img: require("./assets/countryOnion.jpg"),
+    img: require("./assets/tshirt1.png"),
     about: ""
   }
   
