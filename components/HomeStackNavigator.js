@@ -22,15 +22,15 @@ const StackNavigator = (props) => {
         //     headerShown: true,
         // }}
         >
-            <Stack.Screen name="WellCome To TROS" component={Home} />
+            <Stack.Screen name="Welcome To TROS" component={Home} />
             <Stack.Screen name="Login" component={LoginStackNavigator} screenOptions={{ headerShown: false, }} />
 
             <Stack.Screen name="Cart" component={Cart} />
 
-            <Stack.Screen name="Fruits" component={Fruits} screenOptions={{ headerShown: false, }} />
+            <Stack.Screen name="Shirt" component={Fruits} screenOptions={{ headerShown: false, }} />
             {/* <Stack.Screen name="FruitDetails" component={FruitDetails} /> */}
 
-            <Stack.Screen name="Vegetables" component={Vegetables} />
+            <Stack.Screen name="Tshirt" component={Vegetables} />
 
             <Stack.Screen name="Product Details" component={VegetableDetails} />
 

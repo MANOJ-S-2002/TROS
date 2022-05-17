@@ -109,7 +109,7 @@ const Home = ({ navigation }) => {
           <Text style={{ fontSize: 25, color: "white" }}>Catogeries</Text>
         </View>
         <View style={styles.itemcontainer}>
-          <TouchableOpacity onPress={() => navigation.navigate("Fruits")}>
+          <TouchableOpacity onPress={() => navigation.navigate("Shirt")}>
             <View style={styles.list}>
               <Image
                 source={Fruits}
@@ -119,7 +119,7 @@ const Home = ({ navigation }) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate("Vegetables")}>
+          <TouchableOpacity onPress={() => navigation.navigate("Tshirt")}>
             <View style={styles.list}>
               <Image
                 source={Vegetables}
