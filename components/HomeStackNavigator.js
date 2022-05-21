@@ -12,6 +12,7 @@ import VegetableDetails from "./VegetableDetails";
 import PaymentModes from "./PaymentModes";
 import UploadProdect from "./UploadProdect";
 import Aboutus from "../pages/Aboutus";
+import Tracking from "../pages/Tracking";
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +48,8 @@ const StackNavigator = (props) => {
 
       <Stack.Screen name="UploadProduct" component={UploadProdect} />
       <Stack.Screen name="About Us" component={Aboutus} />
+
+      <Stack.Screen name="Track" component={Tracking} />
     </Stack.Navigator>
   );
 };

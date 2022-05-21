@@ -70,10 +70,16 @@ const Home = ({ navigation }) => {
           onPress={() => navigation.navigate("Cart")}
         />
         <Icon
-          name="shopping-cart"
+          name="home"
           size={30}
           color="#900"
           onPress={() => navigation.navigate("About Us")}
+        />
+         <Icon
+          name="circle"
+          size={30}
+          color="#900"
+          onPress={() => navigation.navigate("Track")}
         />
       </View>
 
