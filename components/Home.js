@@ -69,6 +69,12 @@ const Home = ({ navigation }) => {
           color="#900"
           onPress={() => navigation.navigate("Cart")}
         />
+        <Icon
+          name="shopping-cart"
+          size={30}
+          color="#900"
+          onPress={() => navigation.navigate("Cart")}
+        />
       </View>
 
       {/* slider content */}
