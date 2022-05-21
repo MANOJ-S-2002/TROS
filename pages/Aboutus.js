@@ -119,7 +119,7 @@ const Aboutus = () => {
                   style={styles.input}
                   mode="outlined"
                   label="Enter Email"
-                //   style={{ marginLeft: 0 }}
+                  //   style={{ marginLeft: 0 }}
                 />
               </View>
               <View>
@@ -128,7 +128,7 @@ const Aboutus = () => {
                   style={styles.input}
                   mode="outlined"
                   label="Enter Message"
-                //   style={{ height: 150, marginLeft: 0 }}
+                  //   style={{ height: 150, marginLeft: 0 }}
                 />
               </View>
               <View>
@@ -176,7 +176,7 @@ const Aboutus = () => {
                 <Ionicons
                   name="logo-instagram"
                   style={styles.icons}
-                //   style={{ color: "#8a3ab9", fontSize: 30 }}
+                  //   style={{ color: "#8a3ab9", fontSize: 30 }}
                 />
               </Pressable>
               <Pressable>

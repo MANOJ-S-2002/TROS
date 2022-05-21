@@ -12,8 +12,11 @@ import VegetableDetails from "./VegetableDetails";
 import PaymentModes from "./PaymentModes";
 import UploadProdect from "./UploadProdect";
 import Aboutus from "../pages/Aboutus";
+//
 import Tracking from "../pages/Tracking";
 import HelpPage from "../pages/HelpPage";
+// import Trackhome from "../pages/Tracking";
+// import ChooseLocation from "../Screens/ChooseLocation";
 
 const Stack = createNativeStackNavigator();
 
@@ -51,7 +54,7 @@ const StackNavigator = (props) => {
       <Stack.Screen name="About Us" component={Aboutus} />
 
       <Stack.Screen name="Track" component={Tracking} />
-      <Stack.Screen name="Help Page" component={HelpPage}/>
+      <Stack.Screen name="Help Page" component={HelpPage} />
     </Stack.Navigator>
   );
 };

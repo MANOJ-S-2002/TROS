@@ -21,10 +21,11 @@ import Vegetables from "./vegetables.png";
 // import { StyleSheet, Text, View, Image } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import SliderData from "./data";
+import data from "./data";
 
 const Home = ({ navigation }) => {
   const [index, setIndex] = useState(0);
-  const { imgUrl, info } = SliderData[index];
+  const { img, info } = SliderData[index];
 
   const checkNumber = (number) => {
     if (number > SliderData.length - 1) {
@@ -60,30 +61,30 @@ const Home = ({ navigation }) => {
         </KeyboardAvoidingView>
         <Ionicons
           name="person-outline"
-          size={25}
+          size={20}
           onPress={() => navigation.navigate("Login")}
         />
         <Icon
           name="shopping-cart"
-          size={30}
+          size={20}
           color="#900"
           onPress={() => navigation.navigate("Cart")}
         />
         <Icon
           name="home"
-          size={30}
+          size={20}
           color="#900"
           onPress={() => navigation.navigate("About Us")}
         />
         <Icon
           name="circle"
-          size={30}
+          size={20}
           color="#900"
           onPress={() => navigation.navigate("Track")}
         />
         <Icon
-          name="home"
-          size={30}
+          name="help"
+          size={20}
           color="#900"
           onPress={() => navigation.navigate("Help Page")}
         />
@@ -93,12 +94,12 @@ const Home = ({ navigation }) => {
       <View style={styles.Container}>
         <View style={{ paddingLeft: 10 }}>
           <TouchableOpacity onPress={preBtnHandle}>
-            <AntDesign name="left" size={24} color="white" />
+            <AntDesign name="left" size={44} color="white" />
           </TouchableOpacity>
         </View>
         <View style={styles.slider}>
-          <View styale={{ borderRadius: 15 }}>
-            <Image source={{ uri: imgUrl }} style={styles.image}></Image>
+          <View style={{ borderRadius: 15 }}>
+            <Image source={img} style={styles.image}></Image>
           </View>
           <View style={styles.info}>
             <Text style={{ color: "white" }}>{info}</Text>
@@ -109,7 +110,7 @@ const Home = ({ navigation }) => {
             onPress={nextBtnHandle}
             style={{ paddingRight: 10 }}
           >
-            <AntDesign name="right" size={24} color="white" />
+            <AntDesign name="right" size={44} color="white" />
           </TouchableOpacity>
         </View>
       </View>
@@ -201,6 +202,8 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     width: 130,
     height: 130,
+    padding: 40,
+    backgroundColor: "white",
   },
 
   //main conten styles

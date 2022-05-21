@@ -4,7 +4,7 @@ const fruit = [
     name: "Shirt1",
     price: 200,
     like: true,
-    img: require("./assets/shirt1.jpg"),
+    img: require("./assets/images/shirt1.jpg"),
     about:
 ""  },
   {
@@ -12,7 +12,7 @@ const fruit = [
     name: "shirt2",
     price: 400,
     like: false,
-    img: require("./assets/shirt1.jpg"),
+    img: require("./assets/images/shirt1.jpg"),
     about:
 ""  },
   {
@@ -20,7 +20,7 @@ const fruit = [
     name: "shirt3",
     price: 1000,
     like: false,
-    img: require("./assets/shirt1.jpg"),
+    img: require("./assets/images/shirt1.jpg"),
     about:
 ""  },
   {
@@ -28,7 +28,7 @@ const fruit = [
     name: "shirt4",
     price: 300,
     like: true,
-    img: require("./assets/shirt1.jpg"),
+    img: require("./assets/images/shirt1.jpg"),
     about: "",
   },
   

@@ -4,14 +4,14 @@ const veggie = [
     name: "Tshirt1",
     price: 200,
     like: true,
-    img: require("./assets/tshirt1.png"),
+    img: require("./assets/images/tshirt1.png"),
     about:""  },
   {
     id: 2,
     name: "Tshirt2",
     price: 400,
     like: false,
-    img: require("./assets/tshirt1.png"),
+    img: require("./assets/images/tshirt1.png"),
     about:
 ""  },
   {
@@ -19,7 +19,7 @@ const veggie = [
     name: "Tshirt3",
     price: 300,
     like: false,
-    img: require("./assets/tshirt1.png"),
+    img: require("./assets/images/tshirt1.png"),
     about:
 ""  },
   {
@@ -27,7 +27,7 @@ const veggie = [
     name: "Tshirt4",
     price: 350,
     like: true,
-    img: require("./assets/tshirt1.png"),
+    img: require("./assets/images/tshirt1.png"),
     about: ""
   }
   

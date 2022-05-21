@@ -7,7 +7,7 @@ import {
   Dimensions,
   Image,
 } from "react-native";
-import COLORS from "../src/const/color";
+import COLORS from "../src/color";
 
 import {
   FontAwesome,
@@ -16,7 +16,7 @@ import {
 } from "react-native-vector-icons";
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 import { FlatList } from "react-native-gesture-handler";
-import Veggie from "../src/const/Veggie";
+import Veggie from "../src/Veggie";
 
 const width = Dimensions.get("screen").width / 2 - 30;
 const HomeScreen = ({ navigation }) => {
@@ -52,7 +52,9 @@ const HomeScreen = ({ navigation }) => {
   //creating cart using FlatType component
   const Cart = ({ veggie }) => {
     return (
-      <TouchableOpacity onPress={() => navigation.navigate("Product Details", veggie)}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Product Details", veggie)}
+      >
         <View style={styles.card}>
           <View style={{ alignItems: "flex-end" }}>
             <View
@@ -141,7 +143,8 @@ const HomeScreen = ({ navigation }) => {
             TROS
           </Text>
         </View>
-        <FontAwesome onPress={() => navigation.navigate('Cart')}
+        <FontAwesome
+          onPress={() => navigation.navigate("Cart")}
           name="shopping-cart"
           size={28}
           style={{ marginTop: 30, color: COLORS.dark }}

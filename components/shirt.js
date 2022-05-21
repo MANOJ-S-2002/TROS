@@ -7,7 +7,7 @@ import {
     Dimensions,
     Image,
 } from "react-native";
-import COLORS from "../src/const/color";
+import COLORS from "../src/color";
 
 import {
     FontAwesome,
@@ -16,7 +16,7 @@ import {
 } from "react-native-vector-icons";
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 import { FlatList } from "react-native-gesture-handler";
-import fruit from "../src/const/Fruit";
+import fruit from "../src/Fruit";
 
 const width = Dimensions.get("screen").width / 2 - 30;
 const Fruits = ({ navigation }) => {
