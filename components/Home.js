@@ -75,11 +75,17 @@ const Home = ({ navigation }) => {
           color="#900"
           onPress={() => navigation.navigate("About Us")}
         />
-         <Icon
+        <Icon
           name="circle"
           size={30}
           color="#900"
           onPress={() => navigation.navigate("Track")}
+        />
+        <Icon
+          name="home"
+          size={30}
+          color="#900"
+          onPress={() => navigation.navigate("Help Page")}
         />
       </View>
 

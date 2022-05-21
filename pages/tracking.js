@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import MapView from "react-native-maps";
-import {GOOGLE_MAPS_APIKEY} from "GoogleMapKey"
+// import {GOOGLE_MAPS_APIKEY} from "GoogleMapKey"
 import MapViewDirections from "react-native-maps-directions";
 
 const Tracking = () => {
@@ -27,7 +27,7 @@ const Tracking = () => {
         <MapViewDirections
           origin={pickupCords}
           destination={droplocationCords}
-          apikey={GOOGLE_MAPS_APIKEY}
+          // apikey={GOOGLE_MAPS_APIKEY}
         />
       </MapView>
     </View>

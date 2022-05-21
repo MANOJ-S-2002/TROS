@@ -13,6 +13,7 @@ import PaymentModes from "./PaymentModes";
 import UploadProdect from "./UploadProdect";
 import Aboutus from "../pages/Aboutus";
 import Tracking from "../pages/Tracking";
+import HelpPage from "../pages/HelpPage";
 
 const Stack = createNativeStackNavigator();
 
@@ -50,6 +51,7 @@ const StackNavigator = (props) => {
       <Stack.Screen name="About Us" component={Aboutus} />
 
       <Stack.Screen name="Track" component={Tracking} />
+      <Stack.Screen name="Help Page" component={HelpPage}/>
     </Stack.Navigator>
   );
 };
