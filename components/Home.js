@@ -73,7 +73,7 @@ const Home = ({ navigation }) => {
           name="shopping-cart"
           size={30}
           color="#900"
-          onPress={() => navigation.navigate("Cart")}
+          onPress={() => navigation.navigate("About Us")}
         />
       </View>
 
