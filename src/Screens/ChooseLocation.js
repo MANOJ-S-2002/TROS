@@ -1,5 +1,5 @@
 //import libraries
-import { useNavigation } from '@react-navigation/native';
+// import { useNavigation } from '@react-navigation/native';
 import React, { Component, useState } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
@@ -8,8 +8,7 @@ import AddressPickup from '../components/AddressPickup';
 import CustomBtn from '../components/CustomBtn';
 import { showError } from '../../helper/helperFunction';
 
-const ChooseLocation = (props) => {
-    const navigation = useNavigation()
+const ChooseLocation = ({ navigation }) => {
 
     const [state, setState] = useState({
         destinationCords: {}

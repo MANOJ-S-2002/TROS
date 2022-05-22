@@ -15,8 +15,7 @@ import Aboutus from "../pages/Aboutus";
 //
 import Tracking from "../pages/Tracking";
 import HelpPage from "../pages/HelpPage";
-// import Trackhome from "../pages/Tracking";
-// import ChooseLocation from "../src/Screens/ChooseLocation";
+import ChooseLocation from "../src/Screens/ChooseLocation";
 
 const Stack = createNativeStackNavigator();
 
@@ -55,7 +54,7 @@ const StackNavigator = (props) => {
 
       <Stack.Screen name="Track" component={Tracking} />
       <Stack.Screen name="Help Page" component={HelpPage} />
-      {/* <Stack.Screen name="chooseLocation" component={ChooseLocation} /> */}
+      <Stack.Screen name="ChooseLocation" component={ChooseLocation} />
     </Stack.Navigator>
   );
 };
