@@ -70,7 +70,7 @@ const Tracking = ({ navigation }) => {
     }, [])
 
     const onPressLocation = () => {
-        navigation.navigate('chooseLocation', { getCordinates: fetchValue })
+        navigation.navigate('ChooseLocation', { getCordinates: fetchValue })
     }
     const fetchValue = (data) => {
         console.log("this is data", data)
