@@ -1,5 +1,5 @@
 //import libraries
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import React, { Component, useState } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
@@ -8,7 +8,8 @@ import AddressPickup from '../components/AddressPickup';
 import CustomBtn from '../components/CustomBtn';
 import { showError } from '../../helper/helperFunction';
 
-const ChooseLocation = ({ navigation }) => {
+const ChooseLocation = (props) => {
+    const navigation = useNavigation()
 
     const [state, setState] = useState({
         destinationCords: {}
@@ -47,10 +48,10 @@ const ChooseLocation = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-            <ScrollView
+            {/* <ScrollView
                 keyboardShouldPersistTaps="handled"
                 style={{ backgroundColor: 'white', flex: 1, padding: 24 }}
-            >
+            > */}
                 <View style={{ marginBottom: 16 }} />
                 <AddressPickup
                     placheholderText="Enter Destination Location"
@@ -61,7 +62,7 @@ const ChooseLocation = ({ navigation }) => {
                     onPress={onDone}
                     btnStyle={{marginTop: 24}}
                 />
-            </ScrollView>
+            {/* </ScrollView> */}
         </View>
     );
 };

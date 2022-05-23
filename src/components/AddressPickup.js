@@ -52,7 +52,6 @@ const AddressPickup = ({
                 placeholder={placheholderText}
                 onPress={onPressAddress}
                 fetchDetails={true}
-                onPress ={onPressAddress}
                 query={{
                     key: GOOGLE_MAP_KEY,
                     language: 'en'
