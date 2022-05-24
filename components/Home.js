@@ -59,35 +59,8 @@ const Home = ({ navigation }) => {
         <KeyboardAvoidingView>
           <SearchInput />
         </KeyboardAvoidingView>
-        <Ionicons
-          name="person-outline"
-          size={20}
-          onPress={() => navigation.navigate("Login")}
-        />
-        <Icon
-          name="shopping-cart"
-          size={20}
-          color="#900"
-          onPress={() => navigation.navigate("Cart")}
-        />
-        <Icon
-          name="home"
-          size={20}
-          color="#900"
-          onPress={() => navigation.navigate("About Us")}
-        />
-        <Icon
-          name="circle"
-          size={20}
-          color="#900"
-          onPress={() => navigation.navigate("Track")}
-        />
-        <Icon
-          name="help"
-          size={20}
-          color="#900"
-          onPress={() => navigation.navigate("Help Page")}
-        />
+       
+        
       </View>
 
       {/* slider content */}
