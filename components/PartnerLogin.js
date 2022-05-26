@@ -1,14 +1,16 @@
 import React from "react";
 import { View, StyleSheet, Text, ImageBackground, StatusBar } from "react-native";
 import { TextInput, Button } from "react-native-paper";
+import apple from "../assets/apple.jpg";
 
-const image = { uri: 'https://images.unsplash.com/photo-1550989460-0adf9ea622e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80' }
+
+// const image = { uri: 'https://images.unsplash.com/photo-1550989460-0adf9ea622e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80' }
 
 export default function PartnerLogin({ navigation }) {
     return (
 
 
-        <ImageBackground style={styles.backgroundImage} sizeMode='cover' source={image}>
+        <ImageBackground style={styles.backgroundImage} sizeMode='cover' source={apple}>
             {/* <Text style={{ alignItems: 'center', fontSize: 30, fontWeight: 'bold', color: 'white', marginBottom: 30, backgroundColor: 'rgba(101, 92, 92, 0.91)', borderRadius: 10, }}>Login To Veggies</Text> */}
             <View style={styles.loginContainer}>
                 <TextInput

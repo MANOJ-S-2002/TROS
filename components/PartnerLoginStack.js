@@ -6,16 +6,15 @@ import PartnerSignup from "./PartnerSignup";
 const LoginStack = createNativeStackNavigator();
 
 const PartnerLoginStack = () => {
-    return (
-        <LoginStack.Navigator
-            screenOptions={{
-                headerShown: true,
-            }}
-        >
-            <LoginStack.Screen name="PartnerLogin" component={PartnerLogin} />
-            <LoginStack.Screen name="PartnerSignup" component={PartnerSignup} />
-        </LoginStack.Navigator>
-    );
+  return (
+    <LoginStack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <LoginStack.Screen name="PartnerLogin" component={PartnerLogin} />
+      <LoginStack.Screen name="PartnerSignup" component={PartnerSignup} />
+    </LoginStack.Navigator>
+  );
 };
 export default PartnerLoginStack;
-

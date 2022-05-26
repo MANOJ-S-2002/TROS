@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, SafeAreaView, StyleSheet, Image } from "react-native";
 import COLORS from "../src/const/color";
 import Veggie from "../src/const/Veggie";
-import fruit from '../src/const/Fruit'
+import fruit from '../src/const/Fruit';
 
 import {
   FontAwesome,

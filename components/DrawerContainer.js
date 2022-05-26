@@ -9,9 +9,9 @@ import { Image } from "react-native";
 import HomeStackNavigator from "./HomeStackNavigator";
 import Profile from "./Profile";
 import Home from "./Home";
-import Login from "./LoginStackNavigator"
-// import Cart from "../pages/Cart";
-
+import Login from "./LoginStackNavigator";
+import Cart from "../pages/Cart";
+import Tracking from "../pages/Tracking";
 
 const Drawer = createDrawerNavigator();
 
@@ -44,18 +44,18 @@ export default function DrawerContainer(props) {
           ),
         }}
       />
-     <Drawer.Screen
-      name="Cart"
-      component={Home}
-      options={{
-        drawerIcon: ({ color }) => (
-          <Ionicons name="cart" size={25} color={color} />
-        ),
-      }}
-    />
- <Drawer.Screen
+      <Drawer.Screen
+        name="Cart"
+        component={Cart}
+        options={{
+          drawerIcon: ({ color }) => (
+            <Ionicons name="cart" size={25} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
         name="Tracking"
-        component={Home}
+        component={Tracking}
         options={{
           drawerIcon: ({ color }) => (
             <Ionicons name="home" size={25} color={color} />
