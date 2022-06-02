@@ -21,11 +21,10 @@ import Vegetables from "./vegetables.png";
 // import { StyleSheet, Text, View, Image } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import SliderData from "./data";
-import data from "./data";
 
 const Home = ({ navigation }) => {
   const [index, setIndex] = useState(0);
-  const { img, info } = SliderData[index];
+  const { imgUrl, info } = SliderData[index];
 
   const checkNumber = (number) => {
     if (number > SliderData.length - 1) {
@@ -59,20 +58,29 @@ const Home = ({ navigation }) => {
         <KeyboardAvoidingView>
           <SearchInput />
         </KeyboardAvoidingView>
-       
-        
+        <Ionicons
+          name="person-outline"
+          size={25}
+          onPress={() => navigation.navigate("Login")}
+        />
+        <Icon
+          name="shopping-cart"
+          size={30}
+          color="#900"
+          onPress={() => navigation.navigate("Cart")}
+        />
       </View>
 
       {/* slider content */}
       <View style={styles.Container}>
         <View style={{ paddingLeft: 10 }}>
           <TouchableOpacity onPress={preBtnHandle}>
-            <AntDesign name="left" size={44} color="white" />
+            <AntDesign name="left" size={24} color="white" />
           </TouchableOpacity>
         </View>
         <View style={styles.slider}>
-          <View style={{ borderRadius: 15 }}>
-            <Image source={img} style={styles.image}></Image>
+          <View styale={{ borderRadius: 15 }}>
+            <Image source={{ uri: imgUrl }} style={styles.image}></Image>
           </View>
           <View style={styles.info}>
             <Text style={{ color: "white" }}>{info}</Text>
@@ -83,7 +91,7 @@ const Home = ({ navigation }) => {
             onPress={nextBtnHandle}
             style={{ paddingRight: 10 }}
           >
-            <AntDesign name="right" size={44} color="white" />
+            <AntDesign name="right" size={24} color="white" />
           </TouchableOpacity>
         </View>
       </View>
@@ -94,7 +102,7 @@ const Home = ({ navigation }) => {
           <Text style={{ fontSize: 25, color: "white" }}>Catogeries</Text>
         </View>
         <View style={styles.itemcontainer}>
-          <TouchableOpacity onPress={() => navigation.navigate("Shirt")}>
+          <TouchableOpacity onPress={() => navigation.navigate("Fruits")}>
             <View style={styles.list}>
               <Image
                 source={Fruits}
@@ -104,13 +112,13 @@ const Home = ({ navigation }) => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate("Tshirt")}>
+          <TouchableOpacity onPress={() => navigation.navigate("Vegetables")}>
             <View style={styles.list}>
               <Image
                 source={Vegetables}
                 style={{ width: 150, height: 120, borderRadius: 15 }}
               />
-              <Text style={{ fontSize: 20 }}>Tshirt </Text>
+              <Text style={{ fontSize: 20 }}>Tshirts </Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -134,8 +142,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   icon: {
-    width: 110,
-    height: 45,
+    width: 50,
+    height: 50,
     borderRadius: 5,
   },
   //slider styles
@@ -175,8 +183,6 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     width: 130,
     height: 130,
-    padding: 40,
-    backgroundColor: "white",
   },
 
   //main conten styles

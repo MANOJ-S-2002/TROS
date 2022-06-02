@@ -21,7 +21,7 @@ import fruit from "../src/Fruit";
 const width = Dimensions.get("screen").width / 2 - 30;
 const Fruits = ({ navigation }) => {
     //create categories
-    const categories = ["S", "M", "L", "XL"];
+    const categories = ["POPULAR", "OFFERS", "ORGANIC", "GREENY"];
     //selecting index in categories
 
     const [categoryIndex, setCategoryIndex] = React.useState(0);
@@ -138,7 +138,7 @@ const Fruits = ({ navigation }) => {
                     <Text
                         style={{ fontSize: 38, fontWeight: "bold", color: COLORS.green }}
                     >
-                    TROS
+                        Veggie's Shop
                     </Text>
                 </View>
                 <FontAwesome onPress={() => navigation.navigate('Cart')}

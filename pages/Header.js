@@ -3,7 +3,7 @@ import { Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import data from '../components/data';
 import SearchInput from '../components/SearchInput';
-import data1 from '../components/data';
+import data1 from './data1';
 
 const Header = () => {
     return (

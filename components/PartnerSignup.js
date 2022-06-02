@@ -1,13 +1,11 @@
 import React from "react";
 import { View, StyleSheet, ImageBackground } from "react-native";
 import { TextInput, Button } from "react-native-paper";
-import apple from "../assets/apple.jpg";
 
-
-// const image = { uri: 'https://images.unsplash.com/photo-1550989460-0adf9ea622e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80' }
+const image = { uri: 'https://images.unsplash.com/photo-1550989460-0adf9ea622e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80' }
 export default function PartnerSignup({ navigation }) {
     return (
-        <ImageBackground style={styles.image} source={apple} resizeMode="cover">
+        <ImageBackground style={styles.image} source={image} resizeMode="cover">
             <View style={styles.signUpContainer}>
                 <TextInput style={styles.row1} mode="outlined" label="Enter Name" />
                 <TextInput

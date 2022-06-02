@@ -48,7 +48,7 @@ export class Address extends Component {
                     style={{
                         borderWidth: 3,
                         borderColor: "black",
-                        width: '100%',
+                        width: '95%',
                         height: 150,
                         marginBottom: 5,
                         borderRadius: 5,

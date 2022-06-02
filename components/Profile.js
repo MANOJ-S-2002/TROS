@@ -24,7 +24,7 @@ export default function Profile() {
                         <Text style={style.userName}>Your Story</Text>
                         <Text style={style.userName}>600 Pts</Text>
                         <Text style={style.about}>
-                            <Text>Im a part of</Text> <Text style={{ fontWeight: 'bold' }}>Veggies</Text>, We provide all types of <Text style={{ fontWeight: 'bold' }}>Shirt and Tshirt</Text>
+                            <Text>Im a part of</Text> <Text style={{ fontWeight: 'bold' }}>Veggies</Text>, We provide all types of <Text style={{ fontWeight: 'bold' }}>Fruits and Vegetables</Text>
                             directly from the formers. No midele man's, so the we provide all in <Text style={{ fontWeight: 'bold' }}>best Price</Text>.
                         </Text>
                         <TouchableOpacity style={style.logico} onPress={() => { console.log("logout"); }}>

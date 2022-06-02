@@ -2,25 +2,45 @@ import React, { Component } from 'react';
 import { Text, View, FlatList, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const image1 = require('../images/shirt1.jpg');
-const image2 = require('../images/tshirt1.png');
-
+const image1 = require('../images/orange.jpg');
+const image2 = require('../images/tomato.jpg');
+const image3 = require('../images/greens.jpg');
+const image4 = require('../images/onion.jpg');
+const image5 = require('../images/apple.jpg');
 
 
 const data = [
     {
         id: 1,
         image: image1,
-        name: 'shirt1',
-        price: 200,
-        amountTaken: 1
+        name: 'Orange',
+        price: 10,
+        amountTaken: 3
     }, {
         id: 2,
         image: image2,
-        name: 'tshirt1',
-        price: 200,
+        name: 'Tomato',
+        price: 5,
+        amountTaken: 4
+    }, {
+        id: 3,
+        image: image3,
+        name: 'Green',
+        price: 16,
+        amountTaken: 2
+    }, {
+        id: 4,
+        image: image4,
+        name: 'Onion',
+        price: 3,
+        amountTaken: 3
+    }, {
+        id: 5,
+        image: image5,
+        name: 'Apple',
+        price: 20,
         amountTaken: 1
-    }, 
+    },
 ];
 
 class Item extends Component {

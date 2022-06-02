@@ -8,10 +8,7 @@ import IconLogo from "./IconLogo.png";
 import { Image } from "react-native";
 import HomeStackNavigator from "./HomeStackNavigator";
 import Profile from "./Profile";
-import Home from "./Home";
-import Login from "./LoginStackNavigator";
-import Cart from "../pages/Cart";
-import Tracking from "../pages/Tracking";
+// import Tracking from "../pages/Tracking";
 
 const Drawer = createDrawerNavigator();
 
@@ -28,42 +25,16 @@ export default function DrawerContainer(props) {
     >
       <Drawer.Screen
         name="Home"
-        component={Home}
+        component={HomeStackNavigator}
         options={{
           drawerIcon: ({ color }) => (
             <Ionicons name="home" size={25} color={color} />
           ),
         }}
       />
+
       <Drawer.Screen
-        name="Login"
-        component={Login}
-        options={{
-          drawerIcon: ({ color }) => (
-            <Ionicons name="person-outline" size={25} color={color} />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="Cart"
-        component={Cart}
-        options={{
-          drawerIcon: ({ color }) => (
-            <Ionicons name="cart" size={25} color={color} />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="Tracking"
-        component={Tracking}
-        options={{
-          drawerIcon: ({ color }) => (
-            <Ionicons name="home" size={25} color={color} />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="Profile"
+        name="User Profile"
         component={Profile}
         options={{
           drawerIcon: ({ color }) => (
@@ -84,6 +55,15 @@ export default function DrawerContainer(props) {
         options={{
           drawerIcon: ({ color }) => (
             <Ionicons name="person-outline" size={25} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Partner Profile"
+        component={Profile}
+        options={{
+          drawerIcon: ({ color }) => (
+            <AntDesign name="profile" size={25} color={color} />
           ),
         }}
       />

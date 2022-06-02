@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, SafeAreaView, StyleSheet, Image } from "react-native";
 import COLORS from "../src/color";
 // import veggie from "../src/const/Veggie";
-import Veggie from "../src/Veggie";
+import veggie from '../src/Veggie';
 import {
   FontAwesome,
   MaterialIcons,
@@ -100,7 +100,7 @@ const VegetableDetails = ({ navigation, route }) => {
             <Text
               style={{ fontSize: 20, fontWeight: "bold", color: COLORS.white }}
             >
-              Add to Cart
+              Buy
             </Text>
           </View>
         </View>
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     marginTop: 20,
     flexDirection: "row",
-    justifyContent: "flex-end",
+    justifyContent: 'flex-end',
   },
   imageContainer: {
     flex: 0.45,
