@@ -49,7 +49,7 @@ const Home = ({ navigation }) => {
     });
   };
   return (
-    <SafeAreaView style={{ paddingBottom: 30 }}>
+    <SafeAreaView style={{ paddingBottom: 40 }}>
       {/* Header content */}
       <View style={styles.container}>
         <View>

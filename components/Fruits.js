@@ -21,7 +21,7 @@ import fruit from "../src/Fruit";
 const width = Dimensions.get("screen").width / 2 - 30;
 const Fruits = ({ navigation }) => {
     //create categories
-    const categories = ["POPULAR", "OFFERS", "ORGANIC", "GREENY"];
+    const categories = ["S","M","L","XL"];
     //selecting index in categories
 
     const [categoryIndex, setCategoryIndex] = React.useState(0);

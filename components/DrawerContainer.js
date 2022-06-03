@@ -24,7 +24,7 @@ export default function DrawerContainer(props) {
       }}
     >
       <Drawer.Screen
-        name="Home"
+        name="TROS"
         component={HomeStackNavigator}
         options={{
           drawerIcon: ({ color }) => (
