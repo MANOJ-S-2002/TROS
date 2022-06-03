@@ -17,19 +17,19 @@ const Stack = createNativeStackNavigator();
 const StackNavigator = (props) => {
   return (
     <Stack.Navigator
-    // screenOptions={{
-    //     headerShown: true,
-    // }}
+      screenOptions={{
+        headerShown: false,
+      }}
     >
       <Stack.Screen
         name="Welcome To TROS"
         component={Home}
-        screenOptions={{ headerShown: false }}
+        // screenOptions={{ headerShown: false }}
       />
       <Stack.Screen
         name="Login"
         component={LoginStackNavigator}
-        screenOptions={{ headerShown: false }}
+        // screenOptions={{ headerShown: false }}
       />
 
       <Stack.Screen name="Cart" component={Cart} />
@@ -37,7 +37,7 @@ const StackNavigator = (props) => {
       <Stack.Screen
         name="Fruits"
         component={Fruits}
-        screenOptions={{ headerShown: false }}
+        // screenOptions={{ headerShown: false }}
       />
       {/* <Stack.Screen name="FruitDetails" component={FruitDetails} /> */}
 

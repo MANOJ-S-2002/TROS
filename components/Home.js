@@ -15,8 +15,8 @@ import { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 
-import Fruits from "./fruits.png";
-import Vegetables from "./vegetables.png";
+import Fruits from "../images/shirt1.jpg";
+import Vegetables from "../images/tshirt1.png";
 
 // import { StyleSheet, Text, View, Image } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
@@ -24,7 +24,7 @@ import SliderData from "./data";
 
 const Home = ({ navigation }) => {
   const [index, setIndex] = useState(0);
-  const { imgUrl, info } = SliderData[index];
+  const { img, info } = SliderData[index];
 
   const checkNumber = (number) => {
     if (number > SliderData.length - 1) {
@@ -49,7 +49,7 @@ const Home = ({ navigation }) => {
     });
   };
   return (
-    <SafeAreaView style={{ paddingBottom: 40 }}>
+    <SafeAreaView style={{ paddingBottom: 30 }}>
       {/* Header content */}
       <View style={styles.container}>
         <View>
@@ -79,8 +79,8 @@ const Home = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <View style={styles.slider}>
-          <View styale={{ borderRadius: 15 }}>
-            <Image source={{ uri: imgUrl }} style={styles.image}></Image>
+          <View style={{ borderRadius: 15 }}>
+            <Image source={img} style={styles.image}></Image>
           </View>
           <View style={styles.info}>
             <Text style={{ color: "white" }}>{info}</Text>
@@ -183,6 +183,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     width: 130,
     height: 130,
+    backgroundColor: "white",
   },
 
   //main conten styles

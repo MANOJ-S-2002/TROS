@@ -26,7 +26,7 @@ export default function Login({ navigation }) {
       >
         Login
       </Button>
-      <Text>New to VEGES?</Text>
+      <Text>New to TROS?</Text>
       <Button
         style={{ margin: 10 }}
         mode="outlined"

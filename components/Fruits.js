@@ -138,7 +138,7 @@ const Fruits = ({ navigation }) => {
                     <Text
                         style={{ fontSize: 38, fontWeight: "bold", color: COLORS.green }}
                     >
-                        Veggie's Shop
+                TROS
                     </Text>
                 </View>
                 <FontAwesome onPress={() => navigation.navigate('Cart')}
