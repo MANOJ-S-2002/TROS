@@ -2,7 +2,7 @@ const Short = [
   {
     id: 1,
     name: "Short 1",
-    price: 200,
+    price: 300,
     like: true,
     img: require("../images/short.jpg"),
     about: "",

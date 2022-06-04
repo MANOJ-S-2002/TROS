@@ -3,36 +3,36 @@ import { Text, View, FlatList, Image } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
 const image1 = require("../images/shirt1.jpg");
-const image2 = require("../images/shirt1.jpg");
+const image2 = require("../images/pant.jpg");
 const image3 = require("../images/tshirt1.jpg");
-const image4 = require("../images/tshirt1.jpg");
+const image4 = require("../images/short.jpg");
 
 const data = [
   {
     id: 1,
     image: image1,
-    name: "Shirt1",
+    name: "Shirt 1",
     price: 1000,
     amountTaken: 3,
   },
   {
     id: 2,
     image: image2,
-    name: "Shirt2",
-    price: 500,
+    name: "Pant 1",
+    price: 1200,
     amountTaken: 4,
   },
   {
     id: 3,
     image: image3,
-    name: "TShirt1",
-    price: 400,
+    name: "TShirt 1",
+    price: 200,
     amountTaken: 2,
   },
   {
     id: 4,
     image: image4,
-    name: "Tshirt2",
+    name: "Short 1",
     price: 300,
     amountTaken: 3,
   },

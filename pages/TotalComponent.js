@@ -7,7 +7,7 @@ const TotalComponent = () => {
         <View style={containerStyle}>
             <View style={totalStyle}>
                 <Text>Total  </Text>
-                <Text>Rs.2100/-</Text>
+                <Text>Rs.2700/-</Text>
             </View>
         </View>
     );

@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet, Text, ImageBackground, StatusBar } from "react-native";
 import { TextInput, Button } from "react-native-paper";
 
-const image = { uri: 'https://images.unsplash.com/photo-1550989460-0adf9ea622e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80' }
+const image = {  }
 
 export default function PartnerLogin({ navigation }) {
     return (

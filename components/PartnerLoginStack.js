@@ -9,7 +9,7 @@ const PartnerLoginStack = () => {
     return (
         <LoginStack.Navigator
             screenOptions={{
-                headerShown: true,
+                headerShown: false,
             }}
         >
             <LoginStack.Screen name="PartnerLogin" component={PartnerLogin} />
