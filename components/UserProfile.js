@@ -5,7 +5,7 @@ import { Feather as Mgs } from "react-native-vector-icons";
 import { Entypo, AntDesign } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native";
 
-export default function Profile() {
+export default function Profile({ navigation }) {
   return (
     <View style={style.container}>
       <View style={style.container1}>
@@ -28,10 +28,18 @@ export default function Profile() {
             <Text style={style.userName}>Your Story</Text>
             <Text style={style.userName}>500 Pts</Text>
 
+            <Text style={style.profile}>Andrew</Text>
+            <Text style={style.profile}>andrew@gmail.com</Text>
+            <Text style={style.profile}>Chennai,India</Text>
+
+            <Text style={style.profile}>8989899900</Text>
+
+            <Text style={style.profile}></Text>
+
             <TouchableOpacity
               style={style.logico}
               onPress={() => {
-                console.log("logout");
+                navigation.navigate("Welcome To TROS");
               }}
             >
               <Entypo name="log-out" size={25}>
@@ -136,6 +144,11 @@ const style = StyleSheet.create({
   icons3: {
     height: 30,
     width: 26,
+    padding: 10,
+  },
+
+  profile: {
+    flex: 1,
     padding: 10,
   },
 });

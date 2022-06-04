@@ -7,7 +7,7 @@ import PartnerLoginStack from "./PartnerLoginStack";
 import IconLogo from "./IconLogo.png";
 import { Image } from "react-native";
 import HomeStackNavigator from "./HomeStackNavigator";
-import Profile from "./Profile";
+import Profile from "./PartnerProfile";
 import UserProfile from "./UserProfile";
 // import Tracking from "../pages/Tracking";
 
