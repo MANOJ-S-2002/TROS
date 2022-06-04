@@ -17,7 +17,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 
 import Fruits from "../images/shirt1.jpg";
-import Pants from "../images/pant.jpg"
+import Pants from "../images/pant.jpg";
 import short from "../images/short.jpg";
 import Vegetables from "../images/tshirt1.jpg";
 
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
   //slider styles
   Container: {
     width: "auto",
-    height: "35%",
+    height: "auto",
     marginTop: 10,
     margin: 10,
     borderRadius: 10,
@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: "center",
     paddingTop: 50,
-
+    marginBottom: 20,
     margin: 10,
   },
 
