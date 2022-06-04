@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text, SafeAreaView, StyleSheet, Image } from "react-native";
 import COLORS from "../src/color";
-// import veggie from "../src/const/Veggie";
 import veggie from '../src/TshirtData';
 import {
   FontAwesome,

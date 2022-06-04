@@ -16,10 +16,10 @@ import {
 } from "react-native-vector-icons";
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 import { FlatList } from "react-native-gesture-handler";
-import pant from "../src/PantData";
+import Short from "../src/ShortData";
 
 const width = Dimensions.get("screen").width / 2 - 30;
-const Pants = ({ navigation }) => {
+const HomeScreen = ({ navigation }) => {
   //create categories
   const categories = ["S", "M", "L", "XL"];
   //selecting index in categories
@@ -50,10 +50,10 @@ const Pants = ({ navigation }) => {
   };
 
   //creating cart using FlatType component
-  const Cart = ({ pant }) => {
+  const Cart = ({ Short }) => {
     return (
       <TouchableOpacity
-        onPress={() => navigation.navigate("Product Details", pant)}
+        onPress={() => navigation.navigate("Product Details", Short)}
       >
         <View style={styles.card}>
           <View style={{ alignItems: "flex-end" }}>
@@ -64,7 +64,7 @@ const Pants = ({ navigation }) => {
                 borderRadius: 15,
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: pant.like
+                backgroundColor: Short.like
                   ? "rgba(242,42,42,0.2)"
                   : "rgba(0,0,0,0.2)",
               }}
@@ -72,18 +72,18 @@ const Pants = ({ navigation }) => {
               <AntDesign
                 name="heart"
                 size={18}
-                color={pant.like ? COLORS.red : COLORS.dark}
+                color={Short.like ? COLORS.red : COLORS.dark}
               />
             </View>
           </View>
           <View style={{ height: 100, alignItems: "center" }}>
             <Image
               style={{ flex: 1, resizeMode: "contain" }}
-              source={pant.img}
+              source={Short.img}
             />
           </View>
           <Text style={{ fontWeight: "bold", marginTop: 10, fontSize: 20 }}>
-            {pant.name}
+            {Short.name}
           </Text>
           <View
             style={{
@@ -93,7 +93,7 @@ const Pants = ({ navigation }) => {
             }}
           >
             <Text style={{ fontSize: 19, fontWeight: "bold" }}>
-              Rs {pant.price}
+              Rs {Short.price}
             </Text>
             <View
               style={{
@@ -172,13 +172,13 @@ const Pants = ({ navigation }) => {
           paddingBottom: 50,
         }}
         numColumns={2}
-        data={pant}
-        renderItem={({ item }) => <Cart pant={item} />}
+        data={Short}
+        renderItem={({ item }) => <Cart Short={item} />}
       />
     </SafeAreaView>
   );
 };
-export default Pants;
+export default HomeScreen;
 
 const styles = StyleSheet.create({
   header: {
@@ -237,24 +237,3 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 });
-
-// import React from 'react'
-// import { StyleSheet, Text, View } from 'react-native'
-
-// const Fruits = () => {
-//     return (
-//         <View style={styles.FruitesContainer}>
-//             <Text>Fruits</Text>
-//         </View>
-//     )
-// }
-
-// export default Fruits
-
-// const styles = StyleSheet.create({
-//     FruitesContainer: {
-//         flex: 1,
-//         alignItems: 'center',
-//         justifyContent: 'center',
-//     },
-// })
