@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, SafeAreaView, StyleSheet, Image } from "react-native";
 import COLORS from "../src/color";
 // import veggie from "../src/const/Veggie";
-import veggie from '../src/Veggie';
+import veggie from '../src/TshirtData';
 import {
   FontAwesome,
   MaterialIcons,
@@ -99,7 +99,8 @@ const VegetableDetails = ({ navigation, route }) => {
           <View style={styles.buyBtn}>
             <Text
               style={{ fontSize: 20, fontWeight: "bold", color: COLORS.white }}
-            >
+              onPress={() => navigation.navigate("Address")}
+              >
               Buy
             </Text>
           </View>

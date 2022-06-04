@@ -16,7 +16,7 @@ import {
 } from "react-native-vector-icons";
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 import { FlatList } from "react-native-gesture-handler";
-import fruit from "../src/Fruit";
+import fruit from "../src/ShirtData";
 
 const width = Dimensions.get("screen").width / 2 - 30;
 const Fruits = ({ navigation }) => {

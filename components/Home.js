@@ -238,11 +238,14 @@ const styles = StyleSheet.create({
     position: "relative",
   },
   itemcontainer: {
+    height: 1000,
     flex: 1,
     flexDirection: "column",
     borderRadius: 10,
     alignItems: "center",
-    padding: 20,
+    paddingTop: 50,
+
+    margin: 10,
   },
 
   list: {
