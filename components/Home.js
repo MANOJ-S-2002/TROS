@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  ScrollView,
   StyleSheet,
   Text,
   View,
@@ -69,6 +70,12 @@ const Home = ({ navigation }) => {
           color="#900"
           onPress={() => navigation.navigate("Cart")}
         />
+        {/* <Icon
+          name="shopping-cart"
+          size={30}
+          color="#900"
+          onPress={() => navigation.navigate("Track")}
+        /> */}
       </View>
 
       {/* slider content */}
@@ -97,32 +104,55 @@ const Home = ({ navigation }) => {
       </View>
 
       {/* main content */}
-      <View style={styles.maincontainer}>
-        <View style={styles.text}>
-          <Text style={{ fontSize: 25, color: "white" }}>Catogeries</Text>
-        </View>
-        <View style={styles.itemcontainer}>
-          <TouchableOpacity onPress={() => navigation.navigate("Fruits")}>
-            <View style={styles.list}>
-              <Image
-                source={Fruits}
-                style={{ width: 150, height: 120, borderRadius: 15 }}
-              />
-              <Text style={{ fontSize: 20 }}>Shirts </Text>
-            </View>
-          </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate("Vegetables")}>
-            <View style={styles.list}>
-              <Image
-                source={Vegetables}
-                style={{ width: 150, height: 120, borderRadius: 15 }}
-              />
-              <Text style={{ fontSize: 20 }}>Tshirts </Text>
-            </View>
-          </TouchableOpacity>
+      <ScrollView>
+        <View style={styles.maincontainer}>
+          <View style={styles.text}>
+            <Text style={{ fontSize: 25, color: "white" }}>Catogeries</Text>
+          </View>
+          <View style={styles.itemcontainer}>
+            <TouchableOpacity onPress={() => navigation.navigate("Fruits")}>
+              <View style={styles.list}>
+                <Image
+                  source={Fruits}
+                  style={{ width: 150, height: 120, borderRadius: 15 }}
+                />
+                <Text style={{ fontSize: 20 }}>Shirts </Text>
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => navigation.navigate("Fruits")}>
+              <View style={styles.list}>
+                <Image
+                  source={Fruits}
+                  style={{ width: 150, height: 120, borderRadius: 15 }}
+                />
+                <Text style={{ fontSize: 20 }}>Pants </Text>
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => navigation.navigate("Vegetables")}>
+              <View style={styles.list}>
+                <Image
+                  source={Vegetables}
+                  style={{ width: 150, height: 120, borderRadius: 15 }}
+                />
+                <Text style={{ fontSize: 20 }}>Tshirts </Text>
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => navigation.navigate("Fruits")}>
+              <View style={styles.list}>
+                <Image
+                  source={Fruits}
+                  style={{ width: 150, height: 120, borderRadius: 15 }}
+                />
+                <Text style={{ fontSize: 20 }}>Shorts</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
@@ -189,7 +219,7 @@ const styles = StyleSheet.create({
   //main conten styles
   maincontainer: {
     width: "auto",
-    height: "45%",
+    height: "auto",
     margin: 10,
     borderRadius: 10,
     marginTop: 0,
@@ -208,10 +238,11 @@ const styles = StyleSheet.create({
     position: "relative",
   },
   itemcontainer: {
-    flexDirection: "row",
+    flex: 1,
+    flexDirection: "column",
     borderRadius: 10,
     alignItems: "center",
-    justifyContent: "space-around",
+    padding: 20,
   },
 
   list: {

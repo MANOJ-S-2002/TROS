@@ -19,7 +19,7 @@ import { FlatList } from "react-native-gesture-handler";
 import fruit from "../src/Fruit";
 
 const width = Dimensions.get("screen").width / 2 - 30;
-const Fruits = ({ navigation }) => {
+const Pants= ({ navigation }) => {
     //create categories
     const categories = ["S","M","L","XL"];
     //selecting index in categories
@@ -172,11 +172,10 @@ const Fruits = ({ navigation }) => {
                 data={fruit}
                 renderItem={({ item }) => <Cart fruit={item} />}
             />
-            
         </SafeAreaView>
     );
 };
-export default Fruits;
+export default Pants;
 
 const styles = StyleSheet.create({
     header: {
