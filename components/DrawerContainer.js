@@ -8,6 +8,7 @@ import IconLogo from "./IconLogo.png";
 import { Image } from "react-native";
 import HomeStackNavigator from "./HomeStackNavigator";
 import Profile from "./Profile";
+import UserProfile from "./UserProfile";
 // import Tracking from "../pages/Tracking";
 
 const Drawer = createDrawerNavigator();
@@ -35,7 +36,7 @@ export default function DrawerContainer(props) {
 
       <Drawer.Screen
         name="User Profile"
-        component={Profile}
+        component={UserProfile}
         options={{
           drawerIcon: ({ color }) => (
             <AntDesign name="profile" size={25} color={color} />
