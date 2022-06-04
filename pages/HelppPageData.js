@@ -15,7 +15,7 @@ const questions = [
         id: 3,
         question: "How do I know my order has been confirmed?",
         Answer:
-            " An e-mail & SMS will be sent once you've successfully placed your order. We'll also let you know as soon as the seller ships the item(s) to you along with the tracking number(s) for your shipment(s). You can track your orders from the 'My Orders' section on your Vegges account.",
+            " An e-mail & SMS will be sent once you've successfully placed your order. We'll also let you know as soon as the seller ships the item(s) to you along with the tracking number(s) for your shipment(s). You can track your orders from the 'My Orders' section on your account.",
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ const questions = [
         question:
             "If I have found a security Bug/Vulnerability/Issue what should I do?",
         Answer:
-            "We take security very seriously at vegges. If you have found an issue on vegges, you can report it to security@vegges.com with the below details:1. Steps to reproduce the bug/issue 2. Your web browser/mobile browser's name and version3. Screenshot/screencast (if any).",
+            "We take security very seriously at TROS. If you have found an issue on TROS, you can report it to security@tros.com with the below details:1. Steps to reproduce the bug/issue 2. Your web browser/mobile browser's name and version3. Screenshot/screencast (if any).",
     },
 ];
 export default questions;

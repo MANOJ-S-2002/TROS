@@ -150,5 +150,8 @@ const style = StyleSheet.create({
   profile: {
     flex: 1,
     padding: 10,
+    fontWeight: "bold",
+    
+    
   },
 });

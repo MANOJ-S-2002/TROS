@@ -6,7 +6,7 @@ import { Entypo, AntDesign } from '@expo/vector-icons'
 import { TouchableOpacity } from 'react-native';
 import Rating from './Rating'
 
-export default function Profile() {
+export default function Profile({navigation}) {
     return (
         <View style={style.container}>
             <View style={style.container1}>
@@ -24,10 +24,12 @@ export default function Profile() {
                         <Text style={style.userName}>Your Story</Text>
                         <Text style={style.userName}>600 Pts</Text>
                         <Text style={style.about}>
-                            <Text>Im a part of</Text> <Text style={{ fontWeight: 'bold' }}>Veggies</Text>, We provide all types of <Text style={{ fontWeight: 'bold' }}>Fruits and Vegetables</Text>
-                            directly from the formers. No midele man's, so the we provide all in <Text style={{ fontWeight: 'bold' }}>best Price</Text>.
+                            <Text>Im a part of</Text> <Text style={{ fontWeight: 'bold' }}>TROS</Text>, We provide all types of <Text style={{ fontWeight: 'bold' }}>Clothes </Text>
+                            directly from the Shop Owners. so that we provide all in <Text style={{ fontWeight: 'bold' }}>best Price</Text>.
                         </Text>
-                        <TouchableOpacity style={style.logico} onPress={() => { console.log("logout"); }}>
+                        <TouchableOpacity style={style.logico}  onPress={() => {
+                navigation.navigate("Welcome To TROS");
+              }}>
                             <Entypo name="log-out" size={25} > Logout</Entypo>
                         </TouchableOpacity>
                     </View>

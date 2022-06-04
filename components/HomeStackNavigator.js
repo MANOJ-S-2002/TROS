@@ -8,7 +8,7 @@ import Vegetables from "./Tshirt";
 import Address from "./Address";
 // import StripeApp from "./StripeApp";
 // import FruitDetails from "./FruitDetails";
-import VegetableDetails from "./VegetableDetails";
+import VegetableDetails from "./TshirtDetails";
 import PaymentModes from "./PaymentModes";
 import UploadProdect from "./UploadProdect";
 

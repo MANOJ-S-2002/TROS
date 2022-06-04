@@ -5,7 +5,7 @@ import Icon from "react-native-vector-icons/Ionicons";
 const image1 = require("../images/shirt1.jpg");
 const image2 = require("../images/shirt1.jpg");
 const image3 = require("../images/tshirt1.jpg");
-const image4 = require("../images/shirt1.jpg");
+const image4 = require("../images/tshirt1.jpg");
 
 const data = [
   {
