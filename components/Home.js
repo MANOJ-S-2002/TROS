@@ -18,6 +18,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 
 import Fruits from "../images/shirt1.jpg";
 import Pants from "../images/pant.jpg"
+import short from "../images/short.jpg";
 import Vegetables from "../images/tshirt1.jpg";
 
 // import { StyleSheet, Text, View, Image } from "react-native";
@@ -145,7 +146,7 @@ const Home = ({ navigation }) => {
             <TouchableOpacity onPress={() => navigation.navigate("Shorts")}>
               <View style={styles.list}>
                 <Image
-                  source={Fruits}
+                  source={short}
                   style={{ width: 150, height: 120, borderRadius: 15 }}
                 />
                 <Text style={{ fontSize: 20 }}>Shorts</Text>

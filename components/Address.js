@@ -45,17 +45,9 @@ export class Address extends Component {
                     onChange={(text) => {
                         this.setState({ pincode: text });
                     }}
-                    style={{
-                        borderWidth: 3,
-                        borderColor: "black",
-                        width: '95%',
-                        height: 150,
-                        marginBottom: 5,
-                        borderRadius: 5,
-                        alignItems: "center",
-                        padding: 5,
-                        backgroundColor: "#f2eaea"
-                    }}
+                    style={styles.card}
+
+                  
                 />
                 <TextInput
                     placeholder="  enter address"

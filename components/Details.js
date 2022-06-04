@@ -57,7 +57,7 @@ const VegetableDetails = ({ navigation, route }) => {
                 color: COLORS.white,
               }}
             >
-              Rs{veggie.price}
+              Rs.{veggie.price}
             </Text>
           </View>
         </View>
@@ -81,7 +81,7 @@ const VegetableDetails = ({ navigation, route }) => {
             justifyContent: "space-between",
           }}
         >
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          {/* <View style={{ flexDirection: "row", alignItems: "center" }}>
             <View style={styles.borderBtn}>
               <Text style={styles.borderBtnText}>-</Text>
             </View>
@@ -94,13 +94,13 @@ const VegetableDetails = ({ navigation, route }) => {
             <View style={styles.borderBtn}>
               <Text style={styles.borderBtnText}>+</Text>
             </View>
-          </View>
+          </View> */}
           <View style={styles.buyBtn}>
             <Text
               style={{ fontSize: 20, fontWeight: "bold", color: COLORS.white }}
-              onPress={() => navigation.navigate("Address")}
+              onPress={() => navigation.navigate("Cart")}
               >
-              Buy
+              Add to Cart
             </Text>
           </View>
         </View>

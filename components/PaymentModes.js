@@ -5,7 +5,7 @@ import { CardField, useConfirmPayment } from "@stripe/stripe-react-native";
 //ADD localhost address of your server
 const API_URL = "http://localhost:3000";
 
-const PaymentModes = props => {
+const PaymentModes = (props) => {
   const [email, setEmail] = useState();
   const [cardDetails, setCardDetails] = useState();
   const { confirmPayment, loading } = useConfirmPayment();
@@ -60,7 +60,7 @@ const PaymentModes = props => {
         autoCapitalize="none"
         placeholder="E-mail"
         keyboardType="email-address"
-        onChange={value => setEmail(value.nativeEvent.text)}
+        onChange={(value) => setEmail(value.nativeEvent.text)}
         style={styles.input}
       />
       <CardField
@@ -70,10 +70,11 @@ const PaymentModes = props => {
         }}
         cardStyle={styles.card}
         style={styles.cardContainer}
-        onCardChange={cardDetails => {
+        onCardChange={(cardDetails) => {
           setCardDetails(cardDetails);
         }}
       />
+      
       <Button onPress={handlePayPress} title="Pay" disabled={loading} />
     </View>
   );
