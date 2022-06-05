@@ -27,6 +27,15 @@ export default function DrawerContainer(props) {
       }}
     >
       <Drawer.Screen
+        name="Tracking"
+        component={TrackNavigator}
+        options={{
+          drawerIcon: ({ color }) => (
+            <AntDesign name="profile" size={25} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
         name="TROS"
         component={HomeStackNavigator}
         options={{
@@ -64,16 +73,6 @@ export default function DrawerContainer(props) {
       <Drawer.Screen
         name="Partner Profile"
         component={Profile}
-        options={{
-          drawerIcon: ({ color }) => (
-            <AntDesign name="profile" size={25} color={color} />
-          ),
-        }}
-      />
-
-      <Drawer.Screen
-        name="Tracking"
-        component={TrackNavigator}
         options={{
           drawerIcon: ({ color }) => (
             <AntDesign name="profile" size={25} color={color} />

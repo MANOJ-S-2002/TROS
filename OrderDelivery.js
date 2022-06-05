@@ -6,6 +6,7 @@ import MapViewDirections from "react-native-maps-directions";
 import { COLORS, FONTS, icons, SIZES, GOOGLE_API_KEY } from "./constants";
 
 const OrderDelivery = ({ route, navigation }) => {
+//   console.log(GOOGLE_API_KEY);
   const mapView = React.useRef();
 
   const [restaurant, setRestaurant] = React.useState(null);
@@ -22,14 +23,22 @@ const OrderDelivery = ({ route, navigation }) => {
     let { restaurant, currentLocation } = route.params;
 
     let fromLoc = currentLocation.gps;
-    let toLoc = restaurant.location;
+    // let toLoc = restaurant.location;
+    let toLoc = {
+      latitude: 13.0463,
+      longitude: 80.2534,
+    };
     let street = currentLocation.streetName;
 
     let mapRegion = {
-      latitude: (fromLoc.latitude + toLoc.latitude) / 2,
-      longitude: (fromLoc.longitude + toLoc.longitude) / 2,
-      latitudeDelta: Math.abs(fromLoc.latitude - toLoc.latitude) * 2,
-      longitudeDelta: Math.abs(fromLoc.longitude - toLoc.longitude) * 2,
+      //   latitude: (fromLoc.latitude + toLoc.latitude) / 2,
+      //   longitude: (fromLoc.longitude + toLoc.longitude) / 2,
+      //   latitudeDelta: Math.abs(fromLoc.latitude - toLoc.latitude) * 2,
+      //   longitudeDelta: Math.abs(fromLoc.longitude - toLoc.longitude) * 2,
+      latitude: 13.059537,
+      longitude: 80.242477,
+      latitudeDelta: 0.015,
+      longitudeDelta: 0.0121,
     };
 
     setRestaurant(restaurant);
@@ -84,7 +93,7 @@ const OrderDelivery = ({ route, navigation }) => {
             borderRadius: 20,
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: COLORS.white,
+            backgroundColor: "#000000",
           }}
         >
           <View
@@ -136,8 +145,14 @@ const OrderDelivery = ({ route, navigation }) => {
           style={{ flex: 1 }}
         >
           <MapViewDirections
-            origin={fromLocation}
-            destination={toLocation}
+            origin={{
+              latitude: 13.0644,
+              longitude: 80.2338,
+            }}
+            destination={{
+              latitude: 13.0463,
+              longitude: 80.2534,
+            }}
             apikey={GOOGLE_API_KEY}
             strokeWidth={5}
             strokeColor={COLORS.primary}
@@ -165,6 +180,7 @@ const OrderDelivery = ({ route, navigation }) => {
                 if (result.coordinates.length >= 2) {
                   let angle = calculateAngle(result.coordinates);
                   setAngle(angle);
+                  console.log(angle);
                 }
 
                 setFromLocation(nextLoc);
@@ -216,7 +232,7 @@ const OrderDelivery = ({ route, navigation }) => {
             <Text style={{ ...FONTS.body3 }}>{streetName}</Text>
           </View>
 
-          <Text style={{ ...FONTS.body3 }}>{Math.ceil(duration)} mins</Text>
+          <Text style={{ ...FONTS.body3 }}>{Math.ceil(duration)}5 mins</Text>
         </View>
       </View>
     );

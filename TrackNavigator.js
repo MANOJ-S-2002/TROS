@@ -7,7 +7,7 @@ import OrderDelivery from "./OrderDelivery";
 
 const LoginStack = createNativeStackNavigator();
 
-const LoginStackNavigator = () => {
+const StackNavigator = () => {
   return (
     <LoginStack.Navigator
       screenOptions={{
@@ -21,5 +21,5 @@ const LoginStackNavigator = () => {
     </LoginStack.Navigator>
   );
 };
-export default LoginStackNavigator;
+export default StackNavigator;
 

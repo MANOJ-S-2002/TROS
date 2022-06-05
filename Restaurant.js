@@ -90,7 +90,7 @@ const Restaurant = ({ route, navigation }) => {
                         paddingLeft: SIZES.padding * 2,
                         justifyContent: 'center'
                     }}
-                    onPress={() => navigation.goBack()}
+                    onPress={() => navigation.navigate("Home")}
                 >
                     <Image
                         source={icons.back}
