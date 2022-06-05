@@ -5,7 +5,7 @@ const pant = [
     price: 1200,
     like: true,
     img: require("../images/pant.jpg"),
-    about: "",
+    about: "Material Composition: Cotton Care Instructions: Machine Wash Item Type Name: Casual Pants Fit Type: Slim Country of Origin :India",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const pant = [
     price: 400,
     like: false,
     img: require("../images/pant.jpg"),
-    about: "",
+    about: "Material Composition: Cotton Care Instructions: Machine Wash Item Type Name: Casual Pants Fit Type: Slim Country of Origin :India",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const pant = [
     price: 1000,
     like: false,
     img: require("../images/pant.jpg"),
-    about: "",
+    about: "Material Composition: Cotton Care Instructions: Machine Wash Item Type Name: Casual Pants Fit Type: Slim Country of Origin :India",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const pant = [
     price: 500,
     like: true,
     img: require("../images/pant.jpg"),
-    about: "",
+    about: "Material Composition: Cotton Care Instructions: Machine Wash Item Type Name: Casual Pants Fit Type: Slim Country of Origin :India",
   },
 ];
 

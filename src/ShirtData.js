@@ -6,7 +6,8 @@ const fruit = [
     like: true,
     img: require("./assets/images/shirt1.jpg"),
     about:
-""  },
+      "Occasion : Casual Fit \n Slim Fit Material : 100% Cotton \n Product Type : Shirt Pattern : Solid",
+  },
   {
     id: 2,
     name: "shirt 2",
@@ -14,7 +15,9 @@ const fruit = [
     like: false,
     img: require("./assets/images/shirt1.jpg"),
     about:
-""  },
+    "Occasion : Casual Fit \n Slim Fit Material : 100% Cotton \n Product Type : Shirt Pattern : Solid",
+  },
+
   {
     id: 3,
     name: "shirt 3",
@@ -22,16 +25,18 @@ const fruit = [
     like: false,
     img: require("./assets/images/shirt1.jpg"),
     about:
-""  },
+    "Occasion : Casual Fit \n Slim Fit Material : 100% Cotton \n Product Type : Shirt Pattern : Solid",
+  },
+
   {
     id: 4,
     name: "shirt 4",
     price: 300,
     like: true,
     img: require("./assets/images/shirt1.jpg"),
-    about: "",
+    about:
+    "Occasion : Casual Fit \n Slim Fit Material : 100% Cotton \n Product Type : Shirt Pattern : Solid",
   },
-  
 ];
 
 export default fruit;

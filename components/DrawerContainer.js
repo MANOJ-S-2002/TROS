@@ -11,6 +11,8 @@ import Profile from "./PartnerProfile";
 import UserProfile from "./UserProfile";
 // import Tracking from "../pages/Tracking";
 
+import TrackNavigator from "../TrackNavigator";
+
 const Drawer = createDrawerNavigator();
 
 export default function DrawerContainer(props) {
@@ -62,6 +64,16 @@ export default function DrawerContainer(props) {
       <Drawer.Screen
         name="Partner Profile"
         component={Profile}
+        options={{
+          drawerIcon: ({ color }) => (
+            <AntDesign name="profile" size={25} color={color} />
+          ),
+        }}
+      />
+
+      <Drawer.Screen
+        name="Tracking"
+        component={TrackNavigator}
         options={{
           drawerIcon: ({ color }) => (
             <AntDesign name="profile" size={25} color={color} />

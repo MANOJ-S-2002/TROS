@@ -5,7 +5,7 @@ const Short = [
     price: 300,
     like: true,
     img: require("../images/short.jpg"),
-    about: "",
+    about: "Styel Name:Essentials Men's Shorts  Pattern:-Solid Material:-PolycottonCare Instructions: Close All Fastenings; Use Only Mild Detergent; Wash And Iron Inside Out; Wash With Similar Colours",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const Short = [
     price: 400,
     like: false,
     img: require("../images/short.jpg"),
-    about: "",
+    about: "Styel Name:Essentials Men's Shorts  Pattern:-Solid Material:-PolycottonCare Instructions: Close All Fastenings; Use Only Mild Detergent; Wash And Iron Inside Out; Wash With Similar Colours",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const Short = [
     price: 300,
     like: false,
     img: require("../images/short.jpg"),
-    about: "",
+    about: "Styel Name:Essentials Men's Shorts  Pattern:-Solid Material:-PolycottonCare Instructions: Close All Fastenings; Use Only Mild Detergent; Wash And Iron Inside Out; Wash With Similar Colours",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const Short = [
     price: 350,
     like: true,
     img: require("../images/short.jpg"),
-    about: "",
+    about: "Styel Name:Essentials Men's Shorts  Pattern:-Solid Material:-PolycottonCare Instructions: Close All Fastenings; Use Only Mild Detergent; Wash And Iron Inside Out; Wash With Similar Colours",
   },
 ];
 

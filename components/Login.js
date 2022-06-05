@@ -22,7 +22,7 @@ export default function Login({ navigation }) {
       <Button
         style={{ margin: 10 }}
         mode="contained"
-          onPress={() => navigation.navigate("Well Come To Veggies Shope")}
+          onPress={() => navigation.navigate("Welcome To TROS")}
       >
         Login
       </Button>

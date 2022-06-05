@@ -110,48 +110,63 @@ const Home = ({ navigation }) => {
       <ScrollView>
         <View style={styles.maincontainer}>
           <View style={styles.text}>
-            <Text style={{ fontSize: 25, color: "white" }}>Catogeries</Text>
+            <Text style={{ fontSize: 25, color: "white", paddingLeft: 0 }}>
+              Catogeries
+            </Text>
           </View>
           <View style={styles.itemcontainer}>
-            <TouchableOpacity onPress={() => navigation.navigate("Fruits")}>
-              <View style={styles.list}>
-                <Image
-                  source={Fruits}
-                  style={{ width: 150, height: 120, borderRadius: 15 }}
-                />
-                <Text style={{ fontSize: 20 }}>Shirts </Text>
-              </View>
-            </TouchableOpacity>
+            <View style={styles.listcontainer}>
+              <TouchableOpacity onPress={() => navigation.navigate("Fruits")}>
+                <View style={styles.list}>
+                  <Image
+                    source={Fruits}
+                    style={{ width: 150, height: 150, borderRadius: 15 }}
+                  />
+                  <Text style={{ fontSize: 20 }}>Shirts </Text>
+                </View>
+              </TouchableOpacity>
+              {/* </View> */}
 
-            <TouchableOpacity onPress={() => navigation.navigate("Pants")}>
-              <View style={styles.list}>
-                <Image
-                  source={Pants}
-                  style={{ width: 150, height: 120, borderRadius: 15 }}
-                />
-                <Text style={{ fontSize: 20 }}>Pants </Text>
-              </View>
-            </TouchableOpacity>
+              {/* <View style={styles.listcontainer}> */}
 
-            <TouchableOpacity onPress={() => navigation.navigate("Vegetables")}>
-              <View style={styles.list}>
-                <Image
-                  source={Vegetables}
-                  style={{ width: 150, height: 120, borderRadius: 15 }}
-                />
-                <Text style={{ fontSize: 20 }}>Tshirts </Text>
-              </View>
-            </TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.navigate("Pants")}>
+                <View style={styles.list}>
+                  <Image
+                    source={Pants}
+                    style={{ width: 150, height: 150, borderRadius: 15 }}
+                  />
+                  <Text style={{ fontSize: 20 }}>Pants </Text>
+                </View>
+              </TouchableOpacity>
+            </View>
 
-            <TouchableOpacity onPress={() => navigation.navigate("Shorts")}>
-              <View style={styles.list}>
-                <Image
-                  source={short}
-                  style={{ width: 150, height: 120, borderRadius: 15 }}
-                />
-                <Text style={{ fontSize: 20 }}>Shorts</Text>
-              </View>
-            </TouchableOpacity>
+            <View style={styles.listcontainer}>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("Vegetables")}
+              >
+                <View style={styles.list}>
+                  <Image
+                    source={Vegetables}
+                    style={{ width: 150, height: 150, borderRadius: 15 }}
+                  />
+                  <Text style={{ fontSize: 20 }}>Tshirts </Text>
+                </View>
+              </TouchableOpacity>
+
+              {/* </View> */}
+
+              {/* <View style={styles.listcontainer}> */}
+
+              <TouchableOpacity onPress={() => navigation.navigate("Shorts")}>
+                <View style={styles.list}>
+                  <Image
+                    source={short}
+                    style={{ width: 150, height: 150, borderRadius: 15 }}
+                  />
+                  <Text style={{ fontSize: 20 }}>Shorts</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
       </ScrollView>
@@ -201,20 +216,20 @@ const styles = StyleSheet.create({
   },
 
   slider: {
-    width: 260,
-    height: 160,
+    width: 280,
+    height: 210,
     flexDirection: "row",
     alignItems: "center",
   },
   info: {
     marginLeft: 20,
-    width: 125,
+    width: 150,
     color: "white",
   },
   image: {
     borderRadius: 15,
-    width: 130,
-    height: 130,
+    width: 135,
+    height: 135,
     backgroundColor: "white",
   },
 
@@ -224,9 +239,10 @@ const styles = StyleSheet.create({
     height: "auto",
     margin: 10,
     borderRadius: 10,
-    marginTop: 0,
+    marginTop: 5,
     display: "flex",
     justifyContent: "space-around",
+    boxShadow: "#0000005e",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -238,21 +254,32 @@ const styles = StyleSheet.create({
     elevation: 5,
     backgroundColor: "brown",
     position: "relative",
+    marginBottom: 20,
   },
   itemcontainer: {
-    height: 1000,
-    flex: 1,
-    flexDirection: "column",
+    height: 735,
+    // justifyContent: "space-around",
+    // flexDirection: "column",
     borderRadius: 10,
     alignItems: "center",
-    paddingTop: 50,
-    marginBottom: 20,
-    margin: 10,
+    paddingTop: 30,
+    // backgroundColor: "white",
+    // justifyContent:"flex-start"
+  },
+  listcontainer: {
+    // height: 1000,
+    justifyContent: "space-between",
+    flexDirection: "row",
+    // borderRadius: 10,
+    alignItems: "center",
+    // paddingTop: 30,
+    // backgroundColor: "white",
+    // justifyContent:"flex-start"
   },
 
   list: {
     width: 150,
-    height: 150,
+    height: 180,
     alignItems: "center",
     backgroundColor: "#f6f6f6",
     shadowColor: "#000",
@@ -267,9 +294,18 @@ const styles = StyleSheet.create({
     elevation: 5,
     bottom: 30,
     position: "relative",
+    marginHorizontal: 10,
+    marginVertical: 20,
   },
   text: {
     position: "relative",
-    paddingLeft: 150,
+    alignItems: "center",
   },
+  // listcontainer:{
+  //   // display: "flex",
+  //   // flex:1,
+  //   width: "100%",
+  //   alignItems: "center",
+  //   gap:1000,
+  // }
 });

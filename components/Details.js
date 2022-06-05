@@ -102,6 +102,17 @@ const VegetableDetails = ({ navigation, route }) => {
               >
               Add to Cart
             </Text>
+            
+          </View>
+
+          <View style={styles.buyBtn}>
+            <Text
+              style={{ fontSize: 20, fontWeight: "bold", color: COLORS.white }}
+              onPress={() => navigation.navigate("Address")}
+              >
+              Buy
+            </Text>
+            
           </View>
         </View>
       </View>
