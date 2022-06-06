@@ -88,7 +88,7 @@ const Home = ({ navigation }) => {
       rating: 4.8,
       categories: [5, 7],
       priceRating: affordable,
-      photo: images.burger_restaurant_1,
+      photo: images.saravana,
       duration: "30 - 45 min",
       location: {
         latitude: 1.5347282806345879,
@@ -102,7 +102,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 1,
           name: "Shirts",
-          photo: images.crispy_chicken_burger,
+          photo: images.shirt,
           description: "Shirts are with good quality",
           // calories: 200,
           price: 700,
@@ -110,7 +110,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 2,
           name: "Tshirts",
-          photo: images.honey_mustard_chicken_burger,
+          photo: images.tshirt,
           description: "Tshirts are with good quality",
           // calories: 250,
           price: 600,
@@ -118,7 +118,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.baked_fries,
+          photo: images.pant,
           description: "Pants are with good quality",
           // calories: 194,
           price: 800,
@@ -126,7 +126,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Shorts",
-          photo: images.baked_fries,
+          photo: images.short,
           description: "Shorts are with good quality",
           // calories: 194,
           price: 400,
@@ -139,7 +139,7 @@ const Home = ({ navigation }) => {
       rating: 4.8,
       categories: [2, 4, 6],
       priceRating: expensive,
-      photo: images.pizza_restaurant,
+      photo: images.pothys,
       duration: "15 - 20 min",
       location: {
         latitude: 1.556306570595712,
@@ -153,7 +153,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 1,
           name: "Shirts",
-          photo: images.crispy_chicken_burger,
+          photo: images.shirt,
           description: "Shirts are with good quality",
           // calories: 200,
           price: 1000,
@@ -161,7 +161,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 2,
           name: "Tshirts",
-          photo: images.honey_mustard_chicken_burger,
+          photo: images.tshirt,
           description: "Tshirts are with good quality",
           // calories: 250,
           price: 500,
@@ -169,7 +169,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.baked_fries,
+          photo: images.pant,
           description: "Pants are with good quality",
           // calories: 194,
           price: 800,
@@ -177,7 +177,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Shorts",
-          photo: images.baked_fries,
+          photo: images.short,
           description: "Shorts are with good quality",
           // calories: 194,
           price: 350,
@@ -197,14 +197,14 @@ const Home = ({ navigation }) => {
         longitude: 110.34261833833622,
       },
       courier: {
-        avatar: images.avatar_3,
+        avatar: images.peter,
         name: "James",
       },
       menu: [
         {
           menuId: 1,
           name: "Shirts",
-          photo: images.crispy_chicken_burger,
+          photo: images.shirt,
           description: "Shirts are with good quality",
           // calories: 200,
           price: 650,
@@ -212,7 +212,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 2,
           name: "Tshirts",
-          photo: images.honey_mustard_chicken_burger,
+          photo: images.tshirt,
           description: "Tshirts are with good quality",
           // calories: 250,
           price: 700,
@@ -220,7 +220,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.baked_fries,
+          photo: images.pant,
           description: "Pants are with good quality",
           // calories: 194,
           price: 750,
@@ -228,7 +228,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Shorts",
-          photo: images.baked_fries,
+          photo: images.short,
           description: "Shorts are with good quality",
           // calories: 194,
           price: 350,
@@ -241,7 +241,7 @@ const Home = ({ navigation }) => {
       rating: 4.8,
       categories: [8],
       priceRating: expensive,
-      photo: images.japanese_restaurant,
+      photo: images.hm,
       duration: "10 - 15 min",
       location: {
         latitude: 1.5578068150528928,
@@ -255,7 +255,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 1,
           name: "Shirts",
-          photo: images.crispy_chicken_burger,
+          photo: images.shirt,
           description: "Shirts are with good quality",
           // calories: 200,
           price: 740,
@@ -263,7 +263,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 2,
           name: "Tshirts",
-          photo: images.honey_mustard_chicken_burger,
+          photo: images.tshirt,
           description: "Tshirts are with good quality",
           // calories: 250,
           price: 480,
@@ -271,7 +271,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.baked_fries,
+          photo: images.pant,
           description: "Pants are with good quality",
           // calories: 194,
           price: 680,
@@ -279,7 +279,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Shorts",
-          photo: images.baked_fries,
+          photo: images.short,
           description: "Shorts are with good quality",
           // calories: 194,
           price: 380,
@@ -292,7 +292,7 @@ const Home = ({ navigation }) => {
       rating: 4.8,
       categories: [1, 2],
       priceRating: affordable,
-      photo: images.noodle_shop,
+      photo: images.van,
       duration: "15 - 20 min",
       location: {
         latitude: 1.558050496260768,
@@ -306,7 +306,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 1,
           name: "Shirts",
-          photo: images.crispy_chicken_burger,
+          photo: images.shirt,
           description: "Shirts are with good quality",
           // calories: 200,
           price: 500,
@@ -314,7 +314,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 2,
           name: "Tshirts",
-          photo: images.honey_mustard_chicken_burger,
+          photo: images.tshirt,
           description: "Tshirts are with good quality",
           // calories: 250,
           price: 350,
@@ -322,7 +322,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.baked_fries,
+          photo: images.pant,
           description: "Pants are with good quality",
           // calories: 194,
           price: 550,
@@ -330,7 +330,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Shorts",
-          photo: images.baked_fries,
+          photo: images.short,
           description: "Shorts are with good quality",
           // calories: 194,
           price: 250,
@@ -343,7 +343,7 @@ const Home = ({ navigation }) => {
       rating: 4.9,
       categories: [9, 10],
       priceRating: affordable,
-      photo: images.kek_lapis_shop,
+      photo: images.allen,
       duration: "35 - 40 min",
       location: {
         latitude: 1.5573478487252896,
@@ -357,7 +357,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 1,
           name: "Shirts",
-          photo: images.crispy_chicken_burger,
+          photo: images.shirt,
           description: "Shirts are with good quality",
           // calories: 200,
           price: 800,
@@ -365,7 +365,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 2,
           name: "Tshirts",
-          photo: images.honey_mustard_chicken_burger,
+          photo: images.tshirt,
           description: "Tshirts are with good quality",
           // calories: 250,
           price: 600,
@@ -373,7 +373,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.baked_fries,
+          photo: images.pant,
           description: "Pants are with good quality",
           // calories: 194,
           price: 450,
@@ -381,7 +381,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Shorts",
-          photo: images.baked_fries,
+          photo: images.short,
           description: "Shorts are with good quality",
           // calories: 194,
           price: 350,
@@ -418,60 +418,56 @@ const Home = ({ navigation }) => {
 
   function renderHeader() {
     return (
-  
-
-    <View style={{ flexDirection: "row", height: 50 }}>
-      <TouchableOpacity
-        style={{
-          width: 50,
-          paddingLeft: SIZES.padding * 2,
-          justifyContent: "center",
-        }}
-      >
-        <Image
-          source={icons.pin}
-          resizeMode="contain"
+      <View style={{ flexDirection: "row", height: 50 }}>
+        <TouchableOpacity
           style={{
-            width: 30,
-            height: 30,
-          }}
-        />
-      </TouchableOpacity>
-      <View
-        style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-      >
-        <View
-          style={{
-            width: "70%",
-            height: "100%",
-            backgroundColor: COLORS.lightGray3,
-            alignItems: "center",
+            width: 50,
+            paddingLeft: SIZES.padding * 2,
             justifyContent: "center",
-            borderRadius: SIZES.radius,
           }}
         >
-          
-          {/* <Text style={{ ...FONTS.h3 }}>{currentLocation.streetName}</Text> */}
+          <Image
+            source={icons.pin}
+            resizeMode="contain"
+            style={{
+              width: 30,
+              height: 30,
+            }}
+          />
+        </TouchableOpacity>
+        <View
+          style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+        >
+          <View
+            style={{
+              width: "70%",
+              height: "100%",
+              backgroundColor: COLORS.lightGray3,
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: SIZES.radius,
+            }}
+          >
+            {/* <Text style={{ ...FONTS.h3 }}>{currentLocation.streetName}</Text> */}
+          </View>
         </View>
-      </View>
-      <TouchableOpacity
-        style={{
-          width: 50,
-          paddingRight: SIZES.padding * 2,
-          justifyContent: "center",
-        }}
-      >
-        <Image
-          source={icons.basket}
-          resizeMode="contain"
+        <TouchableOpacity
           style={{
-            width: 30,
-            height: 30,
-            
+            width: 50,
+            paddingRight: SIZES.padding * 2,
+            justifyContent: "center",
           }}
-        />
-      </TouchableOpacity>
-    </View>
+        >
+          <Image
+            source={icons.basket}
+            resizeMode="contain"
+            style={{
+              width: 30,
+              height: 30,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
     );
   }
 
