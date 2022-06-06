@@ -83,7 +83,7 @@ const Home = ({ navigation }) => {
   const restaurantData = [
     {
       id: 1,
-      name: "Saravana stores",
+      name: "SARAVANA STORES",
       rating: 4.8,
       categories: [5, 7],
       priceRating: affordable,
@@ -134,7 +134,7 @@ const Home = ({ navigation }) => {
     },
     {
       id: 2,
-      name: "Pothys",
+      name: "POTHYS",
       rating: 4.8,
       categories: [2, 4, 6],
       priceRating: expensive,
@@ -185,7 +185,7 @@ const Home = ({ navigation }) => {
     },
     {
       id: 3,
-      name: "Peter England",
+      name: "PETER ENGLAND",
       rating: 4.8,
       categories: [3],
       priceRating: expensive,
@@ -287,7 +287,7 @@ const Home = ({ navigation }) => {
     },
     {
       id: 5,
-      name: "Mathew",
+      name: "VAN HAUSEN",
       rating: 4.8,
       categories: [1, 2],
       priceRating: affordable,
@@ -338,7 +338,7 @@ const Home = ({ navigation }) => {
     },
     {
       id: 6,
-      name: "70MM ",
+      name: "ALLEN SOLLY ",
       rating: 4.9,
       categories: [9, 10],
       priceRating: affordable,
@@ -415,62 +415,62 @@ const Home = ({ navigation }) => {
     return "";
   }
 
-  function renderHeader() {
-    return (
-      <View style={{ flexDirection: "row", height: 50 }}>
-        <TouchableOpacity
-          style={{
-            width: 50,
-            paddingLeft: SIZES.padding * 2,
-            justifyContent: "center",
-          }}
-        >
-          <Image
-            source={icons.nearby}
-            resizeMode="contain"
-            style={{
-              width: 30,
-              height: 30,
-            }}
-          />
-        </TouchableOpacity>
+  // function renderHeader() {
+  //   return (
+  //     // <View style={{ flexDirection: "row", height: 50 }}>
+  //     //   <TouchableOpacity
+  //     //     style={{
+  //     //       width: 50,
+  //     //       paddingLeft: SIZES.padding * 2,
+  //     //       justifyContent: "center",
+  //     //     }}
+  //     //   >
+  //     //     <Image
+  //     //       source={icons.nearby}
+  //     //       resizeMode="contain"
+  //     //       style={{
+  //     //         width: 30,
+  //     //         height: 30,
+  //     //       }}
+  //     //     />
+  //     //   </TouchableOpacity>
 
-        <View
-          style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-        >
-          <View
-            style={{
-              width: "70%",
-              height: "100%",
-              backgroundColor: COLORS.lightGray3,
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: SIZES.radius,
-            }}
-          >
-            <Text style={{ ...FONTS.h3 }}>{currentLocation.streetName}</Text>
-          </View>
-        </View>
+  //     //   <View
+  //     //     style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+  //     //   >
+  //     //     <View
+  //     //       style={{
+  //     //         width: "70%",
+  //     //         height: "100%",
+  //     //         backgroundColor: COLORS.lightGray3,
+  //     //         alignItems: "center",
+  //     //         justifyContent: "center",
+  //     //         borderRadius: SIZES.radius,
+  //     //       }}
+  //     //     >
+  //     //       <Text style={{ ...FONTS.h3 }}>{currentLocation.streetName}</Text>
+  //     //     </View>
+  //     //   </View>
 
-        <TouchableOpacity
-          style={{
-            width: 50,
-            paddingRight: SIZES.padding * 2,
-            justifyContent: "center",
-          }}
-        >
-          <Image
-            source={icons.basket}
-            resizeMode="contain"
-            style={{
-              width: 30,
-              height: 30,
-            }}
-          />
-        </TouchableOpacity>
-      </View>
-    );
-  }
+  //     //   <TouchableOpacity
+  //     //     style={{
+  //     //       width: 50,
+  //     //       paddingRight: SIZES.padding * 2,
+  //     //       justifyContent: "center",
+  //     //     }}
+  //     //   >
+  //     //     <Image
+  //     //       source={icons.basket}
+  //     //       resizeMode="contain"
+  //     //       style={{
+  //     //         width: 30,
+  //     //         height: 30,
+  //     //       }}
+  //     //     />
+  //     //   </TouchableOpacity>
+  //     // </View>
+  //   // );
+  // // }
 
   function renderMainCategories() {
     const renderItem = ({ item }) => {
@@ -663,7 +663,7 @@ const Home = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      {renderHeader()}
+      {/* {renderHeader()} */}
       {renderMainCategories()}
       {renderRestaurantList()}
     </SafeAreaView>
