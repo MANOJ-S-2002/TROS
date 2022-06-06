@@ -27,7 +27,7 @@ export default function DrawerContainer(props) {
       }}
     >
       <Drawer.Screen
-        name="Tracking"
+        name="HOME"
         component={TrackNavigator}
         options={{
           drawerIcon: ({ color }) => (

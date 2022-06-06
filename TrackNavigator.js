@@ -3,22 +3,28 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./Home";
 import Restaurant from "./Restaurant";
 import OrderDelivery from "./OrderDelivery";
+// import DrawerContainer from "./components/DrawerContainer";
 
 
-const LoginStack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
   return (
-    <LoginStack.Navigator
+    <Stack.Navigator
       screenOptions={{
         headerShown: false,
       }}
     >
-      <LoginStack.Screen name="Home" component={Home} />
-      <LoginStack.Screen name="Restaurant" component={Restaurant} />
-      <LoginStack.Screen name="OrderDelivery" component={OrderDelivery} />
 
-    </LoginStack.Navigator>
+
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Restaurant" component={Restaurant} />
+      <Stack.Screen name="OrderDelivery" component={OrderDelivery} />
+      {/* <Stack.Screen name="Main" component={DrawerContainer} /> */}
+
+
+
+    </Stack.Navigator>
   );
 };
 export default StackNavigator;

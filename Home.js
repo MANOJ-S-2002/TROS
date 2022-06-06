@@ -23,26 +23,26 @@ const Home = ({ navigation }) => {
   };
 
   const categoryData = [
-    {
-      id: 1,
-      name: "Shirt",
-      icon: icons.rice_bowl,
-    },
-    {
-      id: 2,
-      name: "Pants",
-      icon: icons.noodle,
-    },
-    {
-      id: 3,
-      name: "Tshirt",
-      icon: icons.hotdog,
-    },
-    {
-      id: 4,
-      name: "Shorts",
-      icon: icons.salad,
-    },
+    // {
+    //   id: 1,
+    //   name: "Shirts",
+    //   icon: icons.rice_bowl,
+    // },
+    // {
+    //   id: 2,
+    //   name: "Pants",
+    //   icon: icons.noodle,
+    // },
+    // {
+    //   id: 3,
+    //   name: "Tshirts",
+    //   icon: icons.hotdog,
+    // },
+    // {
+    //   id: 4,
+    //   name: "Shorts",
+    //   icon: icons.salad,
+    // },
     // {
     //   id: 5,
     //   name: "Burgers",
@@ -83,7 +83,7 @@ const Home = ({ navigation }) => {
   const restaurantData = [
     {
       id: 1,
-      name: "Shirts",
+      name: "Saravana stores",
       rating: 4.8,
       categories: [5, 7],
       priceRating: affordable,
@@ -95,38 +95,46 @@ const Home = ({ navigation }) => {
       },
       courier: {
         avatar: images.avatar_1,
-        name: "Amy",
+        name: "Andrew",
       },
       menu: [
         {
           menuId: 1,
-          name: "",
+          name: "Shirts",
           photo: images.crispy_chicken_burger,
-          description: "Burger with crispy chicken, cheese and lettuce",
-          calories: 200,
-          price: 10,
+          description: "Shirts are with good quality",
+          // calories: 200,
+          price: 700,
         },
         {
           menuId: 2,
-          name: "Crispy Chicken Burger with Honey Mustard",
+          name: "Tshirts",
           photo: images.honey_mustard_chicken_burger,
-          description: "Crispy Chicken Burger with Honey Mustard Coleslaw",
-          calories: 250,
-          price: 15,
+          description: "Tshirts are with good quality",
+          // calories: 250,
+          price: 600,
         },
         {
           menuId: 3,
-          name: "Crispy Baked French Fries",
+          name: "Pants",
           photo: images.baked_fries,
-          description: "Crispy Baked French Fries",
-          calories: 194,
-          price: 8,
+          description: "Pants are with good quality",
+          // calories: 194,
+          price: 800,
+        },
+        {
+          menuId: 3,
+          name: "Shorts",
+          photo: images.baked_fries,
+          description: "Shorts are with good quality",
+          // calories: 194,
+          price: 400,
         },
       ],
     },
     {
       id: 2,
-      name: "ByProgrammers Pizza",
+      name: "Pothys",
       rating: 4.8,
       categories: [2, 4, 6],
       priceRating: expensive,
@@ -142,43 +150,42 @@ const Home = ({ navigation }) => {
       },
       menu: [
         {
-          menuId: 4,
-          name: "Hawaiian Pizza",
-          photo: images.hawaiian_pizza,
-          description: "Canadian bacon, homemade pizza crust, pizza sauce",
-          calories: 250,
-          price: 15,
+          menuId: 1,
+          name: "Shirts",
+          photo: images.crispy_chicken_burger,
+          description: "Shirts are with good quality",
+          // calories: 200,
+          price: 1000,
         },
         {
-          menuId: 5,
-          name: "Tomato & Basil Pizza",
-          photo: images.pizza,
-          description:
-            "Fresh tomatoes, aromatic basil pesto and melted bocconcini",
-          calories: 250,
-          price: 20,
+          menuId: 2,
+          name: "Tshirts",
+          photo: images.honey_mustard_chicken_burger,
+          description: "Tshirts are with good quality",
+          // calories: 250,
+          price: 500,
         },
         {
-          menuId: 6,
-          name: "Tomato Pasta",
-          photo: images.tomato_pasta,
-          description: "Pasta with fresh tomatoes",
-          calories: 100,
-          price: 10,
+          menuId: 3,
+          name: "Pants",
+          photo: images.baked_fries,
+          description: "Pants are with good quality",
+          // calories: 194,
+          price: 800,
         },
         {
-          menuId: 7,
-          name: "Mediterranean Chopped Salad ",
-          photo: images.salad,
-          description: "Finely chopped lettuce, tomatoes, cucumbers",
-          calories: 100,
-          price: 10,
+          menuId: 3,
+          name: "Shorts",
+          photo: images.baked_fries,
+          description: "Shorts are with good quality",
+          // calories: 194,
+          price: 350,
         },
       ],
     },
     {
       id: 3,
-      name: "ByProgrammers Hotdogs",
+      name: "Peter England",
       rating: 4.8,
       categories: [3],
       priceRating: expensive,
@@ -194,18 +201,42 @@ const Home = ({ navigation }) => {
       },
       menu: [
         {
-          menuId: 8,
-          name: "Chicago Style Hot Dog",
-          photo: images.chicago_hot_dog,
-          description: "Fresh tomatoes, all beef hot dogs",
-          calories: 100,
-          price: 20,
+          menuId: 1,
+          name: "Shirts",
+          photo: images.crispy_chicken_burger,
+          description: "Shirts are with good quality",
+          // calories: 200,
+          price: 650,
+        },
+        {
+          menuId: 2,
+          name: "Tshirts",
+          photo: images.honey_mustard_chicken_burger,
+          description: "Tshirts are with good quality",
+          // calories: 250,
+          price: 700,
+        },
+        {
+          menuId: 3,
+          name: "Pants",
+          photo: images.baked_fries,
+          description: "Pants are with good quality",
+          // calories: 194,
+          price: 750,
+        },
+        {
+          menuId: 3,
+          name: "Shorts",
+          photo: images.baked_fries,
+          description: "Shorts are with good quality",
+          // calories: 194,
+          price: 350,
         },
       ],
     },
     {
       id: 4,
-      name: "ByProgrammers Sushi",
+      name: "HM",
       rating: 4.8,
       categories: [8],
       priceRating: expensive,
@@ -221,18 +252,42 @@ const Home = ({ navigation }) => {
       },
       menu: [
         {
-          menuId: 9,
-          name: "Sushi sets",
-          photo: images.sushi,
-          description: "Fresh salmon, sushi rice, fresh juicy avocado",
-          calories: 100,
-          price: 50,
+          menuId: 1,
+          name: "Shirts",
+          photo: images.crispy_chicken_burger,
+          description: "Shirts are with good quality",
+          // calories: 200,
+          price: 740,
+        },
+        {
+          menuId: 2,
+          name: "Tshirts",
+          photo: images.honey_mustard_chicken_burger,
+          description: "Tshirts are with good quality",
+          // calories: 250,
+          price: 480,
+        },
+        {
+          menuId: 3,
+          name: "Pants",
+          photo: images.baked_fries,
+          description: "Pants are with good quality",
+          // calories: 194,
+          price: 680,
+        },
+        {
+          menuId: 3,
+          name: "Shorts",
+          photo: images.baked_fries,
+          description: "Shorts are with good quality",
+          // calories: 194,
+          price: 380,
         },
       ],
     },
     {
       id: 5,
-      name: "ByProgrammers Cuisine",
+      name: "Mathew",
       rating: 4.8,
       categories: [1, 2],
       priceRating: affordable,
@@ -248,42 +303,42 @@ const Home = ({ navigation }) => {
       },
       menu: [
         {
-          menuId: 10,
-          name: "Kolo Mee",
-          photo: images.kolo_mee,
-          description: "Noodles with char siu",
-          calories: 200,
-          price: 5,
+          menuId: 1,
+          name: "Shirts",
+          photo: images.crispy_chicken_burger,
+          description: "Shirts are with good quality",
+          // calories: 200,
+          price: 500,
         },
         {
-          menuId: 11,
-          name: "Sarawak Laksa",
-          photo: images.sarawak_laksa,
-          description: "Vermicelli noodles, cooked prawns",
-          calories: 300,
-          price: 8,
+          menuId: 2,
+          name: "Tshirts",
+          photo: images.honey_mustard_chicken_burger,
+          description: "Tshirts are with good quality",
+          // calories: 250,
+          price: 350,
         },
         {
-          menuId: 12,
-          name: "Nasi Lemak",
-          photo: images.nasi_lemak,
-          description: "A traditional Malay rice dish",
-          calories: 300,
-          price: 8,
+          menuId: 3,
+          name: "Pants",
+          photo: images.baked_fries,
+          description: "Pants are with good quality",
+          // calories: 194,
+          price: 550,
         },
         {
-          menuId: 13,
-          name: "Nasi Briyani with Mutton",
-          photo: images.nasi_briyani_mutton,
-          description: "A traditional Indian rice dish with mutton",
-          calories: 300,
-          price: 8,
+          menuId: 3,
+          name: "Shorts",
+          photo: images.baked_fries,
+          description: "Shorts are with good quality",
+          // calories: 194,
+          price: 250,
         },
       ],
     },
     {
       id: 6,
-      name: "ByProgrammers Dessets",
+      name: "70MM ",
       rating: 4.9,
       categories: [9, 10],
       priceRating: affordable,
@@ -299,28 +354,36 @@ const Home = ({ navigation }) => {
       },
       menu: [
         {
-          menuId: 12,
-          name: "Teh C Peng",
-          photo: images.teh_c_peng,
-          description: "Three Layer Teh C Peng",
-          calories: 100,
-          price: 2,
+          menuId: 1,
+          name: "Shirts",
+          photo: images.crispy_chicken_burger,
+          description: "Shirts are with good quality",
+          // calories: 200,
+          price: 800,
         },
         {
-          menuId: 13,
-          name: "ABC Ice Kacang",
-          photo: images.ice_kacang,
-          description: "Shaved Ice with red beans",
-          calories: 100,
-          price: 3,
+          menuId: 2,
+          name: "Tshirts",
+          photo: images.honey_mustard_chicken_burger,
+          description: "Tshirts are with good quality",
+          // calories: 250,
+          price: 600,
         },
         {
-          menuId: 14,
-          name: "Kek Lapis",
-          photo: images.kek_lapis,
-          description: "Layer cakes",
-          calories: 300,
-          price: 20,
+          menuId: 3,
+          name: "Pants",
+          photo: images.baked_fries,
+          description: "Pants are with good quality",
+          // calories: 194,
+          price: 450,
+        },
+        {
+          menuId: 3,
+          name: "Shorts",
+          photo: images.baked_fries,
+          description: "Shorts are with good quality",
+          // calories: 194,
+          price: 350,
         },
       ],
     },
@@ -443,7 +506,7 @@ const Home = ({ navigation }) => {
               source={item.icon}
               resizeMode="contain"
               style={{
-                width: 660,
+                width: 60,
                 height: 30,
               }}
             />
@@ -559,16 +622,14 @@ const Home = ({ navigation }) => {
                   <Text style={{ ...FONTS.body3 }}>
                     {getCategoryNameById(categoryId)}
                   </Text>
-                  <Text style={{ ...FONTS.h3, color: COLORS.darkgray }}>
-                    {" "}
-                    .{" "}
-                  </Text>
+                  <Text style={{ ...FONTS.h3, color: COLORS.darkgray }}> </Text>
                 </View>
               );
             })}
 
             {/* Price */}
-            {[1, 2, 3].map((priceRating) => (
+
+            {/* {[1, 2, 3].map((priceRating) => (
               <Text
                 key={priceRating}
                 style={{
@@ -581,7 +642,7 @@ const Home = ({ navigation }) => {
               >
                 $
               </Text>
-            ))}
+            ))} */}
           </View>
         </View>
       </TouchableOpacity>
