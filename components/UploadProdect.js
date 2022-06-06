@@ -61,7 +61,7 @@ export default function UploadProdect({ navigation}) {
         <Button
           style={{color: "white",margin: 10 }}
           mode="contained"
-          onPress={() => navigation.navigate("Welcome To TROS")}
+          onPress={() => navigation.navigate("Home")}
         >
           Submit
         </Button>

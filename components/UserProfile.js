@@ -39,7 +39,7 @@ export default function Profile({ navigation }) {
             <TouchableOpacity
               style={style.logico}
               onPress={() => {
-                navigation.navigate("Welcome To TROS");
+                navigation.navigate("Home");
               }}
             >
               <Entypo name="log-out" size={25}>

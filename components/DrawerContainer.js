@@ -10,6 +10,7 @@ import HomeStackNavigator from "./HomeStackNavigator";
 import Profile from "./PartnerProfile";
 import UserProfile from "./UserProfile";
 // import Tracking from "../pages/Tracking";
+import LoginStackNavigator from "./LoginStackNavigator";
 
 import TrackNavigator from "../TrackNavigator";
 
@@ -43,6 +44,17 @@ export default function DrawerContainer(props) {
             <Ionicons name="home" size={25} color={color} />
           ),
         }}
+      />
+      <Drawer.Screen
+        name="UserLogin"
+        component={LoginStackNavigator}
+        options={{
+          drawerIcon: ({ color }) => (
+            <AntDesign name="profile" size={25} color={color} />
+          ),
+        }}
+
+        // screenOptions={{ headerShown: false }}
       />
 
       <Drawer.Screen

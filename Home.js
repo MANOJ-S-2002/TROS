@@ -467,6 +467,7 @@ const Home = ({ navigation }) => {
           style={{
             width: 30,
             height: 30,
+            
           }}
         />
       </TouchableOpacity>

@@ -28,7 +28,7 @@ export default function Profile({navigation}) {
                             directly from the Shop Owners. so that we provide all in <Text style={{ fontWeight: 'bold' }}>best Price</Text>.
                         </Text>
                         <TouchableOpacity style={style.logico}  onPress={() => {
-                navigation.navigate("Welcome To TROS");
+                navigation.navigate("Home");
               }}>
                             <Entypo name="log-out" size={25} > Logout</Entypo>
                         </TouchableOpacity>
