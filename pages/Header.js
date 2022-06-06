@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
-import Data1 from "./data1";
+import Data1 from "./Data1";
 import SearchInput from "../components/SearchInput";
 
 const Header = () => {
