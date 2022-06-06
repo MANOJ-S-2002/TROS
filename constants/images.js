@@ -19,6 +19,8 @@ const short= require("../images/short.jpg");
 
 
 
+
+
 export default {
     avatar_1,
     avatar_2,

@@ -95,7 +95,7 @@ const Home = ({ navigation }) => {
         longitude: 110.35632207358996,
       },
       courier: {
-        avatar: images.avatar_1,
+        avatar: images.avatar_2,
         name: "Andrew",
       },
       menu: [
@@ -190,14 +190,14 @@ const Home = ({ navigation }) => {
       rating: 4.8,
       categories: [3],
       priceRating: expensive,
-      photo: images.hot_dog_restaurant,
+      photo: images.pothys,
       duration: "20 - 25 min",
       location: {
         latitude: 1.5238753474714375,
         longitude: 110.34261833833622,
       },
       courier: {
-        avatar: images.peter,
+        avatar: images.avatar_3,
         name: "James",
       },
       menu: [
