@@ -17,9 +17,20 @@ const tshirt= require("../images/tshirt1.jpg");
 const pant= require("../images/pant.jpg");
 const short= require("../images/short.jpg");
 const green = require("../images/green.jpg");
-
-
-
+const btshirt = require("../images/btshirt.jpg");
+const blue = require("../images/blue.jpg");
+const ntshirt = require("../images/ntshirt.jpg");
+const black = require("../images/black.jpg");
+const blackts = require("../images/blackts.jpg");
+const jb = require("../images/jb.jpg");
+const motowphan = require("../images/motowphan.jpg");
+const phantbl = require("../images/phantbl.jpg");
+const sb = require("../images/sb.jpg");
+const su1 = require("../images/su1.jpg");
+const sub = require("../images/sub.jpg");
+const vph = require("../images/vph.jpg");
+const cs = require("../images/cs.jpg");
+const sm = require("../images/sm.jpg");
 
 export default {
     avatar_1,
@@ -41,6 +52,20 @@ export default {
     tshirt,
     pant,
     short,
-    green
+    green,
+    btshirt,
+    blue,
+    ntshirt,
+    black,
+    blackts,
+    jb,
+    motowphan,
+    phantbl,
+    sb,
+    sm,
+    su1,
+    sub,
+    vph,
+    cs
 
 }

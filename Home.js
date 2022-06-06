@@ -153,7 +153,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 1,
           name: "Shirts",
-          photo: images.shirt,
+          photo: images.black,
           description: "Shirts are with good quality",
           // calories: 200,
           price: 1000,
@@ -161,7 +161,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 2,
           name: "Tshirts",
-          photo: images.tshirt,
+          photo: images.blackts,
           description: "Tshirts are with good quality",
           // calories: 250,
           price: 500,
@@ -169,7 +169,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.pant,
+          photo: images.jb,
           description: "Pants are with good quality",
           // calories: 194,
           price: 800,
@@ -212,7 +212,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 2,
           name: "Tshirts",
-          photo: images.tshirt,
+          photo: images.btshirt,
           description: "Tshirts are with good quality",
           // calories: 250,
           price: 700,
@@ -220,7 +220,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.pant,
+          photo: images.motowphan,
           description: "Pants are with good quality",
           // calories: 194,
           price: 750,
@@ -228,7 +228,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Shorts",
-          photo: images.short,
+          photo: images.sb,
           description: "Shorts are with good quality",
           // calories: 194,
           price: 350,
@@ -255,7 +255,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 1,
           name: "Shirts",
-          photo: images.shirt,
+          photo: images.blue,
           description: "Shirts are with good quality",
           // calories: 200,
           price: 740,
@@ -263,7 +263,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 2,
           name: "Tshirts",
-          photo: images.tshirt,
+          photo: images.ntshirt,
           description: "Tshirts are with good quality",
           // calories: 250,
           price: 480,
@@ -271,7 +271,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.pant,
+          photo: images.phantbl,
           description: "Pants are with good quality",
           // calories: 194,
           price: 680,
@@ -279,7 +279,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Shorts",
-          photo: images.short,
+          photo: images.sm,
           description: "Shorts are with good quality",
           // calories: 194,
           price: 380,
@@ -306,7 +306,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 1,
           name: "Shirts",
-          photo: images.shirt,
+          photo: images.su1,
           description: "Shirts are with good quality",
           // calories: 200,
           price: 500,
@@ -314,7 +314,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 2,
           name: "Tshirts",
-          photo: images.tshirt,
+          photo: images.sub,
           description: "Tshirts are with good quality",
           // calories: 250,
           price: 350,
@@ -322,7 +322,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.pant,
+          photo: images.vph,
           description: "Pants are with good quality",
           // calories: 194,
           price: 550,
@@ -330,7 +330,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Shorts",
-          photo: images.short,
+          photo: images.cs,
           description: "Shorts are with good quality",
           // calories: 194,
           price: 250,
