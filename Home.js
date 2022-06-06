@@ -10,6 +10,7 @@ import {
 } from "react-native";
 
 import { icons, images, SIZES, COLORS, FONTS } from "./constants";
+import { Ionicons } from "@expo/vector-icons";
 
 const Home = ({ navigation }) => {
   // Dummy Datas
@@ -415,62 +416,63 @@ const Home = ({ navigation }) => {
     return "";
   }
 
-  // function renderHeader() {
-  //   return (
-  //     // <View style={{ flexDirection: "row", height: 50 }}>
-  //     //   <TouchableOpacity
-  //     //     style={{
-  //     //       width: 50,
-  //     //       paddingLeft: SIZES.padding * 2,
-  //     //       justifyContent: "center",
-  //     //     }}
-  //     //   >
-  //     //     <Image
-  //     //       source={icons.nearby}
-  //     //       resizeMode="contain"
-  //     //       style={{
-  //     //         width: 30,
-  //     //         height: 30,
-  //     //       }}
-  //     //     />
-  //     //   </TouchableOpacity>
+  function renderHeader() {
+    return (
+  
 
-  //     //   <View
-  //     //     style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-  //     //   >
-  //     //     <View
-  //     //       style={{
-  //     //         width: "70%",
-  //     //         height: "100%",
-  //     //         backgroundColor: COLORS.lightGray3,
-  //     //         alignItems: "center",
-  //     //         justifyContent: "center",
-  //     //         borderRadius: SIZES.radius,
-  //     //       }}
-  //     //     >
-  //     //       <Text style={{ ...FONTS.h3 }}>{currentLocation.streetName}</Text>
-  //     //     </View>
-  //     //   </View>
-
-  //     //   <TouchableOpacity
-  //     //     style={{
-  //     //       width: 50,
-  //     //       paddingRight: SIZES.padding * 2,
-  //     //       justifyContent: "center",
-  //     //     }}
-  //     //   >
-  //     //     <Image
-  //     //       source={icons.basket}
-  //     //       resizeMode="contain"
-  //     //       style={{
-  //     //         width: 30,
-  //     //         height: 30,
-  //     //       }}
-  //     //     />
-  //     //   </TouchableOpacity>
-  //     // </View>
-  //   // );
-  // // }
+    <View style={{ flexDirection: "row", height: 50 }}>
+      <TouchableOpacity
+        style={{
+          width: 50,
+          paddingLeft: SIZES.padding * 2,
+          justifyContent: "center",
+        }}
+      >
+        <Image
+          source={icons.pin}
+          resizeMode="contain"
+          style={{
+            width: 30,
+            height: 30,
+          }}
+        />
+      </TouchableOpacity>
+      <View
+        style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+      >
+        <View
+          style={{
+            width: "70%",
+            height: "100%",
+            backgroundColor: COLORS.lightGray3,
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: SIZES.radius,
+          }}
+        >
+          
+          {/* <Text style={{ ...FONTS.h3 }}>{currentLocation.streetName}</Text> */}
+        </View>
+      </View>
+      <TouchableOpacity
+        style={{
+          width: 50,
+          paddingRight: SIZES.padding * 2,
+          justifyContent: "center",
+        }}
+      >
+        <Image
+          source={icons.basket}
+          resizeMode="contain"
+          style={{
+            width: 30,
+            height: 30,
+          }}
+        />
+      </TouchableOpacity>
+    </View>
+    );
+  }
 
   function renderMainCategories() {
     const renderItem = ({ item }) => {
@@ -663,7 +665,7 @@ const Home = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* {renderHeader()} */}
+      {renderHeader()}
       {renderMainCategories()}
       {renderRestaurantList()}
     </SafeAreaView>
