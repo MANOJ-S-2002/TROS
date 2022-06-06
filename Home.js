@@ -10,8 +10,6 @@ import {
 } from "react-native";
 
 import { icons, images, SIZES, COLORS, FONTS } from "./constants";
-import { Ionicons } from "@expo/vector-icons";
-
 const Home = ({ navigation }) => {
   // Dummy Datas
 
@@ -190,7 +188,7 @@ const Home = ({ navigation }) => {
       rating: 4.8,
       categories: [3],
       priceRating: expensive,
-      photo: images.pothys,
+      photo: images.peter,
       duration: "20 - 25 min",
       location: {
         latitude: 1.5238753474714375,
