@@ -16,7 +16,7 @@ const shirt= require("../images/shirt1.jpg");
 const tshirt= require("../images/tshirt1.jpg");
 const pant= require("../images/pant.jpg");
 const short= require("../images/short.jpg");
-
+const green = require("../images/green.jpg");
 
 
 
@@ -40,6 +40,7 @@ export default {
     shirt,
     tshirt,
     pant,
-    short
+    short,
+    green
 
 }

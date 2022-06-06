@@ -204,7 +204,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 1,
           name: "Shirts",
-          photo: images.shirt,
+          photo: images.green,
           description: "Shirts are with good quality",
           // calories: 200,
           price: 650,
