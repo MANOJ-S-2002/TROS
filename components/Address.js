@@ -1,8 +1,11 @@
 import { NavigationContainer } from "@react-navigation/native";
 import React, { Component } from "react";
-import { TextInput, View, StyleSheet, Button, Alert } from "react-native";
+import { TextInput,Text, View, StyleSheet,ImageBackground, Button, Alert } from "react-native";
 import { withNavigation } from 'react-navigation'
+import bg from "../images/bg.jpg";
 
+
+const image = bg
 export class Address extends Component {
 
     switchPage = () => this.props.navigation.navigate('pay');
@@ -25,23 +28,39 @@ export class Address extends Component {
     render() {
         // const { navigation } = this.props.navigation;
         return (
+            <ImageBackground style={styles.backgroundImage} sizeMode='cover' source={image}>
+
+            
             <View style={styles.container}>
+            <Text
+          style={{
+            margin: 10,
+            borderRadius: 7,
+            fontSize: 30,
+            fontWeight: "bold",
+            color: "black",
+            backgroundColor: "",
+          }}
+        >
+          ADDRESS
+        </Text>
+                
                 <TextInput
-                    placeholder="enter name"
+                    placeholder="Enter name"
                     onChange={(text) => {
                         this.setState({ name: text });
                     }}
                     style={styles.card}
                 />
                 <TextInput
-                    placeholder="enter number"
+                    placeholder="Enter number"
                     onChange={(text) => {
                         this.setState({ number: text });
                     }}
                     style={styles.card}
                 />
                 <TextInput
-                    placeholder="  enter pincode"
+                    placeholder="  Enter pincode"
                     onChange={(text) => {
                         this.setState({ pincode: text });
                     }}
@@ -50,7 +69,7 @@ export class Address extends Component {
                   
                 />
                 <TextInput
-                    placeholder="  enter address"
+                    placeholder="  Enter address"
                     onChange={(text) => {
                         this.setState({ address: text });
                     }}
@@ -58,7 +77,7 @@ export class Address extends Component {
                 />
 
                 <TextInput
-                    placeholder="  enter landmark"
+                    placeholder="  Enter landmark"
                     onChange={(text) => {
                         this.setState({ landmark: text });
                     }}
@@ -66,7 +85,7 @@ export class Address extends Component {
                 />
 
                 <TextInput
-                    placeholder="  enter state"
+                    placeholder="  Enter state"
                     onChange={(text) => {
                         this.setState({ country_state: text });
                     }}
@@ -75,9 +94,12 @@ export class Address extends Component {
                 <Button
                     title="Continue"
                     onPress={this.switchPage}
+                    color="orange"
+                    
 
                 />
             </View>
+            </ImageBackground>
         );
     }
 }
@@ -87,10 +109,12 @@ export default withNavigation(Address);
 const styles = StyleSheet.create({
     container: {
         display: "flex",
-        backgroundColor: "white",
+        // backgroundColor: "white",
         alignItems: "center",
-        justifyContent: "center",
+        // justifyContent: "center",
         width: '100%',
+        paddingTop: 50,
+
     },
     card: {
         borderWidth: 3,
@@ -101,5 +125,14 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         padding: 5,
         backgroundColor: "#f2eaea"
-    }
+    },
+    backgroundImage: {
+        paddingTop: 50,
+        width: '100%',
+        height: 'auto',
+        flex: 1,
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        // opacity:0.8
+      },
 });

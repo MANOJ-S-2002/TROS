@@ -1,13 +1,26 @@
 import React from "react";
 import { View, StyleSheet, ImageBackground } from "react-native";
-import { TextInput, Button } from "react-native-paper";
+import { TextInput, Text, Button } from "react-native-paper";
 import bg from "../images/bg.jpg";
 
-const image = bg ;
+const image = bg;
 export default function Signup({ navigation }) {
   return (
     <ImageBackground style={styles.image} source={image} resizeMode="cover">
       <View style={styles.signUpContainer}>
+        <Text
+          style={{
+            // paddingTop: 5,
+            margin: 10,
+            borderRadius: 7,
+            fontSize: 30,
+            fontWeight: "bold",
+            color: "black",
+            // backgroundColor: "orange",
+          }}
+        >
+          SIGN UP
+        </Text>
         <TextInput style={styles.row1} mode="outlined" label="Enter Name" />
         <TextInput
           style={styles.row1}
@@ -25,8 +38,8 @@ export default function Signup({ navigation }) {
         />
         <Button
           style={{ margin: 10 }}
-        
           mode="contained"
+          color="orange"
           onPress={() => navigation.navigate("Login")}
         >
           Signup
@@ -40,6 +53,7 @@ const styles = StyleSheet.create({
   signUpContainer: {
     // backgroundColor: `gray`,
     padding: 10,
+    paddingTop: 120,
     // flex: 1,
     borderRadius: 15,
     alignItems: "center",
@@ -50,7 +64,7 @@ const styles = StyleSheet.create({
     width: "auto",
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
+    // justifyContent: "center",
   },
   row1: {
     width: 300,
