@@ -2,6 +2,7 @@ import React from "react";
 import {
   StyleSheet,
   SafeAreaView,
+  Button,
   View,
   Text,
   TouchableOpacity,
@@ -273,10 +274,22 @@ const Restaurant = ({ route, navigation }) => {
             {/* Calories */}
             <View
               style={{
-                flexDirection: "row",
-                marginTop: 10,
+                marginTop: 40,
+                marginBottom: 20,
               }}
             >
+              <TouchableOpacity
+                style={{
+                  flexDirection: "row",
+                  paddingLeft: 20,
+                  justifyContent: "space-around",
+                }}
+              >
+                <Button title="S" />
+                <Button title="M" />
+                <Button title="L" />
+                <Button title="XL" />
+              </TouchableOpacity>
               {/* <Image
                                     source={icons.fire}
                                     style={{
@@ -286,9 +299,9 @@ const Restaurant = ({ route, navigation }) => {
                                     }}
                                 /> */}
 
-              <Text style={{
+              {/* <Text style={{
                                     ...FONTS.body3, color: COLORS.darygray
-                                }}>{item.calories}</Text>
+                                }}>{item.calories}</Text> */}
             </View>
           </View>
         ))}
