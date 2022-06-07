@@ -187,7 +187,7 @@ const Restaurant = ({ route, navigation }) => {
               {/* Food Image */}
               <View style={{ height: 350 }}>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("Product")}
+                // onPress={() => navigation.navigate("Product")}
                 >
                   <Image
                     source={item.photo}
@@ -271,25 +271,20 @@ const Restaurant = ({ route, navigation }) => {
               <Text style={{ ...FONTS.body3 }}>{item.description}</Text>
             </View>
 
-            {/* Calories */}
+            {/* button*/}
             <View
               style={{
                 marginTop: 40,
                 marginBottom: 20,
+                flexDirection: "row",
+
               }}
             >
-              <TouchableOpacity
-                style={{
-                  flexDirection: "row",
-                  paddingLeft: 20,
-                  justifyContent: "space-around",
-                }}
-              >
-                <Button title="S" />
-                <Button title="M" />
-                <Button title="L" />
-                <Button title="XL" />
-              </TouchableOpacity>
+              
+              <Button title="S" color="darkorange" />
+              <Button title="M" color="darkorange" />
+              <Button title="L" color="darkorange" />
+              <Button title="XL" color="darkorange" />
               {/* <Image
                                     source={icons.fire}
                                     style={{
@@ -384,7 +379,7 @@ const Restaurant = ({ route, navigation }) => {
             <Text style={{ ...FONTS.h3 }}>
               {getBasketItemCount()} items in Cart
             </Text>
-            <Text style={{ ...FONTS.h3 }}>${sumOrder()}</Text>
+            <Text style={{ ...FONTS.h3 }}>₹{sumOrder()}</Text>
           </View>
 
           {/* <View
