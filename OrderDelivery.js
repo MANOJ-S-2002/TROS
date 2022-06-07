@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
 import MapViewDirections from "react-native-maps-directions";
+import {Linking} from 'react-native'
 
 import { COLORS, FONTS, icons, SIZES, GOOGLE_API_KEY } from "./constants";
 
@@ -47,7 +48,12 @@ const OrderDelivery = ({ route, navigation }) => {
     setToLocation(toLoc);
     setRegion(mapRegion);
   }, []);
-
+    dialCall = (number) => {
+    let phoneNumber = '';
+    if (Platform.OS === 'android') { phoneNumber = `tel:${number}`; }
+    else {phoneNumber = `telprompt:${number}`; }
+    Linking.openURL(phoneNumber);
+ };
   function calculateAngle(coordinates) {
     let startLat = coordinates[0]["latitude"];
     let startLng = coordinates[0]["longitude"];
@@ -318,7 +324,7 @@ const OrderDelivery = ({ route, navigation }) => {
                 justifyContent: "center",
                 borderRadius: 10,
               }}
-              onPress={() => navigation.navigate("Home")}
+              onPress={()=>{this.dialCall(6385480659)}}
             >
               <Text style={{ ...FONTS.h4, color: COLORS.white }}>Call</Text>
             </TouchableOpacity>
