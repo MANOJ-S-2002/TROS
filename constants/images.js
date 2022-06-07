@@ -31,7 +31,17 @@ const sub = require("../images/sub.jpg");
 const vph = require("../images/vph.jpg");
 const cs = require("../images/cs.jpg");
 const sm = require("../images/sm.jpg");
-
+//const My_project = require("../images/My_project.jpg");
+const nss = require("../images/nss.jpg");
+const nns1 = require("../images/nns1.jpg");
+const nss1 = require("../images/nss1.jpg");
+const pp = require("../images/pp.jpg");
+const vinbshirt = require("../images/vinbshirt.jpg");
+const pan = require("../images/pan.jpg");
+const pan2 = require("../images/pan2.jpg");
+const pan3 = require("../images/pan3.jpg");
+const pan4 = require("../images/pan4.jpg");
+const pan6 = require("../images/pan6.jpg");
 export default {
     avatar_1,
     avatar_2,
@@ -66,6 +76,16 @@ export default {
     su1,
     sub,
     vph,
-    cs
+    cs,
+    nss,
+    nns1,
+    nss1,
+    pp,
+    vinbshirt,
+    pan,
+    pan2,
+    pan3,
+    pan4,
+    pan6
 
 }

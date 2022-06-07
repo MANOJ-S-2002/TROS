@@ -123,7 +123,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 1,
           name: "Shirts",
-          photo: images.black,
+          photo: images.nss1,
           description: "Shirts are with good quality",
           calories: "S M L XL",
           price: 1000,
@@ -131,7 +131,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 2,
           name: "Tshirts",
-          photo: images.blackts,
+          photo: images.ntshirt,
           description: "Tshirts are with good quality",
           calories: "S M L XL",
           price: 500,
@@ -139,7 +139,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.jb,
+          photo: images.pan,
           description: "Pants are with good quality",
           calories: "S M L XL",
           price: 800,
@@ -190,7 +190,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.motowphan,
+          photo: images.pan2,
           description: "Pants are with good quality",
           calories: "S M L XL",
           price: 750,
@@ -241,7 +241,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.phantbl,
+          photo: images.pan3,
           description: "Pants are with good quality",
           calories: "S M L XL",
           price: 680,
@@ -276,7 +276,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 1,
           name: "Shirts",
-          photo: images.su1,
+          photo: images.vinbshirt,
           description: "Shirts are with good quality",
           calories: "S M L XL",
           price: 500,
@@ -292,7 +292,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.vph,
+          photo: images.pan4,
           description: "Pants are with good quality",
           calories: "S M L XL",
           price: 550,
@@ -343,7 +343,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.pant,
+          photo: images.pan6,
           description: "Pants are with good quality",
           calories: "S M L XL",
           price: 450,
