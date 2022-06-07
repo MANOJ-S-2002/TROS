@@ -1,8 +1,9 @@
 import React from "react";
 import { View, StyleSheet, Text, ImageBackground, StatusBar } from "react-native";
 import { TextInput, Button } from "react-native-paper";
+import bg from "../images/bg.jpg";
 
-const image = {  }
+const image = bg
 
 export default function PartnerLogin({ navigation }) {
     return (
@@ -44,7 +45,7 @@ export default function PartnerLogin({ navigation }) {
 }
 const styles = StyleSheet.create({
     loginContainer: {
-        backgroundColor: `gray`,
+        // backgroundColor: `gray`,
         padding: 10,
         // flex: 1,
         borderRadius: 15,

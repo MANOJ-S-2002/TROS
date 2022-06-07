@@ -9,7 +9,7 @@ export default function Profile({ navigation }) {
   return (
     <View style={style.container}>
       <View style={style.container1}>
-        <Image source={require("../images/penico.jpg")} style={style.icons} />
+        <Image source={require("./IconLogo.png")} style={style.icons} />
         <Text style={style.title}>UserProfile</Text>
         <Mgs name="message-square" size={25} style={style.icons1} />
       </View>
@@ -32,7 +32,7 @@ export default function Profile({ navigation }) {
             <Text style={style.profile}>andrew@gmail.com</Text>
             <Text style={style.profile}>Chennai,India</Text>
 
-            <Text style={style.profile}>8989899900</Text>
+            <Text style={style.profile}>89898990</Text>
 
             <Text style={style.profile}></Text>
 
@@ -117,10 +117,10 @@ const style = StyleSheet.create({
   },
 
   icons: {
-    height: 30,
-    width: 30,
+    height: 50,
+    width: 50,
     borderRadius: 50,
-    borderColor: "yellow",
+    // borderColor: "yellow",
     borderWidth: 3,
     marginStart: 10,
   },

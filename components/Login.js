@@ -1,8 +1,9 @@
 import React from "react";
 import { View, StyleSheet, Text, ImageBackground } from "react-native";
 import { TextInput, Button } from "react-native-paper";
+import bg from "../images/bg.jpg";
 
-const image = { }
+const image = bg
 
 export default function Login({ navigation }) {
   return (
@@ -26,10 +27,14 @@ export default function Login({ navigation }) {
       >
         Login
       </Button>
-      <Text>New to TROS?</Text>
+
+    
+      
+      <Text
+      style={{ margin: 10 ,borderRadius:7,fontSize:20,fontWeight:"bold",color:"white",backgroundColor:"" }}>New to TROS?</Text>
       <Button
         style={{ margin: 10 }}
-        mode="outlined"
+        mode="contained"
           onPress={() => navigation.navigate("Signup")}
       >
         Register Here!
@@ -41,7 +46,7 @@ export default function Login({ navigation }) {
 }
 const styles = StyleSheet.create({
   loginContainer: {
-    backgroundColor: `gray`,
+    // backgroundColor: `gray`,
     padding: 10,
     // flex: 1,
     borderRadius: 15,
@@ -55,6 +60,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    // opacity:0.8
   },
   input: {
     width: 300,
@@ -62,5 +68,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 25,
     fontSize: 16,
     borderRadius: 25,
+    
   },
 });

@@ -10,7 +10,7 @@ export default function Profile({navigation}) {
     return (
         <View style={style.container}>
             <View style={style.container1}>
-                <Image source={require('../images/penico.jpg')} style={style.icons} />
+                <Image source={require('./IconLogo.png')} style={style.icons} />
                 <Text style={style.title}>Profile</Text>
                 <Mgs name="message-square" size={25} style={style.icons1} />
             </View>
@@ -107,10 +107,10 @@ const style = StyleSheet.create({
     },
 
     icons: {
-        height: 30,
-        width: 30,
+        height: 50,
+        width: 50,
         borderRadius: 50,
-        borderColor: "yellow",
+        // borderColor: "yellow",
         borderWidth: 3,
         marginStart: 10
     },

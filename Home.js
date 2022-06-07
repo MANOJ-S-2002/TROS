@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Image,
   FlatList,
-  KeyboardAvoidingView
+  KeyboardAvoidingView,
 } from "react-native";
 import SearchInput from "./components/SearchInput";
 
@@ -44,7 +44,6 @@ const Home = ({ navigation }) => {
     //   name: "Shorts",
     //   icon: icons.salad,
     // },
-    
   ];
 
   // price rating
@@ -68,7 +67,6 @@ const Home = ({ navigation }) => {
       courier: {
         avatar: images.avatar_2,
         name: "Andrew",
-
       },
       menu: [
         {
@@ -394,16 +392,16 @@ const Home = ({ navigation }) => {
         <TouchableOpacity
           style={{
             width: 50,
-            paddingLeft: SIZES.padding * 2,
+            paddingLeft: SIZES.padding,
             justifyContent: "center",
           }}
         >
           <Image
-            source={icons.pin}
+            source={require("./components/IconLogo.png")}
             resizeMode="contain"
             style={{
-              width: 30,
-              height: 30,
+              width: 100,
+              height: 100,
             }}
           />
         </TouchableOpacity>
@@ -424,9 +422,9 @@ const Home = ({ navigation }) => {
               backgroundColor: COLORS.lightGray,
             }}
           >
-        <KeyboardAvoidingView>
-          <SearchInput />
-        </KeyboardAvoidingView>
+            <KeyboardAvoidingView style={(paddingTop = 1)}>
+              <SearchInput />
+            </KeyboardAvoidingView>
           </View>
         </View>
         {/* <View
@@ -445,7 +443,7 @@ const Home = ({ navigation }) => {
             <Text style={{ ...FONTS.h3 }}>{currentLocation.streetName}</Text>
           </View>
         </View> */}
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={{
             width: 50,
             paddingRight: SIZES.padding * 2,
@@ -460,7 +458,7 @@ const Home = ({ navigation }) => {
               height: 30,
             }}
           />
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     );
   }
