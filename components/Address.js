@@ -5,7 +5,7 @@ import { withNavigation } from 'react-navigation'
 
 export class Address extends Component {
 
-    switchPage = () => this.props.navigation.navigate('PaymentModes');
+    switchPage = () => this.props.navigation.navigate('pay');
 
     constructor() {
         super();

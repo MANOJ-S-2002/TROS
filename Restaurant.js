@@ -389,7 +389,7 @@ const Restaurant = ({ route, navigation }) => {
           {/* Order Button */}
           <View
             style={{
-              padding: SIZES.padding * 2,
+              padding: SIZES.padding,
               alignItems: "center",
               justifyContent: "center",
             }}
@@ -397,7 +397,30 @@ const Restaurant = ({ route, navigation }) => {
             <TouchableOpacity
               style={{
                 width: SIZES.width * 0.9,
-                padding: SIZES.padding,
+                // padding: SIZES.padding,
+                backgroundColor: COLORS.primary,
+                alignItems: "center",
+                borderRadius: SIZES.radius,
+              }}
+              onPress={() => navigation.navigate("Address")}
+            >
+              <Text style={{ color: COLORS.white, ...FONTS.h2 }}>
+                Order Now
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View
+            style={{
+              padding: SIZES.padding,
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <TouchableOpacity
+              style={{
+                width: SIZES.width * 0.9,
+                // padding: SIZES.padding,
                 backgroundColor: COLORS.primary,
                 alignItems: "center",
                 borderRadius: SIZES.radius,
@@ -409,7 +432,9 @@ const Restaurant = ({ route, navigation }) => {
                 })
               }
             >
-              <Text style={{ color: COLORS.white, ...FONTS.h2 }}>Order</Text>
+              <Text style={{ color: COLORS.white, ...FONTS.h2 }}>
+                Trail now
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
