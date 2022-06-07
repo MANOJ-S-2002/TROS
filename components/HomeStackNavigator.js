@@ -51,7 +51,7 @@ const StackNavigator = (props) => {
       <Stack.Screen name="Product Details" component={VegetableDetails} />
 
       <Stack.Screen name="Address" component={Address} />
-      <Stack.Screen name="PaymentModes" component={PaymentModes} />
+      <Stack.Screen name="pay" component={PaymentModes} />
 
       <Stack.Screen name="UploadProduct" component={UploadProdect} />
     </Stack.Navigator>

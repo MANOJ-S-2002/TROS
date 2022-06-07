@@ -7,7 +7,9 @@ import {
   TouchableOpacity,
   Image,
   FlatList,
+  KeyboardAvoidingView
 } from "react-native";
+import SearchInput from "./components/SearchInput";
 
 import { icons, images, SIZES, COLORS, FONTS } from "./constants";
 const Home = ({ navigation }) => {
@@ -74,7 +76,7 @@ const Home = ({ navigation }) => {
           name: "Shirts",
           photo: images.shirt,
           description: "Shirts are with good quality",
-          // calories: 200,
+          calories: "SMLXL",
           price: 700,
         },
         {
@@ -82,7 +84,7 @@ const Home = ({ navigation }) => {
           name: "Tshirts",
           photo: images.tshirt,
           description: "Tshirts are with good quality",
-          // calories: 250,
+          calories: "S \n M \n L \n XL",
           price: 600,
         },
         {
@@ -90,7 +92,7 @@ const Home = ({ navigation }) => {
           name: "Pants",
           photo: images.pant,
           description: "Pants are with good quality",
-          // calories: 194,
+          calories: "S \n M \n L \n XL",
           price: 800,
         },
         {
@@ -98,7 +100,7 @@ const Home = ({ navigation }) => {
           name: "Shorts",
           photo: images.short,
           description: "Shorts are with good quality",
-          // calories: 194,
+          calories: "S \n M \n L \n XL",
           price: 400,
         },
       ],
@@ -125,7 +127,7 @@ const Home = ({ navigation }) => {
           name: "Shirts",
           photo: images.black,
           description: "Shirts are with good quality",
-          // calories: 200,
+          calories: "S \n M \n L \n XL",
           price: 1000,
         },
         {
@@ -133,7 +135,7 @@ const Home = ({ navigation }) => {
           name: "Tshirts",
           photo: images.blackts,
           description: "Tshirts are with good quality",
-          // calories: 250,
+          calories: "S \n M \n L \n XL",
           price: 500,
         },
         {
@@ -141,7 +143,7 @@ const Home = ({ navigation }) => {
           name: "Pants",
           photo: images.jb,
           description: "Pants are with good quality",
-          // calories: 194,
+          calories: "S \n M \n L \n XL",
           price: 800,
         },
         {
@@ -149,7 +151,7 @@ const Home = ({ navigation }) => {
           name: "Shorts",
           photo: images.short,
           description: "Shorts are with good quality",
-          // calories: 194,
+          calories: "S \n M \n L \n XL",
           price: 350,
         },
       ],
@@ -176,7 +178,7 @@ const Home = ({ navigation }) => {
           name: "Shirts",
           photo: images.green,
           description: "Shirts are with good quality",
-          // calories: 200,
+          calories: "S \n M \n L \n XL",
           price: 650,
         },
         {
@@ -184,7 +186,7 @@ const Home = ({ navigation }) => {
           name: "Tshirts",
           photo: images.btshirt,
           description: "Tshirts are with good quality",
-          // calories: 250,
+          calories: "S \n M \n L \n XL",
           price: 700,
         },
         {
@@ -192,7 +194,7 @@ const Home = ({ navigation }) => {
           name: "Pants",
           photo: images.motowphan,
           description: "Pants are with good quality",
-          // calories: 194,
+          calories: "S \n M \n L \n XL",
           price: 750,
         },
         {
@@ -200,7 +202,7 @@ const Home = ({ navigation }) => {
           name: "Shorts",
           photo: images.sb,
           description: "Shorts are with good quality",
-          // calories: 194,
+          calories: "S \n M \n L \n XL",
           price: 350,
         },
       ],
@@ -227,7 +229,7 @@ const Home = ({ navigation }) => {
           name: "Shirts",
           photo: images.blue,
           description: "Shirts are with good quality",
-          // calories: 200,
+          calories: "S \n M \n L \n XL",
           price: 740,
         },
         {
@@ -235,7 +237,7 @@ const Home = ({ navigation }) => {
           name: "Tshirts",
           photo: images.ntshirt,
           description: "Tshirts are with good quality",
-          // calories: 250,
+          calories: "S \n M \n L \n XL",
           price: 480,
         },
         {
@@ -243,7 +245,7 @@ const Home = ({ navigation }) => {
           name: "Pants",
           photo: images.phantbl,
           description: "Pants are with good quality",
-          // calories: 194,
+          calories: "S \n M \n L \n XL",
           price: 680,
         },
         {
@@ -251,7 +253,7 @@ const Home = ({ navigation }) => {
           name: "Shorts",
           photo: images.sm,
           description: "Shorts are with good quality",
-          // calories: 194,
+          calories: "S \n M \n L \n XL",
           price: 380,
         },
       ],
@@ -278,7 +280,7 @@ const Home = ({ navigation }) => {
           name: "Shirts",
           photo: images.su1,
           description: "Shirts are with good quality",
-          // calories: 200,
+          calories: "S \n M \n L \n XL",
           price: 500,
         },
         {
@@ -286,7 +288,7 @@ const Home = ({ navigation }) => {
           name: "Tshirts",
           photo: images.sub,
           description: "Tshirts are with good quality",
-          // calories: 250,
+          calories: "S \n M \n L \n XL",
           price: 350,
         },
         {
@@ -294,7 +296,7 @@ const Home = ({ navigation }) => {
           name: "Pants",
           photo: images.vph,
           description: "Pants are with good quality",
-          // calories: 194,
+          calories: "S \n M \n L \n XL",
           price: 550,
         },
         {
@@ -302,7 +304,7 @@ const Home = ({ navigation }) => {
           name: "Shorts",
           photo: images.cs,
           description: "Shorts are with good quality",
-          // calories: 194,
+          calories: "S \n M \n L \n XL",
           price: 250,
         },
       ],
@@ -329,7 +331,7 @@ const Home = ({ navigation }) => {
           name: "Shirts",
           photo: images.shirt,
           description: "Shirts are with good quality",
-          // calories: 200,
+          calories: "S \n M \n L \n XL",
           price: 800,
         },
         {
@@ -337,7 +339,7 @@ const Home = ({ navigation }) => {
           name: "Tshirts",
           photo: images.tshirt,
           description: "Tshirts are with good quality",
-          // calories: 250,
+          calories: "S \n M \n L \n XL",
           price: 600,
         },
         {
@@ -345,7 +347,7 @@ const Home = ({ navigation }) => {
           name: "Pants",
           photo: images.pant,
           description: "Pants are with good quality",
-          // calories: 194,
+          calories: "S \n M \n L \n XL",
           price: 450,
         },
         {
@@ -353,7 +355,7 @@ const Home = ({ navigation }) => {
           name: "Shorts",
           photo: images.short,
           description: "Shorts are with good quality",
-          // calories: 194,
+          calories: "S \n M \n L \n XL",
           price: 350,
         },
       ],
@@ -406,6 +408,28 @@ const Home = ({ navigation }) => {
           />
         </TouchableOpacity>
         <View
+          style={{
+            flex: 1,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <View
+            style={{
+              height: 50,
+              alignItems: "center",
+              justifyContent: "center",
+              // paddingHorizontal: SIZES.padding * 3,
+              borderRadius: SIZES.radius,
+              backgroundColor: COLORS.lightGray,
+            }}
+          >
+        <KeyboardAvoidingView>
+          <SearchInput />
+        </KeyboardAvoidingView>
+          </View>
+        </View>
+        {/* <View
           style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
         >
           <View
@@ -418,9 +442,9 @@ const Home = ({ navigation }) => {
               borderRadius: SIZES.radius,
             }}
           >
-            {/* <Text style={{ ...FONTS.h3 }}>{currentLocation.streetName}</Text> */}
+            <Text style={{ ...FONTS.h3 }}>{currentLocation.streetName}</Text>
           </View>
-        </View>
+        </View> */}
         <TouchableOpacity
           style={{
             width: 50,

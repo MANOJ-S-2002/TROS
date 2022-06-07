@@ -7,10 +7,12 @@ import {
   TouchableOpacity,
   Image,
   Animated,
+  KeyboardAvoidingView,
 } from "react-native";
 import { isIphoneX } from "react-native-iphone-x-helper";
 
 import { icons, COLORS, SIZES, FONTS } from "./constants";
+import SearchInput from "./components/SearchInput";
 
 const Restaurant = ({ route, navigation }) => {
   const scrollX = new Animated.Value(0);
@@ -96,7 +98,7 @@ const Restaurant = ({ route, navigation }) => {
             resizeMode="contain"
             style={{
               width: 30,
-              height: 30,
+              height: 25,
             }}
           />
         </TouchableOpacity>
@@ -114,15 +116,37 @@ const Restaurant = ({ route, navigation }) => {
               height: 50,
               alignItems: "center",
               justifyContent: "center",
-              paddingHorizontal: SIZES.padding * 3,
+              // paddingHorizontal: SIZES.padding * 6,
               borderRadius: SIZES.radius,
-              backgroundColor: COLORS.lightGray3,
+              // backgroundColor: COLORS.lightGray3,
             }}
           >
-            <Text style={{ ...FONTS.h3 }}>{restaurant?.name}</Text>
+            <Text style={{ ...FONTS.h4 }}>{restaurant?.name}</Text>
           </View>
         </View>
 
+        <View
+          style={{
+            flex: 1,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <View
+            style={{
+              height: 50,
+              alignItems: "center",
+              justifyContent: "center",
+              paddingHorizontal: SIZES.padding,
+              borderRadius: SIZES.radius,
+              // backgroundColor: COLORS.lightGray3,
+            }}
+          >
+            <KeyboardAvoidingView>
+              <SearchInput />
+            </KeyboardAvoidingView>
+          </View>
+        </View>
         {/* <TouchableOpacity
                     style={{
                         width: 50,
@@ -146,7 +170,7 @@ const Restaurant = ({ route, navigation }) => {
   function renderFoodInfo() {
     return (
       <Animated.ScrollView
-        horizontal
+        vertical
         pagingEnabled
         scrollEventThrottle={16}
         snapToAlignment="center"
@@ -158,19 +182,22 @@ const Restaurant = ({ route, navigation }) => {
       >
         {restaurant?.menu.map((item, index) => (
           <View key={`menu-${index}`} style={{ alignItems: "center" }}>
-            <View style={{ height: SIZES.height * 0.35 }}>
+            <View style={{ height: 350 }}>
               {/* Food Image */}
-
-              <TouchableOpacity onPress={() => navigation.navigate("Shirt")}>
-                <Image
-                  source={item.photo}
-                  resizeMode="cover"
-                  style={{
-                    width: SIZES.width,
-                    height: "100%",
-                  }}
-                />
-              </TouchableOpacity>
+              <View style={{ height: 350 }}>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate("Product")}
+                >
+                  <Image
+                    source={item.photo}
+                    resizeMode="cover"
+                    style={{
+                      width: SIZES.width,
+                      height: 330,
+                    }}
+                  />
+                </TouchableOpacity>
+              </View>
 
               {/* Quantity */}
               <View
@@ -259,9 +286,9 @@ const Restaurant = ({ route, navigation }) => {
                                     }}
                                 /> */}
 
-              {/* <Text style={{
+              <Text style={{
                                     ...FONTS.body3, color: COLORS.darygray
-                                }}>{item.calories.toFixed(2)} cal</Text> */}
+                                }}>{item.calories}</Text>
             </View>
           </View>
         ))}
@@ -269,61 +296,61 @@ const Restaurant = ({ route, navigation }) => {
     );
   }
 
-  function renderDots() {
-    const dotPosition = Animated.divide(scrollX, SIZES.width);
+  // function renderDots() {
+  //   const dotPosition = Animated.divide(scrollX, SIZES.width);
 
-    return (
-      <View style={{ height: 30 }}>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "center",
-            height: SIZES.padding,
-          }}
-        >
-          {restaurant?.menu.map((item, index) => {
-            const opacity = dotPosition.interpolate({
-              inputRange: [index - 1, index, index + 1],
-              outputRange: [0.3, 1, 0.3],
-              extrapolate: "clamp",
-            });
+  //   return (
+  //     <View style={{ height: 30 }}>
+  //       <View
+  //         style={{
+  //           flexDirection: "row",
+  //           alignItems: "center",
+  //           justifyContent: "center",
+  //           height: SIZES.padding,
+  //         }}
+  //       >
+  //         {restaurant?.menu.map((item, index) => {
+  //           const opacity = dotPosition.interpolate({
+  //             inputRange: [index - 1, index, index + 1],
+  //             outputRange: [0.3, 1, 0.3],
+  //             extrapolate: "clamp",
+  //           });
 
-            const dotSize = dotPosition.interpolate({
-              inputRange: [index - 1, index, index + 1],
-              outputRange: [SIZES.base * 0.8, 10, SIZES.base * 0.8],
-              extrapolate: "clamp",
-            });
+  //           const dotSize = dotPosition.interpolate({
+  //             inputRange: [index - 1, index, index + 1],
+  //             outputRange: [SIZES.base * 0.8, 10, SIZES.base * 0.8],
+  //             extrapolate: "clamp",
+  //           });
 
-            const dotColor = dotPosition.interpolate({
-              inputRange: [index - 1, index, index + 1],
-              outputRange: [COLORS.darkgray, COLORS.primary, COLORS.darkgray],
-              extrapolate: "clamp",
-            });
+  //           const dotColor = dotPosition.interpolate({
+  //             inputRange: [index - 1, index, index + 1],
+  //             outputRange: [COLORS.darkgray, COLORS.primary, COLORS.darkgray],
+  //             extrapolate: "clamp",
+  //           });
 
-            return (
-              <Animated.View
-                key={`dot-${index}`}
-                opacity={opacity}
-                style={{
-                  borderRadius: SIZES.radius,
-                  marginHorizontal: 6,
-                  width: dotSize,
-                  height: dotSize,
-                  backgroundColor: dotColor,
-                }}
-              />
-            );
-          })}
-        </View>
-      </View>
-    );
-  }
+  //           return (
+  //             <Animated.View
+  //               key={`dot-${index}`}
+  //               opacity={opacity}
+  //               style={{
+  //                 borderRadius: SIZES.radius,
+  //                 marginHorizontal: 6,
+  //                 width: dotSize,
+  //                 height: dotSize,
+  //                 backgroundColor: dotColor,
+  //               }}
+  //             />
+  //           );
+  //         })}
+  //       </View>
+  //     </View>
+  //   );
+  // }
 
   function renderOrder() {
     return (
       <View>
-        {renderDots()}
+        {/* {renderDots()} */}
         <View
           style={{
             backgroundColor: COLORS.white,
@@ -347,7 +374,7 @@ const Restaurant = ({ route, navigation }) => {
             <Text style={{ ...FONTS.h3 }}>${sumOrder()}</Text>
           </View>
 
-          <View
+          {/* <View
             style={{
               flexDirection: "row",
               justifyContent: "space-between",
@@ -384,12 +411,12 @@ const Restaurant = ({ route, navigation }) => {
                 8888
               </Text>
             </View>
-          </View>
+          </View> */}
 
           {/* Order Button */}
           <View
             style={{
-              padding: SIZES.padding * 2,
+              padding: SIZES.padding,
               alignItems: "center",
               justifyContent: "center",
             }}
@@ -397,7 +424,30 @@ const Restaurant = ({ route, navigation }) => {
             <TouchableOpacity
               style={{
                 width: SIZES.width * 0.9,
-                padding: SIZES.padding,
+                // padding: SIZES.padding,
+                backgroundColor: COLORS.primary,
+                alignItems: "center",
+                borderRadius: SIZES.radius,
+              }}
+              onPress={() => navigation.navigate("Address")}
+            >
+              <Text style={{ color: COLORS.white, ...FONTS.h2 }}>
+                Order Now
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View
+            style={{
+              padding: SIZES.padding,
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <TouchableOpacity
+              style={{
+                width: SIZES.width * 0.9,
+                // padding: SIZES.padding,
                 backgroundColor: COLORS.primary,
                 alignItems: "center",
                 borderRadius: SIZES.radius,
@@ -409,7 +459,9 @@ const Restaurant = ({ route, navigation }) => {
                 })
               }
             >
-              <Text style={{ color: COLORS.white, ...FONTS.h2 }}>Order</Text>
+              <Text style={{ color: COLORS.white, ...FONTS.h2 }}>
+                Trail now
+              </Text>
             </TouchableOpacity>
           </View>
         </View>

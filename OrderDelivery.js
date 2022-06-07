@@ -7,7 +7,7 @@ import {Linking} from 'react-native'
 import { COLORS, FONTS, icons, SIZES, GOOGLE_API_KEY } from "./constants";
 
 const OrderDelivery = ({ route, navigation }) => {
-//   console.log(GOOGLE_API_KEY);
+  //   console.log(GOOGLE_API_KEY);
   const mapView = React.useRef();
 
   const [restaurant, setRestaurant] = React.useState(null);
@@ -23,8 +23,13 @@ const OrderDelivery = ({ route, navigation }) => {
   React.useEffect(() => {
     let { restaurant, currentLocation } = route.params;
 
-    let fromLoc = currentLocation.gps;
-    // let toLoc = restaurant.location;
+    // let fromLoc = currentLocation.gps;
+    let fromLoc = {
+      latitude: 13.0644,
+      longitude: 80.2338,
+    };
+
+    //let toLoc = restaurant.location;
     let toLoc = {
       latitude: 13.0463,
       longitude: 80.2534,
