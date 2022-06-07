@@ -422,7 +422,7 @@ const Home = ({ navigation }) => {
               backgroundColor: COLORS.lightGray,
             }}
           >
-            <KeyboardAvoidingView style={(paddingTop = 1)}>
+            <KeyboardAvoidingView>
               <SearchInput />
             </KeyboardAvoidingView>
           </View>
