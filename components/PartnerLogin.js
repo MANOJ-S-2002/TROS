@@ -1,11 +1,46 @@
 import React from "react";
-import { View, StyleSheet, Text, ImageBackground } from "react-native";
+import { View, StyleSheet, Text, ImageBackground, Keyboard,Alert } from "react-native";
 import { TextInput, Button } from "react-native-paper";
 import bg from "../images/bg.jpg";
 
-const image = bg;
 
-export default function Login({ navigation }) {
+
+
+// export default function Login({ navigation }) {
+  const Login = ({navigation}) => {
+
+    const [inputs, setInputs] = React.useState({
+      email: '',
+      // fullname: '',
+      // phone: '',
+      password: '',
+    });
+    const [errors, setErrors] = React.useState({});
+    const handleOnchange = (text, input) => {
+      setInputs(prevState => ({...prevState, [input]: text}));
+    };
+    const handleError = (error, input) => {
+      setErrors(prevState => ({...prevState, [input]: error}));
+    };
+    const image = bg;
+    const validate = async () => {
+      Keyboard.dismiss();
+      let isValid = true;
+      if (!inputs.email) {
+        handleError("Please input email", "email");
+        isValid = false;
+      }
+      if (!inputs.password) {
+        handleError("Please input password", "password");
+        isValid = false;
+      }
+      if (isValid) {
+        navigation.navigate("Partner Profile");
+        // login();
+      }
+    };
+
+
   return (
     <ImageBackground
       style={styles.backgroundImage}
@@ -28,19 +63,27 @@ export default function Login({ navigation }) {
         <TextInput
           style={styles.input}
           mode="outlined"
-          label="Enter Email/Number"
+          onChangeText={(text) => handleOnchange(text, "email")}
+          onFocus={() => handleError(null, "email")}
+          error={errors.email}
+          placeholder=" email"
+          label="Enter your Email"
         />
         <TextInput
           style={styles.input}
           mode="outlined"
           secureTextEntry
-          label="Password"
+          label=" Enter your Password"
+          onChangeText={(text) => handleOnchange(text, "password")}
+          onFocus={() => handleError(null, "password")}
+          placeholder=" password"
+          error={errors.password}
         />
         <Button
           style={{ margin: 10 }}
           mode="contained"
           color="orange"
-          onPress={() => navigation.navigate("Partner Profile")}
+          onPress={() => validate()}
         >
           Login
         </Button>
@@ -71,6 +114,8 @@ export default function Login({ navigation }) {
     </ImageBackground>
   );
 }
+
+
 const styles = StyleSheet.create({
   loginContainer: {
     // backgroundColor: `gray`,
@@ -96,7 +141,10 @@ const styles = StyleSheet.create({
     height: 50,
 
     marginHorizontal: 25,
+    margin:10,
     fontSize: 16,
     borderRadius: 25,
   },
 });
+
+export default Login;

@@ -1,11 +1,71 @@
 import React from "react";
-import { View, StyleSheet, Text, ImageBackground } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Text,
+  ImageBackground,
+  Keyboard,
+  Alert,
+} from "react-native";
 import { TextInput, Button } from "react-native-paper";
-import bg from "../images/bg.jpg";
+import image from "../images/bg.jpg";
 
-const image = bg;
+// export default function Login({ navigation }) {
+const Login = ({ navigation }) => {
+  const [inputs, setInputs] = React.useState({ email: "", password: "" });
+  const [errors, setErrors] = React.useState({});
+  // const [loading, setLoading] = React.useState(false);
 
-export default function Login({ navigation }) {
+  const validate = async () => {
+    Keyboard.dismiss();
+    let isValid = true;
+    if (!inputs.email) {
+      handleError("Please input email", "email");
+      isValid = false;
+    }
+    if (!inputs.password) {
+      handleError("Please input password", "password");
+      isValid = false;
+    }
+    if (isValid) {
+      navigation.navigate("User Profile");
+      // login();
+    }
+  };
+
+  // const login = () => {
+  //   setLoading(true);
+  //   setTimeout(async () => {
+  //     setLoading(false);
+  //     let userData = await AsyncStorage.getItem("userData");
+  //     if (userData) {
+  //       userData = JSON.parse(userData);
+  //       if (
+  //         inputs.email == userData.email &&
+  //         inputs.password == userData.password
+  //       ) {
+  //         navigation.navigate("MapScreen");
+  //         AsyncStorage.setItem(
+  //           "userData",
+  //           JSON.stringify({ ...userData, loggedIn: true })
+  //         );
+  //       } else {
+  //         Alert.alert("Error", "Invalid Details");
+  //       }
+  //     } else {
+  //       Alert.alert("Error", "User does not exist");
+  //     }
+  //   }, 1000);
+  // };
+
+  const handleOnchange = (text, input) => {
+    setInputs((prevState) => ({ ...prevState, [input]: text }));
+  };
+
+  const handleError = (error, input) => {
+    setErrors((prevState) => ({ ...prevState, [input]: error }));
+  };
+
   return (
     <ImageBackground
       style={styles.backgroundImage}
@@ -28,23 +88,27 @@ export default function Login({ navigation }) {
         <TextInput
           style={styles.input}
           mode="outlined"
-          
-          label="Enter Email/Number"
+          onChangeText={(text) => handleOnchange(text, "email")}
+          onFocus={() => handleError(null, "email")}
+          error={errors.email}
+          placeholder=" email"
+          label="Enter your Email"
         />
         <TextInput
           style={styles.input}
           mode="outlined"
           secureTextEntry
-          label="Password"
+          label=" Enter your Password"
+          onChangeText={(text) => handleOnchange(text, "password")}
+          onFocus={() => handleError(null, "password")}
+          placeholder=" password"
+          error={errors.password}
         />
         <Button
-  
-    style={{ margin: 10,  }}
+          style={{ margin: 10 }}
           mode="contained"
           color="orange"
-          
-
-          onPress={() => navigation.navigate("User Profile")}
+          onPress={() => validate()}
         >
           Login
         </Button>
@@ -55,7 +119,7 @@ export default function Login({ navigation }) {
             borderRadius: 7,
             fontSize: 20,
             fontWeight: "bold",
-    paddingTop: 130,
+            paddingTop: 130,
 
             color: "black",
             // backgroundColor: "white",
@@ -74,7 +138,8 @@ export default function Login({ navigation }) {
       </View>
     </ImageBackground>
   );
-}
+};
+
 const styles = StyleSheet.create({
   loginContainer: {
     // backgroundColor: `gray`,
@@ -98,9 +163,12 @@ const styles = StyleSheet.create({
   input: {
     width: 300,
     height: 50,
-    
+
     marginHorizontal: 25,
+    margin: 10,
     fontSize: 16,
     borderRadius: 25,
   },
 });
+
+export default Login;
