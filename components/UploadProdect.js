@@ -60,7 +60,7 @@ export default function UploadProdect({ navigation}) {
         
         <Button
           style={{color: "white",margin: 10 }}
-          mode="contained"
+color="orange"          mode="contained"
           onPress={() => navigation.navigate("Home")}
         >
           Submit
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
   },
 
   detailsContainer: {
-    backgroundColor: `gray`,
+    // backgroundColor: `gray`,
     padding: 10,
     // flex: 1,
     borderRadius: 15,

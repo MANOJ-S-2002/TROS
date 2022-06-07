@@ -22,7 +22,7 @@ export default function DrawerContainer(props) {
     <Drawer.Navigator
       screenOptions={{
         // headerShown: false,
-        drawerActiveBackgroundColor: "brown",
+        drawerActiveBackgroundColor: "orange",
         drawerActiveTintColor: "#fff",
         drawerInactiveTintColor: "#333",
       }}

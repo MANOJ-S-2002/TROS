@@ -13,24 +13,24 @@ export default function Profile({ navigation }) {
         <Text style={style.title}>UserProfile</Text>
         <Mgs name="message-square" size={25} style={style.icons1} />
       </View>
-      <View style={{ padding: 7, alignItems: "center" }}>
+      <View style={{ padding: 10, alignItems: "center" }}>
         <Image
-          source={{
-            uri: "https://media.gqindia.com/wp-content/uploads/2018/05/26-866x956.jpg",
-          }}
+          source={require("../assets/images/avatar-3.jpg")}
           style={style.userImage}
         />
         <View style={{ position: "absolute" }}>
-          <View style={style.addBtnContainer}>
+          {/* <View style={style.addBtnContainer}>
             <Ionicons name="add-outline" style={style.addBtn} />
-          </View>
+          </View> */}
           <View>
-            <Text style={style.userName}>Your Story</Text>
-            <Text style={style.userName}>500 Pts</Text>
+            {/* <Text style={style.userName}>Your Story</Text>
+            <Text style={style.userName}>500 Pts</Text> */}
 
             <Text style={style.profile}>Andrew</Text>
             <Text style={style.profile}>andrew@gmail.com</Text>
-            <Text style={style.profile}>Chennai,India</Text>
+            <Text style={style.profile}>
+              LICET, Nungambakkam, Chennai,India
+            </Text>
 
             <Text style={style.profile}>89898990</Text>
 
@@ -68,7 +68,7 @@ const style = StyleSheet.create({
     width: "100%",
     borderColor: "#ffffff",
     alignItems: "center",
-    padding: 14,
+    padding: 16,
     marginTop: 15,
   },
 
@@ -133,6 +133,7 @@ const style = StyleSheet.create({
     alignItems: "center",
     padding: 15,
     textAlign: "center",
+    paddingTop: 100,
   },
 
   logico: {
@@ -149,9 +150,8 @@ const style = StyleSheet.create({
 
   profile: {
     flex: 1,
-    padding: 10,
+
+    paddingTop: 10,
     fontWeight: "bold",
-    
-    
   },
 });

@@ -6,6 +6,11 @@ import OrderDelivery from "./OrderDelivery";
 import Product from "./Details"
 import Pay from "./components/PaymentModes";
 import Address from "./components/Address";
+import Upload from "./components/UploadProdect"
+// import uprofile from "./components/UserProfile"
+// import pprofile from "./components/PartnerProfile"
+
+
 
 
 // import HomeStackNavigator from "./components/HomeStackNavigator";
@@ -30,6 +35,13 @@ const StackNavigator = () => {
       <Stack.Screen name="Address" component={Address} />
 
       <Stack.Screen name="pay" component={ Pay} />
+      <Stack.Screen name="UploadProduct" component={ Upload} />
+      {/* <Stack.Screen name="UserProfile" component={ uprofile} />
+      <Stack.Screen name="Partner Profile" component={ pprofile} /> */}
+
+
+
+      
       
 
 
