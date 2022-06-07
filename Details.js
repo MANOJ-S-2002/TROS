@@ -7,7 +7,7 @@ import {
   Dimensions,
   Image,
 } from "react-native";
-import COLORS from "../src/color";
+import COLORS from "./src/color";
 
 import {
   FontAwesome,
@@ -16,10 +16,10 @@ import {
 } from "react-native-vector-icons";
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 import { FlatList } from "react-native-gesture-handler";
-import pant from "../src/PantData";
+import fruit from "./src/ShirtData";
 
 const width = Dimensions.get("screen").width / 2 - 30;
-const Pants = ({ navigation }) => {
+const Fruits = ({ navigation }) => {
   //create categories
   const categories = ["S", "M", "L", "XL"];
   //selecting index in categories
@@ -50,10 +50,10 @@ const Pants = ({ navigation }) => {
   };
 
   //creating cart using FlatType component
-  const Cart = ({ pant }) => {
+  const Cart = ({ fruit }) => {
     return (
       <TouchableOpacity
-        // onPress={() => navigation.navigate("Product Details", pant)}
+      // onPress={() => navigation.navigate("")}
       >
         <View style={styles.card}>
           <View style={{ alignItems: "flex-end" }}>
@@ -64,27 +64,28 @@ const Pants = ({ navigation }) => {
                 borderRadius: 15,
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: pant.like
-                  ? "rgba(242,42,42,0.2)"
-                  : "rgba(0,0,0,0.2)",
+                // backgroundColor: fruit.like
+                // ? "rgba(242,42,42,0.2)"
+                // : "rgba(0,0,0,0.2)",
               }}
             >
-              <AntDesign
-                name="heart"
-                size={18}
-                color={pant.like ? COLORS.red : COLORS.dark}
-              />
+              {/* <AntDesign
+                                name="heart"
+                                size={18}
+                                color={fruit.like ? COLORS.red : COLORS.dark}
+                            /> */}
             </View>
           </View>
-          <View style={{ height: 100, alignItems: "center" }}>
+
+          <View style={{ height: 190, alignItems: "center" }}>
             <Image
               style={{ flex: 1, resizeMode: "contain" }}
-              source={pant.img}
+              source={fruit.img}
             />
           </View>
-          <Text style={{ fontWeight: "bold", marginTop: 10, fontSize: 20 }}>
-            {pant.name}
-          </Text>
+          {/* <Text style={{ fontWeight: "bold", marginTop: 10, fontSize: 20 }}>
+                        {fruit.name}
+                    </Text> */}
           <View
             style={{
               flexDirection: "row",
@@ -92,32 +93,19 @@ const Pants = ({ navigation }) => {
               marginTop: 5,
             }}
           >
-            <Text style={{ fontSize: 19, fontWeight: "bold" }}>
-              Rs {pant.price}
-            </Text>
+            {/* <Text style={{ fontSize: 19, fontWeight: "bold" }}>
+                            Rs {fruit.price}
+                        </Text> */}
             <View
               style={{
                 height: 24,
                 width: 25,
-                backgroundColor: COLORS.green,
+                // backgroundColor: COLORS.green,
                 borderRadius: 8,
                 justifyContent: "center",
                 alignItems: "center",
               }}
-            >
-              <Text
-                style={{
-                  flex: 1,
-                  fontSize: 22,
-                  color: COLORS.white,
-                  fontWeight: "bold",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                +
-              </Text>
-            </View>
+            ></View>
           </View>
         </View>
       </TouchableOpacity>
@@ -172,13 +160,13 @@ const Pants = ({ navigation }) => {
           paddingBottom: 50,
         }}
         numColumns={2}
-        data={pant}
-        renderItem={({ item }) => <Cart pant={item} />}
+        data={fruit}
+        renderItem={({ item }) => <Cart fruit={item} />}
       />
     </SafeAreaView>
   );
 };
-export default Pants;
+export default Fruits;
 
 const styles = StyleSheet.create({
   header: {
@@ -228,33 +216,12 @@ const styles = StyleSheet.create({
     borderColor: COLORS.green,
   },
   card: {
-    height: 220,
+    height: 250,
     backgroundColor: COLORS.light,
     width,
     marginHorizontal: 2,
     borderRadius: 10,
     marginBottom: 20,
-    padding: 10,
+    padding: 0,
   },
 });
-
-// import React from 'react'
-// import { StyleSheet, Text, View } from 'react-native'
-
-// const Fruits = () => {
-//     return (
-//         <View style={styles.FruitesContainer}>
-//             <Text>Fruits</Text>
-//         </View>
-//     )
-// }
-
-// export default Fruits
-
-// const styles = StyleSheet.create({
-//     FruitesContainer: {
-//         flex: 1,
-//         alignItems: 'center',
-//         justifyContent: 'center',
-//     },
-// })

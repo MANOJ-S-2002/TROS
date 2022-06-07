@@ -13,7 +13,6 @@ import { isIphoneX } from "react-native-iphone-x-helper";
 
 import { icons, COLORS, SIZES, FONTS } from "./constants";
 import SearchInput from "./components/SearchInput";
-// import pant from "./src/PantData";
 
 const Restaurant = ({ route, navigation }) => {
   const scrollX = new Animated.Value(0);
@@ -187,7 +186,7 @@ const Restaurant = ({ route, navigation }) => {
               {/* Food Image */}
               <View style={{ height: 350 }}>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("Shirt")}
+                  onPress={() => navigation.navigate("Product")}
                 >
                   <Image
                     source={item.photo}
@@ -287,9 +286,9 @@ const Restaurant = ({ route, navigation }) => {
                                     }}
                                 /> */}
 
-              {/* <Text style={{
+              <Text style={{
                                     ...FONTS.body3, color: COLORS.darygray
-                                }}>{item.calories.toFixed(2)} cal</Text> */}
+                                }}>{item.calories}</Text>
             </View>
           </View>
         ))}

@@ -53,7 +53,7 @@ const HomeScreen = ({ navigation }) => {
   const Cart = ({ Short }) => {
     return (
       <TouchableOpacity
-        onPress={() => navigation.navigate("Product Details", Short)}
+        // onPress={() => navigation.navigate("Product Details", Short)}
       >
         <View style={styles.card}>
           <View style={{ alignItems: "flex-end" }}>
