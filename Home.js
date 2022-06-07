@@ -394,7 +394,6 @@ const Home = ({ navigation }) => {
             width: 80,
             paddingLeft: SIZES.padding,
             justifyContent: "center",
-            
           }}
         >
           <Image
@@ -420,7 +419,7 @@ const Home = ({ navigation }) => {
               justifyContent: "center",
               // paddingHorizontal: SIZES.padding * 3,
               borderRadius: SIZES.radius,
-              backgroundColor: COLORS.lightGray,
+              // backgroundColor: COLORS.lightGray,
             }}
           >
             <KeyboardAvoidingView>
@@ -519,9 +518,9 @@ const Home = ({ navigation }) => {
     };
 
     return (
-      <View style={{ padding: SIZES.padding * 2 }}>
-        <Text style={{ ...FONTS.h1 }}>Welcome To</Text>
-        <Text style={{ ...FONTS.h1 }}>TROS</Text>
+      <View style={{ padding: SIZES.padding }}>
+        <Text style={{ ...FONTS.h1, color: "black" }}>WELCOME TO </Text>
+        <Text style={{ ...FONTS.h1, color: "black" }}>TROS</Text>
 
         <FlatList
           data={categories}
@@ -665,7 +664,7 @@ const Home = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.lightGray4,
+    backgroundColor: "white",
   },
   shadow: {
     shadowColor: "#000",

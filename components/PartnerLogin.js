@@ -40,7 +40,7 @@ export default function Login({ navigation }) {
           style={{ margin: 10 }}
           mode="contained"
           color="orange"
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("Partner Profile")}
         >
           Login
         </Button>

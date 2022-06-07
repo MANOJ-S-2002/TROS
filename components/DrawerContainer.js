@@ -36,7 +36,7 @@ export default function DrawerContainer(props) {
           ),
         }}
       />
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name="TROS"
         component={HomeStackNavigator}
         options={{
@@ -44,7 +44,7 @@ export default function DrawerContainer(props) {
             <Ionicons name="home" size={25} color={color} />
           ),
         }}
-      />
+      /> */}
       <Drawer.Screen
         name="UserLogin"
         component={LoginStackNavigator}

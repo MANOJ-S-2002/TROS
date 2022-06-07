@@ -44,7 +44,7 @@ export default function Login({ navigation }) {
           color="orange"
           
 
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("User Profile")}
         >
           Login
         </Button>

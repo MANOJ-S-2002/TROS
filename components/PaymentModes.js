@@ -74,7 +74,8 @@ const PaymentModes = (props) => {
       <View style={styles.container}>
         <Text
           style={{
-            margin: 10,
+            margin: 80,
+            paddingLeft: 30,
             borderRadius: 7,
             fontSize: 30,
             fontWeight: "bold",
@@ -107,6 +108,7 @@ const PaymentModes = (props) => {
           onPress={handlePayPress}
           color="orange"
           title="Pay"
+          // mode="contained"
           disabled={loading}
         />
         {/* <Button      title="Pay" disabled={loading} /> */}
@@ -118,9 +120,10 @@ export default PaymentModes;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    display: "flex",
     paddingTop: 50,
-
+    // alignItems: "center",
+    borderRadius: 10,
     justifyContent: "center",
     margin: 20,
   },
@@ -134,10 +137,13 @@ const styles = StyleSheet.create({
   },
   card: {
     backgroundColor: "#efefefef",
+    
   },
   cardContainer: {
     height: 50,
     marginVertical: 30,
+    backgroundColor: "orange",
+
   },
 
   backgroundImage: {
@@ -145,7 +151,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "auto",
     flex: 1,
-    justifyContent: "center",
+    // justifyContent: "center",
     // alignItems: 'center',
   },
 });

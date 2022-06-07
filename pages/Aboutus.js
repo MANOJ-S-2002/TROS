@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { TextInput, Button } from "react-native-paper";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import shirt from "../images/shirt1.jpg";
+import shirt from "../images/bg.jpg";
 const Aboutus = () => {
   return (
     <>
@@ -40,8 +40,8 @@ const Aboutus = () => {
               <Image
                 source={shirt}
                 style={{
-                  height: 300,
-                  width: 350,
+                  height: 350,
+                  width: 330,
                 }}
               />
             </View>
@@ -59,8 +59,7 @@ const Aboutus = () => {
             </View>
             <View>
               <Text style={{ fontSize: 15, padding: 10 }}>
-                To delivery the clothes to the Costumers
-                directly by the shop . 
+                To delivery the clothes to the Costumers directly by the shop .
               </Text>
             </View>
             <View>
@@ -135,8 +134,9 @@ const Aboutus = () => {
                 <Button
                   style={{
                     margin: 10,
-                    backgroundColor: "#005114",
+                    backgroundColor: "orange",
                     marginLeft: 0,
+                    // color: "black"
                   }}
                   mode="contained"
                 >
@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
   InputHighLight: {
     padding: 3,
     fontSize: 17,
-    color: "#005114",
+    // color: "#005114",
     fontWeight: "bold",
   },
 });

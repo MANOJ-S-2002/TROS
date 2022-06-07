@@ -274,7 +274,7 @@ const Restaurant = ({ route, navigation }) => {
             {/* button*/}
             <View
               style={{
-                marginTop: 40,
+                marginTop: 20,
                 marginBottom: 20,
                 flexDirection: "row",
 
