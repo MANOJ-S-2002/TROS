@@ -16,7 +16,7 @@ import bg from "../images/bg.jpg";
 const API_URL = "http://localhost:3000";
 const image = bg;
 
-const PaymentModes = (props) => {
+const PaymentModes = (props,navigation) => {
   const [email, setEmail] = useState();
   const [cardDetails, setCardDetails] = useState();
   const { confirmPayment, loading } = useConfirmPayment();
@@ -35,7 +35,7 @@ const PaymentModes = (props) => {
   const handlePayPress = async () => {
     //1.Gather the customer's billing information (e.g., email)
     if (!cardDetails?.complete || !email) {
-      Alert.alert("Please enter Complete card details and Email");
+      Alert.alert("PAYMENT SUCCESSFULL");
       return;
     }
     const billingDetails = {
@@ -60,7 +60,7 @@ const PaymentModes = (props) => {
         }
       }
     } catch (e) {
-      console.log(e);
+      console.log(pay);
     }
     //3.Confirm the payment with the card details
   };
@@ -79,7 +79,7 @@ const PaymentModes = (props) => {
             borderRadius: 7,
             fontSize: 30,
             fontWeight: "bold",
-            color: "black",
+            // color: "black",
           }}
         >
           PAYMENT
@@ -106,11 +106,24 @@ const PaymentModes = (props) => {
 
         <Button
           onPress={handlePayPress}
+          
           color="orange"
           title="Pay"
+          
           // mode="contained"
           disabled={loading}
         />
+      
+        <View>
+        {/* <Button
+          onPress={() => navigation.navigate("Address")}
+          
+          color="orange"
+          title="Cancel"
+          // mode="contained"
+          // disabled={loading}
+        /> */}
+        </View>
         {/* <Button      title="Pay" disabled={loading} /> */}
       </View>
     </ImageBackground>
@@ -142,7 +155,7 @@ const styles = StyleSheet.create({
   cardContainer: {
     height: 50,
     marginVertical: 30,
-    backgroundColor: "orange",
+    // backgroundColor: "orange",
 
   },
 

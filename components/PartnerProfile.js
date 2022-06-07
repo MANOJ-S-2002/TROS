@@ -21,10 +21,12 @@ export default function Profile({ navigation }) {
         />
 
         <View style={{ position: "absolute" }}>
-          <View style={style.addBtnContainer}>
+          {/* <View style={style.addBtnContainer}>
             <Ionicons name="add-outline" style={style.addBtn} />
-          </View>
+          </View> */}
           <View>
+          <View style={{ paddingTop: 150, paddingLeft: 100 }}>
+
             <Text style={style.profile}>SANTHOSH</Text>
             <Text style={style.profile}>Santhosh@gmail.com</Text>
             <Text style={style.profile}>
@@ -34,6 +36,7 @@ export default function Profile({ navigation }) {
             <Text style={style.profile}>8234861597</Text>
 
             <Text style={style.profile}></Text>
+            </View>
 
             {/* <Text style={style.about}>
               <Text>I am a part of</Text>{" "}

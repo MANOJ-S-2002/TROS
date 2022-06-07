@@ -28,11 +28,11 @@ export default function DrawerContainer(props) {
       }}
     >
       <Drawer.Screen
-        name="NEW"
+        name="TROS"
         component={TrackNavigator}
         options={{
           drawerIcon: ({ color }) => (
-            <AntDesign name="profile" size={25} color={color} />
+            <Ionicons name="home" size={25} color={color} />
           ),
         }}
       />
@@ -50,7 +50,7 @@ export default function DrawerContainer(props) {
         component={LoginStackNavigator}
         options={{
           drawerIcon: ({ color }) => (
-            <AntDesign name="profile" size={25} color={color} />
+            <Ionicons name="person-outline" size={25} color={color} />
           ),
         }}
 

@@ -49,18 +49,7 @@ const Signup = ({ navigation }) => {
     }
   };
 
-  // const register = () => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     try {
-  //       setLoading(false);
-  //       AsyncStorage.setItem('userData', JSON.stringify(inputs));
-  //       navigation.navigate('LoginScreen');
-  //     } catch (error) {
-  //       Alert.alert('Error', 'Something went wrong');
-  //     }
-  //   }, 3000);
-  // };
+
 
   const handleOnchange = (text, input) => {
     setInputs((prevState) => ({ ...prevState, [input]: text }));

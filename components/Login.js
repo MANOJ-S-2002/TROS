@@ -33,31 +33,7 @@ const Login = ({ navigation }) => {
     }
   };
 
-  // const login = () => {
-  //   setLoading(true);
-  //   setTimeout(async () => {
-  //     setLoading(false);
-  //     let userData = await AsyncStorage.getItem("userData");
-  //     if (userData) {
-  //       userData = JSON.parse(userData);
-  //       if (
-  //         inputs.email == userData.email &&
-  //         inputs.password == userData.password
-  //       ) {
-  //         navigation.navigate("MapScreen");
-  //         AsyncStorage.setItem(
-  //           "userData",
-  //           JSON.stringify({ ...userData, loggedIn: true })
-  //         );
-  //       } else {
-  //         Alert.alert("Error", "Invalid Details");
-  //       }
-  //     } else {
-  //       Alert.alert("Error", "User does not exist");
-  //     }
-  //   }, 1000);
-  // };
-
+  
   const handleOnchange = (text, input) => {
     setInputs((prevState) => ({ ...prevState, [input]: text }));
   };

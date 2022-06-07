@@ -10,52 +10,50 @@ export default function Profile({ navigation }) {
     <View style={style.container}>
       <View style={style.container1}>
         <Image source={require("./IconLogo.png")} style={style.icons} />
-        <Text style={style.title}>UserProfile</Text>
+        <Text style={style.title}>User Profile</Text>
         <Mgs name="message-square" size={25} style={style.icons1} />
       </View>
-      <View style={{ padding: 10, alignItems: "center" }}>
+      <View style={{ padding: 20, alignItems: "center" }}>
         <Image
           source={require("../assets/images/avatar-3.jpg")}
           style={style.userImage}
         />
-        <View style={{ position: "absolute" }}>
-          {/* <View style={style.addBtnContainer}>
+      </View>
+      <View style={{ position: "absolute" }}>
+        {/* <View style={style.addBtnContainer}>
             <Ionicons name="add-outline" style={style.addBtn} />
           </View> */}
-          <View>
-            {/* <Text style={style.userName}>Your Story</Text>
+        <View style={{ paddingTop: 200, paddingLeft: 100 }}>
+          {/* <Text style={style.userName}>Your Story</Text>
             <Text style={style.userName}>500 Pts</Text> */}
 
-            <Text style={style.profile}>Andrew</Text>
-            <Text style={style.profile}>andrew@gmail.com</Text>
-            <Text style={style.profile}>
-              LICET, Nungambakkam, Chennai,India
-            </Text>
+          <Text style={style.profile}>Andrew</Text>
+          <Text style={style.profile}>andrew@gmail.com</Text>
+          <Text style={style.profile}>LICET, Nungambakkam, Chennai,India</Text>
 
-            <Text style={style.profile}>89898990</Text>
+          <Text style={style.profile}>89898990</Text>
 
-            <Text style={style.profile}></Text>
+          <Text style={style.profile}></Text>
 
-            <TouchableOpacity
-              style={style.logico}
-              onPress={() => {
-                navigation.navigate("Home");
-              }}
-            >
-              <Entypo name="log-out" size={25}>
-                {" "}
-                Logout
-              </Entypo>
-            </TouchableOpacity>
-          </View>
-          <View
-            style={{
-              alignItems: "center",
-              padding: 15,
+          <TouchableOpacity
+            style={style.logico}
+            onPress={() => {
+              navigation.navigate("Home");
             }}
           >
-            {/* <Image source={require('../images/starico.jpg')} style={style.icons3} /> */}
-          </View>
+            <Entypo name="log-out" size={25}>
+              {" "}
+              Logout
+            </Entypo>
+          </TouchableOpacity>
+        </View>
+        <View
+          style={{
+            alignItems: "center",
+            padding: 15,
+          }}
+        >
+          {/* <Image source={require('../images/starico.jpg')} style={style.icons3} /> */}
         </View>
       </View>
     </View>
@@ -64,12 +62,12 @@ export default function Profile({ navigation }) {
 
 const style = StyleSheet.create({
   container: {
-    height: 500,
-    width: "100%",
-    borderColor: "#ffffff",
-    alignItems: "center",
-    padding: 16,
-    marginTop: 15,
+    // height: 500,
+    // width: "100%",
+    // borderColor: "#ffffff",
+    // alignItems: "center",
+    // padding: 16,
+    // marginTop: 15,
   },
 
   container1: {
@@ -93,28 +91,28 @@ const style = StyleSheet.create({
     borderColor: "#ffffff",
   },
 
-  userName: {
-    textAlign: "center",
-    fontSize: 12,
-    marginTop: 5,
-    letterSpacing: 2,
-  },
+  // userName: {
+  //   textAlign: "center",
+  //   fontSize: 12,
+  //   marginTop: 5,
+  //   letterSpacing: 2,
+  // },
 
-  addBtnContainer: {
-    marginTop: 55,
-    backgroundColor: "#4c68d7",
-    marginLeft: "53%",
-    width: 19,
-    height: 19,
-    borderRadius: 50,
-    borderWidth: 1.5,
-    borderColor: "#fff",
-    justifyContent: "center",
-  },
+  // addBtnContainer: {
+  //   marginTop: 55,
+  //   backgroundColor: "#4c68d7",
+  //   marginLeft: "53%",
+  //   width: 19,
+  //   height: 19,
+  //   borderRadius: 50,
+  //   borderWidth: 1.5,
+  //   borderColor: "#fff",
+  //   justifyContent: "center",
+  // },
 
-  addBtn: {
-    alignItems: "center",
-  },
+  // addBtn: {
+  //   alignItems: "center",
+  // },
 
   icons: {
     height: 50,
@@ -150,8 +148,7 @@ const style = StyleSheet.create({
 
   profile: {
     flex: 1,
-
-    paddingTop: 10,
+    padding: 10,
     fontWeight: "bold",
   },
 });
