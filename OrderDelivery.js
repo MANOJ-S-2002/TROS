@@ -53,7 +53,7 @@ const OrderDelivery = ({ route, navigation }) => {
     setToLocation(toLoc);
     setRegion(mapRegion);
   }, []);
-    dialCall = (number) => {
+  dialCall = (number) => {
     let phoneNumber = '';
     if (Platform.OS === 'android') { phoneNumber = `tel:${number}`; }
     else {phoneNumber = `telprompt:${number}`; }
