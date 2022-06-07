@@ -7,7 +7,9 @@ import {
   TouchableOpacity,
   Image,
   FlatList,
+  KeyboardAvoidingView
 } from "react-native";
+import SearchInput from "./components/SearchInput";
 
 import { icons, images, SIZES, COLORS, FONTS } from "./constants";
 const Home = ({ navigation }) => {
@@ -434,6 +436,28 @@ const Home = ({ navigation }) => {
           />
         </TouchableOpacity>
         <View
+          style={{
+            flex: 1,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <View
+            style={{
+              height: 50,
+              alignItems: "center",
+              justifyContent: "center",
+              // paddingHorizontal: SIZES.padding * 3,
+              borderRadius: SIZES.radius,
+              backgroundColor: COLORS.lightGray,
+            }}
+          >
+        <KeyboardAvoidingView>
+          <SearchInput />
+        </KeyboardAvoidingView>
+          </View>
+        </View>
+        {/* <View
           style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
         >
           <View
@@ -446,9 +470,9 @@ const Home = ({ navigation }) => {
               borderRadius: SIZES.radius,
             }}
           >
-            {/* <Text style={{ ...FONTS.h3 }}>{currentLocation.streetName}</Text> */}
+            <Text style={{ ...FONTS.h3 }}>{currentLocation.streetName}</Text>
           </View>
-        </View>
+        </View> */}
         <TouchableOpacity
           style={{
             width: 50,
