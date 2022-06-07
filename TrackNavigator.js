@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./Home";
 import Restaurant from "./Restaurant";
 import OrderDelivery from "./OrderDelivery";
-import Product from "./Details"
+// import Product from "./Details"
 import Pay from "./components/PaymentModes";
 import Address from "./components/Address";
 import Upload from "./components/UploadProdect"
@@ -29,7 +29,7 @@ const StackNavigator = () => {
       <Stack.Screen name="OrderDelivery" component={OrderDelivery} />
       {/* <Stack.Screen name="TROS" component={HomeStackNavigator} /> */}
 
-      <Stack.Screen name="Product" component={Product} />
+      {/* <Stack.Screen name="Product" component={Product} /> */}
       
 
       <Stack.Screen name="Address" component={Address} />

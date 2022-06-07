@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
 import MapViewDirections from "react-native-maps-directions";
-import {Linking} from 'react-native'
+import { Linking } from "react-native";
 
 import { COLORS, FONTS, icons, SIZES, GOOGLE_API_KEY } from "./constants";
 
@@ -13,6 +13,7 @@ const OrderDelivery = ({ route, navigation }) => {
   const [restaurant, setRestaurant] = React.useState(null);
   const [streetName, setStreetName] = React.useState("");
   const [fromLocation, setFromLocation] = React.useState(null);
+
   const [toLocation, setToLocation] = React.useState(null);
   const [region, setRegion] = React.useState(null);
 
@@ -24,27 +25,29 @@ const OrderDelivery = ({ route, navigation }) => {
     let { restaurant, currentLocation } = route.params;
 
     // let fromLoc = currentLocation.gps;
-    let fromLoc = {
+    let fromLoc = restaurant.location;
+
+    // let fromLoc = {
+    //   latitude: 13.0373,
+    //   longitude: 80.2297,
+    // };
+
+    // let toLoc = restaurant.location;
+    let toLoc = {
       latitude: 13.0644,
       longitude: 80.2338,
-    };
-
-    //let toLoc = restaurant.location;
-    let toLoc = {
-      latitude: 13.0463,
-      longitude: 80.2534,
     };
     let street = currentLocation.streetName;
 
     let mapRegion = {
-      //   latitude: (fromLoc.latitude + toLoc.latitude) / 2,
-      //   longitude: (fromLoc.longitude + toLoc.longitude) / 2,
-      //   latitudeDelta: Math.abs(fromLoc.latitude - toLoc.latitude) * 2,
-      //   longitudeDelta: Math.abs(fromLoc.longitude - toLoc.longitude) * 2,
-      latitude: 13.059537,
-      longitude: 80.242477,
-      latitudeDelta: 0.015,
-      longitudeDelta: 0.0121,
+      latitude: (fromLoc.latitude + toLoc.latitude) / 2,
+      longitude: (fromLoc.longitude + toLoc.longitude) / 2,
+      latitudeDelta: Math.abs(fromLoc.latitude - toLoc.latitude) * 2,
+      longitudeDelta: Math.abs(fromLoc.longitude - toLoc.longitude) * 2,
+      // latitude: 13.0644,
+      // longitude: 80.2338,
+      // latitudeDelta: 0.015,
+      // longitudeDelta: 0.0121,
     };
 
     setRestaurant(restaurant);
@@ -54,13 +57,15 @@ const OrderDelivery = ({ route, navigation }) => {
     setRegion(mapRegion);
   }, []);
 
-  
-    dialCall = (number) => {
-    let phoneNumber = '';
-    if (Platform.OS === 'android') { phoneNumber = `tel:${number}`; }
-    else {phoneNumber = `telprompt:${number}`; }
+  dialCall = (number) => {
+    let phoneNumber = "";
+    if (Platform.OS === "android") {
+      phoneNumber = `tel:${number}`;
+    } else {
+      phoneNumber = `telprompt:${number}`;
+    }
     Linking.openURL(phoneNumber);
- };
+  };
   function calculateAngle(coordinates) {
     let startLat = coordinates[0]["latitude"];
     let startLng = coordinates[0]["longitude"];
@@ -129,15 +134,170 @@ const OrderDelivery = ({ route, navigation }) => {
             />
           </View>
         </View>
+
+        {/* <View
+          style={{
+            height: 40,
+            width: 40,
+            borderRadius: 20,
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#000000",
+          }}
+        >
+          <View
+            style={{
+              height: 30,
+              width: 30,
+              borderRadius: 15,
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: COLORS.primary,
+            }}
+          >
+            <Image
+              source={icons.pin}
+              style={{
+                width: 25,
+                height: 25,
+                tintColor: COLORS.white,
+              }}
+            />
+          </View>
+        </View>
+
+        <View
+          style={{
+            height: 40,
+            width: 40,
+            borderRadius: 20,
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#000000",
+          }}
+        >
+          <View
+            style={{
+              height: 30,
+              width: 30,
+              borderRadius: 15,
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: COLORS.primary,
+            }}
+          >
+            <Image
+              source={icons.pin}
+              style={{
+                width: 25,
+                height: 25,
+                tintColor: COLORS.white,
+              }}
+            />
+          </View>
+        </View>
+
+        <View
+          style={{
+            height: 40,
+            width: 40,
+            borderRadius: 20,
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#000000",
+          }}
+        >
+          <View
+            style={{
+              height: 30,
+              width: 30,
+              borderRadius: 15,
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: COLORS.primary,
+            }}
+          >
+            <Image
+              source={icons.pin}
+              style={{
+                width: 25,
+                height: 25,
+                tintColor: COLORS.white,
+              }}
+            />
+          </View>
+        </View>
+
+        <View
+          style={{
+            height: 40,
+            width: 40,
+            borderRadius: 20,
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#000000",
+          }}
+        >
+          <View
+            style={{
+              height: 30,
+              width: 30,
+              borderRadius: 15,
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: COLORS.primary,
+            }}
+          >
+            <Image
+              source={icons.pin}
+              style={{
+                width: 25,
+                height: 25,
+                tintColor: COLORS.white,
+              }}
+            />
+          </View>
+        </View>
+
+        <View
+          style={{
+            height: 40,
+            width: 40,
+            borderRadius: 20,
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#000000",
+          }}
+        >
+          <View
+            style={{
+              height: 30,
+              width: 30,
+              borderRadius: 15,
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: COLORS.primary,
+            }}
+          >
+            <Image
+              source={icons.pin}
+              style={{
+                width: 25,
+                height: 25,
+                tintColor: COLORS.white,
+              }}
+            />
+          </View>
+        </View> */}
       </Marker>
     );
 
     const carIcon = () => (
       <Marker
         coordinate={fromLocation}
-        anchor={{ x: 0.5, y: 0.5 }}
-        flat={true}
-        rotation={angle}
+        // anchor={{ x: 0.5, y: 0.5 }}
+        // flat={true}
+        // rotation={angle}
       >
         <Image
           source={icons.car}
@@ -146,6 +306,41 @@ const OrderDelivery = ({ route, navigation }) => {
             height: 40,
           }}
         />
+        {/* <Image
+          source={icons.car}
+          style={{
+            width: 40,
+            height: 40,
+          }}
+        />
+        <Image
+          source={icons.car}
+          style={{
+            width: 40,
+            height: 40,
+          }}
+        />
+        <Image
+          source={icons.car}
+          style={{
+            width: 40,
+            height: 40,
+          }}
+        />
+        <Image
+          source={icons.car}
+          style={{
+            width: 40,
+            height: 40,
+          }}
+        />
+        <Image
+          source={icons.car}
+          style={{
+            width: 40,
+            height: 40,
+          }}
+        /> */}
       </Marker>
     );
 
@@ -158,14 +353,14 @@ const OrderDelivery = ({ route, navigation }) => {
           style={{ flex: 1 }}
         >
           <MapViewDirections
-            origin={{
-              latitude: 13.0644,
-              longitude: 80.2338,
-            }}
-            destination={{
-              latitude: 13.0463,
-              longitude: 80.2534,
-            }}
+            // origin={{
+            //   latitude: 13.0644,
+            //   longitude: 80.2338,
+            // }}
+            // destination={{
+            //   latitude: 13.0463,
+            //   longitude: 80.2534,
+            // }}
             apikey={GOOGLE_API_KEY}
             strokeWidth={5}
             strokeColor={COLORS.primary}
@@ -245,7 +440,10 @@ const OrderDelivery = ({ route, navigation }) => {
             <Text style={{ ...FONTS.body3 }}>{streetName}</Text>
           </View>
 
-          <Text style={{ ...FONTS.body3 }}>{Math.ceil(duration)}5 mins</Text>
+          <Text style={{ ...FONTS.body3 }}>
+            {/* {Math.ceil(duration)} */}
+            30 mins
+          </Text>
         </View>
       </View>
     );
@@ -331,7 +529,9 @@ const OrderDelivery = ({ route, navigation }) => {
                 justifyContent: "center",
                 borderRadius: 10,
               }}
-              onPress={()=>{this.dialCall(6385480659)}}
+              onPress={() => {
+                this.dialCall(6385480659);
+              }}
             >
               <Text style={{ ...FONTS.h4, color: COLORS.white }}>Call</Text>
             </TouchableOpacity>

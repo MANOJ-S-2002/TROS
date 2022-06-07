@@ -61,8 +61,8 @@ const Home = ({ navigation }) => {
       photo: images.saravana,
       duration: "30 - 45 min",
       location: {
-        latitude: 1.5347282806345879,
-        longitude: 110.35632207358996,
+        latitude: 13.0373,
+        longitude: 80.2297,
       },
       courier: {
         avatar: images.avatar_2,
@@ -112,8 +112,8 @@ const Home = ({ navigation }) => {
       photo: images.pothys,
       duration: "15 - 20 min",
       location: {
-        latitude: 1.556306570595712,
-        longitude: 110.35504616746915,
+        latitude: 13.0401,
+        longitude: 80.2303,
       },
       courier: {
         avatar: images.avatar_2,
@@ -163,8 +163,8 @@ const Home = ({ navigation }) => {
       photo: images.peter,
       duration: "20 - 25 min",
       location: {
-        latitude: 1.5238753474714375,
-        longitude: 110.34261833833622,
+        latitude: 13.091,
+        longitude: 80.1832,
       },
       courier: {
         avatar: images.avatar_3,
@@ -214,8 +214,8 @@ const Home = ({ navigation }) => {
       photo: images.hm,
       duration: "10 - 15 min",
       location: {
-        latitude: 1.5578068150528928,
-        longitude: 110.35482523764315,
+        latitude: 13.081,
+        longitude: 80.1955,
       },
       courier: {
         avatar: images.avatar_4,
@@ -265,8 +265,8 @@ const Home = ({ navigation }) => {
       photo: images.van,
       duration: "15 - 20 min",
       location: {
-        latitude: 1.558050496260768,
-        longitude: 110.34743759630511,
+        latitude: 13.0735,
+        longitude: 80.2216,
       },
       courier: {
         avatar: images.avatar_4,
@@ -316,8 +316,8 @@ const Home = ({ navigation }) => {
       photo: images.allen,
       duration: "35 - 40 min",
       location: {
-        latitude: 1.5573478487252896,
-        longitude: 110.35568783282145,
+        latitude: 13.0143,
+        longitude: 80.2239,
       },
       courier: {
         avatar: images.avatar_1,
@@ -417,9 +417,10 @@ const Home = ({ navigation }) => {
               height: 50,
               alignItems: "center",
               justifyContent: "center",
-              // paddingHorizontal: SIZES.padding * 3,
+              // paddingHorizontal: SIZES.padding ,
               borderRadius: SIZES.radius,
-              // backgroundColor: COLORS.lightGray,
+              color: "black",
+              // backgroundColor:"black",
             }}
           >
             <KeyboardAvoidingView>
@@ -519,8 +520,12 @@ const Home = ({ navigation }) => {
 
     return (
       <View style={{ padding: SIZES.padding }}>
-        <Text style={{ ...FONTS.h1, color: "black" }}>WELCOME TO </Text>
-        <Text style={{ ...FONTS.h1, color: "black" }}>TROS</Text>
+        <Text style={{ ...FONTS.h1, color: "black", paddingTop: 22 }}>
+          WELCOME TO{" "}
+        </Text>
+        <Text style={{ ...FONTS.h1, color: "black", paddingTop: 22 }}>
+          TROS
+        </Text>
 
         <FlatList
           data={categories}

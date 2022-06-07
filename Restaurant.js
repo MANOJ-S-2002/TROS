@@ -281,7 +281,7 @@ const Restaurant = ({ route, navigation }) => {
               }}
             >
               
-              <Button title="S" color="darkorange" />
+              <Button title="S" color="darkorange"  />
               <Button title="M" color="darkorange" />
               <Button title="L" color="darkorange" />
               <Button title="XL" color="darkorange" />

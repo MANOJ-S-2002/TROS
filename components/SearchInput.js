@@ -6,7 +6,7 @@ const SearchInput = () => {
   return (
     <View style={styles.input}>
       <EvilIcons name="search" size={24} color="black" />
-      <TextInput placeholder="search for the product " />
+      <TextInput placeholder="search                                                           " />
     </View>
   );
 };
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "#f6f6f6",
-    padding: 3,
+    padding: 7,
     borderRadius: 10,
   },
 });
