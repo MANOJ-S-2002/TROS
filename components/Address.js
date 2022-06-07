@@ -1,8 +1,11 @@
 import { NavigationContainer } from "@react-navigation/native";
 import React, { Component } from "react";
-import { TextInput, View, StyleSheet, Button, Alert } from "react-native";
+import { TextInput, View, StyleSheet,ImageBackground, Button, Alert } from "react-native";
 import { withNavigation } from 'react-navigation'
+import bg from "../images/bg.jpg";
 
+
+const image = bg
 export class Address extends Component {
 
     switchPage = () => this.props.navigation.navigate('pay');
@@ -25,7 +28,12 @@ export class Address extends Component {
     render() {
         // const { navigation } = this.props.navigation;
         return (
+            <ImageBackground style={styles.backgroundImage} sizeMode='cover' source={image}>
+
+            
             <View style={styles.container}>
+
+                
                 <TextInput
                     placeholder="enter name"
                     onChange={(text) => {
@@ -78,6 +86,7 @@ export class Address extends Component {
 
                 />
             </View>
+            </ImageBackground>
         );
     }
 }
@@ -87,7 +96,7 @@ export default withNavigation(Address);
 const styles = StyleSheet.create({
     container: {
         display: "flex",
-        backgroundColor: "white",
+        // backgroundColor: "white",
         alignItems: "center",
         justifyContent: "center",
         width: '100%',
@@ -101,5 +110,14 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         padding: 5,
         backgroundColor: "#f2eaea"
-    }
+    },
+    backgroundImage: {
+        paddingTop: 50,
+        width: '100%',
+        height: 'auto',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        // opacity:0.8
+      },
 });

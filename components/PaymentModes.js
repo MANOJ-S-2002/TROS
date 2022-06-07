@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TextInput, Button, Alert } from "react-native";
+import { View, Text, StyleSheet, TextInput,ImageBackground, Button, Alert } from "react-native";
 import { CardField, useConfirmPayment } from "@stripe/stripe-react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import bg from "../images/bg.jpg";
 
 //ADD localhost address of your server
 const API_URL = "http://localhost:3000";
+const image = bg
 
 const PaymentModes = (props) => {
   const [email, setEmail] = useState();
@@ -55,6 +58,8 @@ const PaymentModes = (props) => {
   };
 
   return (
+    <ImageBackground style={styles.backgroundImage} sizeMode='cover' source={image}>
+
     <View style={styles.container}>
       <TextInput
         autoCapitalize="none"
@@ -76,7 +81,11 @@ const PaymentModes = (props) => {
       />
       
       <Button onPress={handlePayPress} title="Pay" disabled={loading} />
+      {/* <Button      title="Pay" disabled={loading} /> */}
+   
     </View>
+    </ImageBackground>
+
   );
 };
 export default PaymentModes;
@@ -101,5 +110,15 @@ const styles = StyleSheet.create({
   cardContainer: {
     height: 50,
     marginVertical: 30,
+  },
+
+  backgroundImage: {
+    paddingTop: 50,
+    width: '100%',
+    height: 'auto',
+    flex: 1,
+    justifyContent: 'center',
+    // alignItems: 'center',
+  
   },
 });

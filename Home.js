@@ -391,17 +391,18 @@ const Home = ({ navigation }) => {
       <View style={{ flexDirection: "row", height: 50 }}>
         <TouchableOpacity
           style={{
-            width: 50,
+            width: 80,
             paddingLeft: SIZES.padding,
             justifyContent: "center",
+            
           }}
         >
           <Image
             source={require("./components/IconLogo.png")}
             resizeMode="contain"
             style={{
-              width: 100,
-              height: 100,
+              width: 80,
+              height: 70,
             }}
           />
         </TouchableOpacity>
