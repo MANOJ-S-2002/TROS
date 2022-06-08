@@ -36,6 +36,7 @@ const PaymentModes = (props,navigation) => {
     //1.Gather the customer's billing information (e.g., email)
     if (!cardDetails?.complete || !email) {
       Alert.alert("PAYMENT SUCCESSFULL");
+      // navigation.navigate("Restaurant")
       return;
     }
     const billingDetails = {

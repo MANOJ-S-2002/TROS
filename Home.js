@@ -52,57 +52,7 @@ const Home = ({ navigation }) => {
   const expensive = 3;
 
   const restaurantData = [
-    {
-      id: 1,
-      name: "SARAVANA STORES",
-      rating: 4.8,
-      categories: [5, 7],
-      priceRating: affordable,
-      photo: images.saravana,
-      duration: "30 - 45 min",
-      location: {
-        latitude: 13.0373,
-        longitude: 80.2297,
-      },
-      courier: {
-        avatar: images.avatar_2,
-        name: "Andrew",
-      },
-      menu: [
-        {
-          menuId: 1,
-          name: "Shirts",
-          photo: images.shirt,
-          description: "Shirts are with good quality",
-          calories: "S M L XL",
-          price: 700,
-        },
-        {
-          menuId: 2,
-          name: "Tshirts",
-          photo: images.tshirt,
-          description: "Tshirts are with good quality",
-          calories: "S M L XL",
-          price: 600,
-        },
-        {
-          menuId: 3,
-          name: "Pants",
-          photo: images.pant,
-          description: "Pants are with good quality",
-          calories: "S M L XL",
-          price: 800,
-        },
-        {
-          menuId: 3,
-          name: "Shorts",
-          photo: images.short,
-          description: "Shorts are with good quality",
-          calories: "S M L XL",
-          price: 400,
-        },
-      ],
-    },
+  
     {
       id: 2,
       name: "POTHYS",
@@ -117,7 +67,7 @@ const Home = ({ navigation }) => {
       },
       courier: {
         avatar: images.avatar_2,
-        name: "Jackson",
+        name: "ANDREW MANOJI",
       },
       menu: [
         {
@@ -147,13 +97,14 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Shorts",
-          photo: images.short,
+          photo: images.cs,
           description: "Shorts are with good quality",
           calories: "S M L XL",
           price: 350,
         },
       ],
     },
+
     {
       id: 3,
       name: "PETER ENGLAND",
@@ -202,6 +153,57 @@ const Home = ({ navigation }) => {
           description: "Shorts are with good quality",
           calories: "S M L XL",
           price: 350,
+        },
+      ],
+    },
+    {
+      id: 1,
+      name: "SARAVANA STORES",
+      rating: 4.8,
+      categories: [5, 7],
+      priceRating: affordable,
+      photo: images.saravana,
+      duration: "30 - 45 min",
+      location: {
+        latitude: 13.0373,
+        longitude: 80.2297,
+      },
+      courier: {
+        avatar: images.avatar_2,
+        name: "SANTHOSH",
+      },
+      menu: [
+        {
+          menuId: 1,
+          name: "Shirts",
+          photo: images.shirt,
+          description: "Shirts are with good quality",
+          calories: "S M L XL",
+          price: 700,
+        },
+        {
+          menuId: 2,
+          name: "Tshirts",
+          photo: images.tshirt,
+          description: "Tshirts are with good quality",
+          calories: "S M L XL",
+          price: 600,
+        },
+        {
+          menuId: 3,
+          name: "Pants",
+          photo: images.pan3,
+          description: "Pants are with good quality",
+          calories: "S M L XL",
+          price: 800,
+        },
+        {
+          menuId: 3,
+          name: "Shorts",
+          photo: images.cs,
+          description: "Shorts are with good quality",
+          calories: "S M L XL",
+          price: 400,
         },
       ],
     },
@@ -276,7 +278,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 1,
           name: "Shirts",
-          photo: images.vinbshirt,
+          photo: images.shirt,
           description: "Shirts are with good quality",
           calories: "S M L XL",
           price: 500,
@@ -284,7 +286,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 2,
           name: "Tshirts",
-          photo: images.sub,
+          photo: images.tshirt,
           description: "Tshirts are with good quality",
           calories: "S M L XL",
           price: 350,
@@ -292,7 +294,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Pants",
-          photo: images.pan4,
+          photo: images.pan3,
           description: "Pants are with good quality",
           calories: "S M L XL",
           price: 550,
@@ -321,7 +323,7 @@ const Home = ({ navigation }) => {
       },
       courier: {
         avatar: images.avatar_1,
-        name: "Jessie",
+        name: "AKASH",
       },
       menu: [
         {
@@ -351,7 +353,7 @@ const Home = ({ navigation }) => {
         {
           menuId: 3,
           name: "Shorts",
-          photo: images.short,
+          photo: images.sb,
           description: "Shorts are with good quality",
           calories: "S M L XL",
           price: 350,
@@ -391,13 +393,13 @@ const Home = ({ navigation }) => {
       <View style={{ flexDirection: "row", height: 50 }}>
         <TouchableOpacity
           style={{
-            width: 80,
+            width: 100,
             paddingLeft: SIZES.padding,
             justifyContent: "center",
           }}
         >
           <Image
-            source={require("./components/IconLogo.png")}
+            source={require("./assets/images/logomp.png")}
             resizeMode="contain"
             style={{
               width: 80,

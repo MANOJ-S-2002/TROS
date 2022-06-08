@@ -1,12 +1,15 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./Home";
-import Restaurant from "./Restaurant";
+import Restaurant from "./Shop";
 import OrderDelivery from "./OrderDelivery";
 // import Product from "./Details"
 import Pay from "./components/PaymentModes";
 import Address from "./components/Address";
 import Upload from "./components/UploadProdect"
+import Last from "./last";
+
+
 // import uprofile from "./components/UserProfile"
 // import pprofile from "./components/PartnerProfile"
 
@@ -36,6 +39,8 @@ const StackNavigator = () => {
 
       <Stack.Screen name="pay" component={ Pay} />
       <Stack.Screen name="UploadProduct" component={ Upload} />
+      <Stack.Screen name="last" component={ Last} />
+
       {/* <Stack.Screen name="UserProfile" component={ uprofile} />
       <Stack.Screen name="Partner Profile" component={ pprofile} /> */}
 

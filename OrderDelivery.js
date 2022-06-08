@@ -530,7 +530,7 @@ const OrderDelivery = ({ route, navigation }) => {
                 borderRadius: 10,
               }}
               onPress={() => {
-                this.dialCall(6385480659);
+                this.dialCall(6382173404);
               }}
             >
               <Text style={{ ...FONTS.h4, color: COLORS.white }}>Call</Text>

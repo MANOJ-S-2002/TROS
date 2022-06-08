@@ -7,7 +7,7 @@
     
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./components/IconLogo.png",
+      "image": "./assets/images/logomp.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
