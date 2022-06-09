@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Image,
   Animated,
+  TouchableHighlight,
   KeyboardAvoidingView,
 } from "react-native";
 import { isIphoneX } from "react-native-iphone-x-helper";
@@ -27,6 +28,17 @@ const Restaurant = ({ route, navigation }) => {
     setRestaurant(item);
     setCurrentLocation(currentLocation);
   });
+
+  var [ isPress, setIsPress ] = React.useState(false);
+
+  var touchProps = {
+    activeOpacity: 1,
+    underlayColor: 'blue',                               // <-- "backgroundColor" will be always overwritten by "underlayColor"
+    style: isPress ? styles.btnPress : styles.btnNormal, // <-- but you can still apply other style changes
+    onHideUnderlay: () => setIsPress(false),
+    onShowUnderlay: () => setIsPress(true),
+    onPress: () => console.log('HELLO'),                 // <-- "onPress" is apparently required
+  };
 
   function editOrder(action, menuId, price) {
     let orderList = orderItems.slice();
@@ -168,6 +180,8 @@ const Restaurant = ({ route, navigation }) => {
     );
   }
 
+  
+
   function renderFoodInfo() {
     return (
       <Animated.ScrollView
@@ -280,23 +294,16 @@ const Restaurant = ({ route, navigation }) => {
 
               }}
             >
-              
+            
+        
+    
               <Button title="S" color="darkorange"  />
+            
               <Button title="M" color="darkorange" />
               <Button title="L" color="darkorange" />
               <Button title="XL" color="darkorange" />
-              {/* <Image
-                                    source={icons.fire}
-                                    style={{
-                                        width: 20,
-                                        height: 20,
-                                        marginRight: 10
-                                    }}
-                                /> */}
-
-              {/* <Text style={{
-                                    ...FONTS.body3, color: COLORS.darygray
-                                }}>{item.calories}</Text> */}
+        
+        
             </View>
           </View>
         ))}
@@ -504,6 +511,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.lightGray2,
   },
+
 });
 
 export default Restaurant;
