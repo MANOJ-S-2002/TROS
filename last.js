@@ -9,14 +9,11 @@ export default function Profile({ navigation }) {
   return (
     <View style={style.container}>
       <View style={style.container1}>
-        <Image source={require("./components/IconLogo.png")} style={style.icons} />
-        <Text style={style.title}>User Profile</Text>
-        <Mgs name="message-square" size={25} style={style.icons1} />
+        {" "}
+        <Text style={style.title}></Text>
       </View>
       <View style={{ padding: 20, alignItems: "center" }}>
         <Image
-          source={require("./assets/images/avatar-3.jpg")}
-          style={style.userImage}
         />
       </View>
       <View style={{ position: "absolute" }}>
@@ -28,7 +25,6 @@ export default function Profile({ navigation }) {
             <Text style={style.userName}>500 Pts</Text> */}
 
           <Text style={style.profile}>PAYMENT SUCCESSFUL</Text>
-          <Text style={style.profile}>andrew@gmail.com</Text>
           {/* <Text style={style.profile}>LICET, Nungambakkam, Chennai,India</Text>
 
           <Text style={style.profile}>89898990</Text>
@@ -45,7 +41,7 @@ export default function Profile({ navigation }) {
               {" "}
               Logout
             </Entypo> */}
-          <Text> Go Homepage</Text> 
+            <Text> Go Homepage</Text>
           </TouchableOpacity>
         </View>
         <View
