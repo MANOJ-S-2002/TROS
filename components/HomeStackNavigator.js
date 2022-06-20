@@ -2,17 +2,17 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginStackNavigator from "./LoginStackNavigator";
 import Cart from "../pages/Cart";
-import Home from "./Home";
-import Fruits from "./Shirt";
-import Vegetables from "./Tshirt";
+// import Home from "./Home";
+// import Fruits from "./Shirt";
+// import Vegetables from "./Tshirt";
 import Address from "./Address";
 // import StripeApp from "./StripeApp";
 // import FruitDetails from "./FruitDetails";
-import VegetableDetails from "./Details";
+// import VegetableDetails from "./Details";
 import PaymentModes from "./PaymentModes";
 import UploadProdect from "./UploadProdect";
-import Pants from "./Pants";
-import Shorts from "./Shorts";
+// import Pants from "./Pants";
+// import Shorts from "./Shorts";
 
 const Stack = createNativeStackNavigator();
 
@@ -43,9 +43,6 @@ const StackNavigator = (props) => {
       />
       {/* <Stack.Screen name="FruitDetails" component={FruitDetails} /> */}
 
-      <Stack.Screen name="Vegetables" component={Vegetables} />
-      <Stack.Screen name="Pants" component={Pants} />
-      <Stack.Screen name="Shorts" component={Shorts} />
 
 
       <Stack.Screen name="Product Details" component={VegetableDetails} />

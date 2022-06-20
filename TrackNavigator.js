@@ -1,7 +1,7 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./Home";
-import Restaurant from "./Shop";
+import Shop from "./Shop";
 import OrderDelivery from "./OrderDelivery";
 // import Product from "./Details"
 import Pay from "./components/PaymentModes";
@@ -28,7 +28,7 @@ const StackNavigator = () => {
       }}
     >
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Restaurant" component={Restaurant} />
+      <Stack.Screen name="Shop" component={Shop} />
       <Stack.Screen name="OrderDelivery" component={OrderDelivery} />
       {/* <Stack.Screen name="TROS" component={HomeStackNavigator} /> */}
 

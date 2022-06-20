@@ -16,28 +16,69 @@ import { isIphoneX } from "react-native-iphone-x-helper";
 import { icons, COLORS, SIZES, FONTS } from "./constants";
 import SearchInput from "./components/SearchInput";
 
-const Restaurant = ({ route, navigation }) => {
+const Shop = ({ route, navigation }) => {
   const scrollX = new Animated.Value(0);
-  const [restaurant, setRestaurant] = React.useState(null);
+  const [Shop, setShop] = React.useState(null);
   const [currentLocation, setCurrentLocation] = React.useState(null);
   const [orderItems, setOrderItems] = React.useState([]);
+
+  const categories = ["Small", "Medium", "Large", "ExtraLarge"];
+  const [selectedCategoryIndex, setSelectedCategoryIndex] = React.useState(0);
+
+  const CategoryList = ({ navigation }) => {
+    return (
+      <View style={styles.categoryListContainer}>
+        {categories.map((item, index) => (
+          <TouchableOpacity
+            key={index}
+            activeOpacity={0.8}
+            onPress={() => setSelectedCategoryIndex(index)}
+          >
+            <View>
+              <Text
+                style={{
+                  ...styles.categoryListText,
+                  color:
+                    selectedCategoryIndex == index
+                      ? COLORS.primary
+                      : COLORS.grey,
+                }}
+              >
+                {item}
+              </Text>
+              {selectedCategoryIndex == index && (
+                <View
+                  style={{
+                    height: 3,
+                    width: 30,
+                    backgroundColor: COLORS.primary,
+                    marginTop: 2,
+                  }}
+                />
+              )}
+            </View>
+          </TouchableOpacity>
+        ))}
+      </View>
+    );
+  };
 
   React.useEffect(() => {
     let { item, currentLocation } = route.params;
 
-    setRestaurant(item);
+    setShop(item);
     setCurrentLocation(currentLocation);
   });
 
-  var [ isPress, setIsPress ] = React.useState(false);
+  var [isPress, setIsPress] = React.useState(false);
 
   var touchProps = {
     activeOpacity: 1,
-    underlayColor: 'blue',                               // <-- "backgroundColor" will be always overwritten by "underlayColor"
+    underlayColor: "blue", // <-- "backgroundColor" will be always overwritten by "underlayColor"
     style: isPress ? styles.btnPress : styles.btnNormal, // <-- but you can still apply other style changes
     onHideUnderlay: () => setIsPress(false),
     onShowUnderlay: () => setIsPress(true),
-    onPress: () => console.log('HELLO'),                 // <-- "onPress" is apparently required
+    onPress: () => console.log("HELLO"), // <-- "onPress" is apparently required
   };
 
   function editOrder(action, menuId, price) {
@@ -116,7 +157,7 @@ const Restaurant = ({ route, navigation }) => {
           />
         </TouchableOpacity>
 
-        {/* Restaurant Name Section */}
+        {/* Shop Name Section */}
         <View
           style={{
             flex: 1,
@@ -134,7 +175,7 @@ const Restaurant = ({ route, navigation }) => {
               // backgroundColor: COLORS.lightGray3,
             }}
           >
-            <Text style={{ ...FONTS.h4 }}>{restaurant?.name}</Text>
+            <Text style={{ ...FONTS.h4 }}>{Shop?.name}</Text>
           </View>
         </View>
 
@@ -180,8 +221,6 @@ const Restaurant = ({ route, navigation }) => {
     );
   }
 
-  
-
   function renderFoodInfo() {
     return (
       <Animated.ScrollView
@@ -195,7 +234,7 @@ const Restaurant = ({ route, navigation }) => {
           { useNativeDriver: false }
         )}
       >
-        {restaurant?.menu.map((item, index) => (
+        {Shop?.menu.map((item, index) => (
           <View key={`menu-${index}`} style={{ alignItems: "center" }}>
             <View style={{ height: 350 }}>
               {/* Food Image */}
@@ -291,19 +330,13 @@ const Restaurant = ({ route, navigation }) => {
                 marginTop: 20,
                 marginBottom: 20,
                 flexDirection: "row",
-
               }}
             >
-            
-        
-    
-              <Button title="S" color="darkorange"  />
-            
+              <Button title="S" color="darkorange" />
+
               <Button title="M" color="darkorange" />
               <Button title="L" color="darkorange" />
               <Button title="XL" color="darkorange" />
-        
-        
             </View>
           </View>
         ))}
@@ -324,7 +357,7 @@ const Restaurant = ({ route, navigation }) => {
   //           height: SIZES.padding,
   //         }}
   //       >
-  //         {restaurant?.menu.map((item, index) => {
+  //         {Shop?.menu.map((item, index) => {
   //           const opacity = dotPosition.interpolate({
   //             inputRange: [index - 1, index, index + 1],
   //             outputRange: [0.3, 1, 0.3],
@@ -469,7 +502,7 @@ const Restaurant = ({ route, navigation }) => {
               }}
               onPress={() =>
                 navigation.navigate("OrderDelivery", {
-                  restaurant: restaurant,
+                  Shop: Shop,
                   currentLocation: currentLocation,
                 })
               }
@@ -500,6 +533,8 @@ const Restaurant = ({ route, navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       {renderHeader()}
+      <CategoryList />
+
       {renderFoodInfo()}
       {renderOrder()}
     </SafeAreaView>
@@ -511,7 +546,16 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.lightGray2,
   },
-
+  categoryListContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginHorizontal: 20,
+    marginTop: 30,
+  },
+  categoryListText: {
+    fontSize: 17,
+    fontWeight: "bold",
+  },
 });
 
-export default Restaurant;
+export default Shop;

@@ -10,7 +10,7 @@ const OrderDelivery = ({ route, navigation }) => {
   //   console.log(GOOGLE_API_KEY);
   const mapView = React.useRef();
 
-  const [restaurant, setRestaurant] = React.useState(null);
+  const [Shop, setShop] = React.useState(null);
   const [streetName, setStreetName] = React.useState("");
   const [fromLocation, setFromLocation] = React.useState(null);
 
@@ -22,17 +22,17 @@ const OrderDelivery = ({ route, navigation }) => {
   const [angle, setAngle] = React.useState(0);
 
   React.useEffect(() => {
-    let { restaurant, currentLocation } = route.params;
+    let { Shop, currentLocation } = route.params;
 
     // let fromLoc = currentLocation.gps;
-    let fromLoc = restaurant.location;
+    let fromLoc = Shop.location;
 
     // let fromLoc = {
     //   latitude: 13.0373,
     //   longitude: 80.2297,
     // };
 
-    // let toLoc = restaurant.location;
+    // let toLoc = Shop.location;
     let toLoc = {
       latitude: 13.0644,
       longitude: 80.2338,
@@ -50,7 +50,7 @@ const OrderDelivery = ({ route, navigation }) => {
       // longitudeDelta: 0.0121,
     };
 
-    setRestaurant(restaurant);
+    setShop(Shop);
     setStreetName(street);
     setFromLocation(fromLoc);
     setToLocation(toLoc);
@@ -473,7 +473,7 @@ const OrderDelivery = ({ route, navigation }) => {
           <View style={{ flexDirection: "row", alignItems: "center" }}>
             {/* Avatar */}
             <Image
-              source={restaurant?.courier.avatar}
+              source={Shop?.courier.avatar}
               style={{
                 width: 50,
                 height: 50,
@@ -489,7 +489,7 @@ const OrderDelivery = ({ route, navigation }) => {
                   justifyContent: "space-between",
                 }}
               >
-                <Text style={{ ...FONTS.h4 }}>{restaurant?.courier.name}</Text>
+                <Text style={{ ...FONTS.h4 }}>{Shop?.courier.name}</Text>
                 <View style={{ flexDirection: "row" }}>
                   <Image
                     source={icons.star}
@@ -500,13 +500,13 @@ const OrderDelivery = ({ route, navigation }) => {
                       marginRight: SIZES.padding,
                     }}
                   />
-                  <Text style={{ ...FONTS.body3 }}>{restaurant?.rating}</Text>
+                  <Text style={{ ...FONTS.body3 }}>{Shop?.rating}</Text>
                 </View>
               </View>
 
-              {/* Restaurant */}
+              {/* Shop */}
               <Text style={{ color: COLORS.darkgray, ...FONTS.body4 }}>
-                {restaurant?.name}
+                {Shop?.name}
               </Text>
             </View>
           </View>

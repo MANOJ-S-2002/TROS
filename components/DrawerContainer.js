@@ -11,7 +11,7 @@ import Profile from "./PartnerProfile";
 import UserProfile from "./UserProfile";
 // import Tracking from "../pages/Tracking";
 import LoginStackNavigator from "./LoginStackNavigator";
-import test from "../test"
+// import test from "../test"
 
 import TrackNavigator from "../TrackNavigator";
 
@@ -103,7 +103,7 @@ export default function DrawerContainer(props) {
         }}
       />
 
-<Drawer.Screen
+{/* <Drawer.Screen
         name="test"
         component={test}
         options={{
@@ -111,7 +111,7 @@ export default function DrawerContainer(props) {
             <Ionicons name="help" size={25} color={color} />
           ),
         }}
-      />
+      /> */}
 
       {/* <Drawer.Screen name="Delaits" component={DetailsScreen} options={{
                     drawerIcon: ({ color }) => (
