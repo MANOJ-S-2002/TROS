@@ -312,12 +312,13 @@ const Shop = ({ route, navigation }) => {
               style={{
                 width: SIZES.width,
                 alignItems: "center",
-                marginTop: 15,
+                marginTop: 10,
+                paddingBottom:20,
                 paddingHorizontal: SIZES.padding * 2,
               }}
             >
               <Text
-                style={{ marginVertical: 10, textAlign: "center", ...FONTS.h2 }}
+                style={{ marginVertical: 20, textAlign: "center", ...FONTS.h2 }}
               >
                 {item.name} - {item.price.toFixed(2)}
               </Text>
@@ -325,7 +326,7 @@ const Shop = ({ route, navigation }) => {
             </View>
 
             {/* button*/}
-            <View
+            {/* <View
               style={{
                 marginTop: 20,
                 marginBottom: 20,
@@ -337,7 +338,7 @@ const Shop = ({ route, navigation }) => {
               <Button title="M" color="darkorange" />
               <Button title="L" color="darkorange" />
               <Button title="XL" color="darkorange" />
-            </View>
+            </View> */}
           </View>
         ))}
       </Animated.ScrollView>

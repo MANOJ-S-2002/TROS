@@ -11,12 +11,14 @@ import {
 import { CardField, useConfirmPayment } from "@stripe/stripe-react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import bg from "../images/bg.jpg";
+import { icons, COLORS, SIZES, FONTS } from "../constants";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 //ADD localhost address of your server
 const API_URL = "http://localhost:3000";
 const image = bg;
 
-const PaymentModes = (props,navigation) => {
+const PaymentModes = ( {navigation}) => {
   const [email, setEmail] = useState();
   const [cardDetails, setCardDetails] = useState();
   const { confirmPayment, loading } = useConfirmPayment();
@@ -35,8 +37,8 @@ const PaymentModes = (props,navigation) => {
   const handlePayPress = async () => {
     //1.Gather the customer's billing information (e.g., email)
     if (!cardDetails?.complete || !email) {
-      Alert.alert("PAYMENT SUCCESSFULL");
-      // navigation.navigate("Restaurant")
+      // Alert.alert("PAYMENT SUCCESSFULL");
+      navigation.navigate("last")
       return;
     }
     const billingDetails = {
@@ -107,23 +109,38 @@ const PaymentModes = (props,navigation) => {
 
         <Button
           onPress={handlePayPress}
-          
+          // onPress={navigation.navigate("last")}
+
           color="orange"
           title="Pay"
-          
           // mode="contained"
           disabled={loading}
         />
-      
+
+        <View
+          style={{
+            padding: SIZES.padding,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <TouchableOpacity
+            style={{
+              width: SIZES.width * 0.9,
+              // padding: SIZES.padding,
+              backgroundColor: COLORS.primary,
+              alignItems: "center",
+              borderRadius: SIZES.radius,
+            }}
+            onPress={() => navigation.navigate("Home")}
+            >
+            <Text style={{ color: COLORS.white, ...FONTS.h2 }}>cancel</Text>
+          </TouchableOpacity>
+          {/* <TouchableOpacity></TouchableOpacity> */}
+        </View>
+
         <View>
-        {/* <Button
-          onPress={() => navigation.navigate("Address")}
           
-          color="orange"
-          title="Cancel"
-          // mode="contained"
-          // disabled={loading}
-        /> */}
         </View>
         {/* <Button      title="Pay" disabled={loading} /> */}
       </View>
@@ -151,13 +168,11 @@ const styles = StyleSheet.create({
   },
   card: {
     backgroundColor: "#efefefef",
-    
   },
   cardContainer: {
     height: 50,
     marginVertical: 30,
     // backgroundColor: "orange",
-
   },
 
   backgroundImage: {

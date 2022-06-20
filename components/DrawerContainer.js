@@ -11,7 +11,7 @@ import Profile from "./PartnerProfile";
 import UserProfile from "./UserProfile";
 // import Tracking from "../pages/Tracking";
 import LoginStackNavigator from "./LoginStackNavigator";
-// import test from "../test"
+import last from "../paymentsuccess"
 
 import TrackNavigator from "../TrackNavigator";
 
@@ -28,6 +28,16 @@ export default function DrawerContainer(props) {
         drawerInactiveTintColor: "#333",
       }}
     >
+
+{/* <Drawer.Screen
+        name="last"
+        component={last}
+        options={{
+          drawerIcon: ({ color }) => (
+            <Ionicons name="home" size={25} color={color} />
+          ),
+        }}
+      /> */}
       <Drawer.Screen
         name="TROS"
         component={TrackNavigator}
@@ -37,15 +47,7 @@ export default function DrawerContainer(props) {
           ),
         }}
       />
-      {/* <Drawer.Screen
-        name="TROS"
-        component={HomeStackNavigator}
-        options={{
-          drawerIcon: ({ color }) => (
-            <Ionicons name="home" size={25} color={color} />
-          ),
-        }}
-      /> */}
+    
       <Drawer.Screen
         name="UserLogin"
         component={LoginStackNavigator}
@@ -103,21 +105,7 @@ export default function DrawerContainer(props) {
         }}
       />
 
-{/* <Drawer.Screen
-        name="test"
-        component={test}
-        options={{
-          drawerIcon: ({ color }) => (
-            <Ionicons name="help" size={25} color={color} />
-          ),
-        }}
-      /> */}
 
-      {/* <Drawer.Screen name="Delaits" component={DetailsScreen} options={{
-                    drawerIcon: ({ color }) => (
-                        <Ionicons name="help" size={25} color={color} />
-                    )
-                }} /> */}
 
       <Drawer.Screen
         name="AboutUs"

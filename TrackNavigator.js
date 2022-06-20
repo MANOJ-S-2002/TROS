@@ -7,7 +7,7 @@ import OrderDelivery from "./OrderDelivery";
 import Pay from "./components/PaymentModes";
 import Address from "./components/Address";
 import Upload from "./components/UploadProdect"
-import Last from "./last";
+import Last from "./paymentsuccess";
 
 
 // import uprofile from "./components/UserProfile"
